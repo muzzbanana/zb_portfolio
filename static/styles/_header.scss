@@ -1,0 +1,20 @@
+.header-wrapper {
+  align-items: center;
+  display: flex;
+  margin: 2em;
+}
+
+.header-nav {
+  flex: 1;
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 500px;
+}
+
+
+.header-nav li {
+  list-style: none;
+}
