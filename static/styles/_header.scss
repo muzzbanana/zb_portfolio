@@ -1,20 +1,44 @@
 .header-wrapper {
-  align-items: center;
+  border-bottom: #000 solid 1px;
   display: flex;
-  margin: 2em;
+  max-width: 100%;
+
+  .header-nav {
+    ul {
+      display: flex;
+      margin-right: 6px;
+      margin-top: 0;
+      position: absolute;
+      right: 0;
+      top: 25px;
+    }
+    
+    li {
+      list-style: none;
+      margin-right: 34px;
+    
+      a {
+        text-decoration: none;
+        padding-bottom: 8px;
+        
+    
+        &:hover {
+          border-bottom: 2px solid #000;
+        }
+    
+        &:visited {
+          color: #000;
+        }
+      }
+    }
+  }
+  
+  .logo {
+    margin-left: 30px;
+    background-size: 40px;
+  }
+  
+  
 }
 
-.header-nav {
-  flex: 1;
-}
 
-.header-nav ul {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 500px;
-}
-
-
-.header-nav li {
-  list-style: none;
-}

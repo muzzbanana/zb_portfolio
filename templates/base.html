@@ -11,11 +11,11 @@
   </head>
 
   <body class="page">
-    {% include "/partials/header.html" with context %}
-    {% block main %}
-      {{words}}
-    {% endblock %}
-    {% include "/partials/footer.html" with context %}
-
+    <div class="main-container">
+      {% include "/partials/header.html" with context %}
+      {% block main %}
+      {% endblock %}
+      {% include "/partials/footer.html" with context %}
+    </div>
   </body>
 </html>
