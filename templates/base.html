@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>ZachBowles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
+    <!-- download this and put it in assets in the future-->
+    <script src="https://kit.fontawesome.com/d11a9ce67f.js"></script>
     {% assets "scss_all" %}
       <link rel=stylesheet type=text/css href="{{ url_for('static',filename='css/main.css') }}">
     {% endassets %}    
@@ -12,7 +13,9 @@
 
   <body class="page">
     <div class="main-container">
-      {% include "/partials/header.html" with context %}
+      {% if name != 'construction' %}
+         {% include "/partials/header.html" with context %}
+      {% endif %}
       {% block main %}
       {% endblock %}
       {% include "/partials/footer.html" with context %}

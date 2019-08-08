@@ -24,7 +24,13 @@ def dated_url_for(endpoint, **values):
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('home.html')
+    name = 'home'
+    return render_template('home.html', name=name)
+
+@app.route('/construction', methods=['GET'])
+def construction():
+    name = 'construction'
+    return render_template('landing.html', name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)
