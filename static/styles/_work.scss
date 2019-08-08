@@ -1,0 +1,45 @@
+.work-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: calibri;
+  justify-content: center;
+  padding-top: 50px;
+
+  .ink-card {
+    background: #D735A7;
+  }
+
+  .roaster-card {
+    background-color: #FF8246;
+  }
+
+  .hahu-card {
+    background: #373A6D;
+  }
+  .ui-card {
+    background-color: #6FC2D0;
+  }
+
+  .card{
+    width: 280px;
+    border-radius: 25px;
+    min-height: 250px;
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+
+    h1 {
+      color: #fff;
+      line-height: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .card {
+      width: 350px;
+      margin: 75px;
+    }
+  }
+}
+

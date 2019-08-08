@@ -14,6 +14,7 @@
     <div class="main-container">
       {% include "/partials/header.html" with context %}
       {% block main %}
+        {{name}}
       {% endblock %}
       {% include "/partials/footer.html" with context %}
     </div>
