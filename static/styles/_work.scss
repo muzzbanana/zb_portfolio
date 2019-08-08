@@ -1,0 +1,86 @@
+.work-container {
+  margin: 0;
+  
+  .column-1 {
+    display: inline-flex;
+    float: left;
+    height: 227px;
+    left: 10%;
+    padding-right: 50px;
+    position: fixed;
+    width: 300px;
+  }
+
+  .column-2 {
+    display: inline-flex;
+    float: right;
+    height: 227px;
+    position: fixed;
+    right: 10%;
+    width: 300px;
+  }
+
+  .row-1 {
+    padding: 8vh 0;
+    position: absolute;
+  }
+
+  .row-2 {
+    padding-bottom: 10vh; 
+    position: absolute;
+    top: 55vh;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 768px) {
+    .column-1, .column-2 {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      left: 10%;
+    }
+
+    .column-2 {
+      float: left;
+    }
+  }
+
+  .ink-card {
+    background: url('../images/ink_envy_bg.svg');
+  }
+
+  .roaster-card {
+    background: url('../images/roaster_bg.svg');
+  }
+
+  .hahu-card {
+    background: url('../images/hahu_bg.svg');
+  }
+
+  .ui-card {
+    background: url('../images/ui_bg.svg');
+  }
+
+  .card {
+    border-radius: 25px;
+    height: 227px;
+    position: absolute;
+    // padding: 16px;
+    text-align: center;
+    width: 300px;
+    
+    h3 {
+      color: #fff;
+      line-height: 31px;
+      position: relative;
+      top: calc(50% - 31px);
+    }
+  }
+}
+
