@@ -32,7 +32,6 @@ def work():
     name = 'work'
     return render_template('work.html', name=name)
 
-
 if __name__ == '__main__':
     app.run(debug=True)
 

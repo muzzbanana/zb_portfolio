@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="927px" height="925px" viewBox="0 0 927 925" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Stack of Papers</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Splash-Screen" transform="translate(-54.000000, -99.000000)" fill="#FFFFFF">
+            <g id="Stack-of-Papers" transform="translate(50.977995, 94.686944)">
+                <rect id="Rectangle" stroke="#6FC2D0" opacity="0.500069754" transform="translate(440.500000, 426.500000) rotate(11.000000) translate(-440.500000, -426.500000) " x="153.5" y="58.5" width="574" height="736" rx="10"></rect>
+                <rect id="Rectangle" stroke="#FF8246" opacity="0.496861049" transform="translate(446.900729, 467.582562) rotate(35.000000) translate(-446.900729, -467.582562) " x="159.900729" y="99.5825618" width="574" height="736" rx="10"></rect>
+                <rect id="Rectangle" stroke="#D735A7" opacity="0.503255208" transform="translate(528.163629, 483.138478) rotate(-18.000000) translate(-528.163629, -483.138478) " x="231.663629" y="91.1384784" width="593" height="784" rx="10"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
