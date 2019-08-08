@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
 .header-wrapper {
   border-bottom: #000 solid 1px;
   display: flex;
@@ -20,7 +22,9 @@
       a {
         text-decoration: none;
         padding-bottom: 8px;
-        
+        text-transform: uppercase;
+        color: #333;
+        font-family: 'Raleway', serif;
     
         &:hover {
           border-bottom: 2px solid #000;

@@ -7,7 +7,6 @@ assets = Environment(app)
 assets.url = app.static_url_path
 scss = Bundle('styles/main.scss', filters='pyscss', output='css/main.css')
 assets.register('scss_all', scss)
-print('here')
 
 # prevents cached versions
 @app.context_processor
@@ -26,7 +25,6 @@ def dated_url_for(endpoint, **values):
 @app.route('/', methods=['GET'])
 def home():
     return render_template('home.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
