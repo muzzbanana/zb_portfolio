@@ -27,6 +27,11 @@ def home():
     name = 'home'
     return render_template('home.html', name=name)
 
+@app.route('/construction', methods=['GET'])
+def construction():
+    name = 'construction'
+    return render_template('landing.html', name=name)
+
 @app.route('/work', methods=['GET'])
 def work():
     name = 'work'
