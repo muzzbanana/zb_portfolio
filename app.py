@@ -32,6 +32,11 @@ def construction():
     name = 'construction'
     return render_template('landing.html', name=name)
 
+@app.route('/work', methods=['GET'])
+def work():
+    name = 'work'
+    return render_template('work.html', name=name)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
