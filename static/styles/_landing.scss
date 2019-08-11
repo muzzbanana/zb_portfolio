@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
 
 html, body {
     margin: 0;
@@ -6,8 +6,9 @@ html, body {
     font-family: 'Josefin Sans', serif;
 }
 
-.homepage-container {
-    background-image: url(../images/construction_background.svg);
+.construction-container {
+    background-image: url('../images/construction_cartoon.png');
+    font-family: 'Luckiest Guy', cursive;
     height: 100vh;
     overflow: hidden;
     background-position: center;
@@ -16,38 +17,102 @@ html, body {
     background-size: cover;
 }
 
-.homepage-text {
+.tint {
+    background: rgba(0, 0, 0, .58);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 58%;
     position: absolute;
-    top: 263px;
-    left: 350px;
-    margin: 0 auto;
-    height: 200px;
-    width: 588px;
-    color: #ffffff;
+    z-index: 5;
+}
+
+.header {
+    color: #fff;
+    display: flex;
+    line-height: 53px;
+    margin-top: 16px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+
+    .right_side {
+        margin-right: 30px;
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+
+        .fas {
+            color: #fff;
+            padding: 0 15px;
+            text-decoration: none;
+
+            &:hover {
+                color: #d456ff;
+            }
+        }
+
+        .fab {
+            color: #fff;
+
+            &:hover {
+                color: #d456ff;
+            }
+
+        }
+    }
+
+    .name {
+        left: 0;
+        line-height: 53px;
+        margin-left: 30px;
+        margin-top: 0;
+        position: absolute;
+    }
+
+    .contact {
+        margin: 0;
+    }
+}
+
+.title {
+    font-size: 72px;
+    position: absolute;
     text-align: center;
+    top: 154px;
+    width: 100%;
+}
 
-    &h1 {
-        font-size: 30px;
-        line-height: -2.4px;
-        font-family: 'Josefin Sans', serif;
+.message {
+    bottom: 0;
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .right_side {
+        left: 0;
+        margin-left: 30px;
+        top: 40px;
     }
 
-    &p {
-        font-size: 10px;
-        font-family: 'Josefin Sans', serif;
+    .contact {
+        font-size: 20px;
     }
-    .progress-bar {
-        background-color: white;
-        border: 1px solid magenta;
-        width: 400px;
-        margin-left: 100px;
-      }
-      
-      .progress-bar>div {
-        border: 1px solid magenta;
-        background-color: magenta;
-        width: 40%;
-        /* Adjust with JavaScript */
-        height: 20px;
-      }
+    .message {
+        font-size: 20px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 40px;
+        top: 200px;
+    }
 }
