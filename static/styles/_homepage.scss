@@ -1,27 +1,75 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lexend+Mega&display=swap");
 
 html, body {
     margin: 0;
     position: relative;  
-    font-family: 'Josefin Sans', serif;
+    font-family: 'Lexend Mega', sans-serif;
 }
 
 .homepage-container {
-    background-image: url(../images/paper_stacks_homepage.svg);
-    height: 100vh;
+    background: rgba(215, 53, 167, .3);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: contain;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .paper {
+        background: #fff;
+        border-radius: 10px;
+        height: 737px;
+        left: 574px;
+        position: absolute;
+        right: 50px;
+        top: 109px;
+        width: 575px;
+
+        &:hover {
+            z-index: 40;
+        }
+    }
+
+    .paper-1 {
+        border: 2px solid #D735A7;
+        box-shadow: 13px 11px 4px rgba(0, 0, 0, .5);
+        left: 678px;
+        transform: rotate(6deg); 
+        z-index: 30; 
+    }
+
+    .paper-2 {
+        border: 2px solid #FF8246;
+        box-shadow: 6px -4px 4px rgba(0, 0, 0, .5);
+        transform: rotate(35deg);
+        z-index: 25;
+    }
+
+    .paper-3 {
+        border: 2px solid #373A6D;
+        box-shadow: 15px 12px 4px rgba(0, 0, 0, .5);
+        transform: rotate(-14deg);
+        z-index: 20;
+    }
+
+    .paper-4 {
+        border: 2px solid #6FC2D0;
+        box-shadow: 15px 2px 4px rgba(0, 0, 0, .5);
+        transform: rotate(11deg);
+        z-index: 15;
+    }
+
 }
 
 .homepage-text {
-    position: absolute;
-    top: 315px;
-    left: 67px;
+    font-size: 27px;
     height: 217px;
-    width: 408px;
-    font-size: 31px;
+    left: 67px;
+    position: absolute;
+    top: 230px;
+    width: 450px;
+    z-index: 50;
 
     ul {
         display: flex;

@@ -1,18 +1,46 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway';
-
 .header-wrapper {
-  border-bottom: #000 solid 1px;
+  align-items: center;
+  height: 60px;
   display: flex;
-  max-width: 100%;
+
+  .header-title {
+    color: #000;
+    font-size: 20px;
+    margin-left: 30px;
+    position: absolute;
+
+    &:visited {
+      color: #000;
+    }
+  }
 
   .header-nav {
     ul {
       display: flex;
+      font-size: 14px;
       margin-right: 6px;
       margin-top: 0;
       position: absolute;
       right: 0;
       top: 25px;
+
+      .header-mail {
+        color: #D735A7;
+        font-size: 20px;
+
+        &:visited {
+          color: #D735A7;
+        }
+      }
+
+      .header-linkedin {
+        color: #373A6D;
+        font-size: 20px;
+
+        &:visited {
+          color: #373A6D;
+        }
+      }
     }
     
     li {
@@ -24,7 +52,6 @@
         padding-bottom: 8px;
         text-transform: uppercase;
         color: #333;
-        font-family: 'Raleway', serif;
     
         &:hover {
           border-bottom: 2px solid #000;
@@ -36,13 +63,4 @@
       }
     }
   }
-  
-  .logo {
-    margin-left: 30px;
-    background-size: 40px;
-  }
-  
-  
 }
-
-
