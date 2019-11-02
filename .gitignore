@@ -30,3 +30,6 @@ static/css
 
 *.pyc
 env/
+
+# Ignore config file
+config.py

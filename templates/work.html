@@ -1,26 +1,55 @@
 {% extends 'base.html' %}
 
 {% block main %}
-  <div class="work-container">
-    <a href="./">
-      <div class="ink-card  card">
-        <h1>Ink Envy</h1>
-      </div>
-    </a>
-    <a href="./">
-      <div class="roaster-card card">
-        <h1>RoasterTools</h1>
-      </div>
-    </a>
-    <a href="./">
-      <div class="hahu-card card">
-        <h1>HaHu</h1>
-      </div>
-    </a>
-    <a href="./">
-      <div class="ui-card card">
-        <h1>UI Project</h1>
-      </div>   
-    </a>
+<div class="content">
+    <div class="css-carousel">
+  
+        <!-- carousel controls -->
+        <input type="radio" name="carousel" id="carousel-1" checked />
+        <input type="radio" name="carousel" id="carousel-2" />
+        <input type="radio" name="carousel" id="carousel-3" />
+        <input type="radio" name="carousel" id="carousel-4" />
+  
+        <!-- carousel navigation -->
+        <div class="carousel-nav">
+            <label for="carousel-1"></label>
+            <label for="carousel-2"></label>
+            <label for="carousel-3"></label>
+            <label for="carousel-4"></label>
+        </div>
+  
+        <!-- carousel slides -->
+        <div class="carousel-slides">
+            <div class="carousel-inner">
+              <a href="./ink-envy">
+                <div class="carousel-item" style="background-color: #850000;">
+                    <img src="../static/images/construction_cartoon.png">
+                    <div class="center">
+                        <div class="title">Ink Envy</div>
+                    </div>
+                  </div>
+                </a>
+                <div class="carousel-item" style="background-color: #24529c;">
+                    <img src="../static/images/construction_cartoon.png">
+                    <div class="center">
+                        <div class="title">Hahu</div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-color: #268435;">
+                    <img src="../static/images/construction_cartoon.png">
+                    <div class="center">
+                        <div class="title">Roaster Tools</div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-color: #7a0880;">
+                    <img src="../static/images/construction_cartoon.png">
+                    <div class="center">
+                        <div class="title">UI Project</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
   </div>
 {% endblock %}

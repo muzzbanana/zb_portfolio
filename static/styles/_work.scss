@@ -1,45 +1,134 @@
-.work-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  font-family: calibri;
-  justify-content: center;
-  padding-top: 50px;
+.content {
+  position: fixed;
+  top: (101px);
+  right: 0;
+  left: 0;
+  bottom: 0;
 
-  .ink-card {
-    background: #D735A7;
-  }
+  .css-carousel {
+      height: 100%;
 
-  .roaster-card {
-    background-color: #FF8246;
-  }
+      .carousel-slides {
+        height: 45%;
+        margin: 15%;
+        width: 70vw;
+      }
 
-  .hahu-card {
-    background: #373A6D;
-  }
-  .ui-card {
-    background-color: #6FC2D0;
-  }
+      .carousel-inner,
+      .carousel-item {
+          height: 100%;
+      }
 
-  .card{
-    width: 280px;
-    border-radius: 25px;
-    min-height: 250px;
-    padding: 10px;
-    margin: 50px;
-    text-align: center;
+      .carousel-item {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          position: relative;
 
-    h1 {
-      color: #fff;
-      line-height: 30px;
-    }
-  }
+          .center {
+              width: 100%;
+              height: 100%;
+              display: table;
+              text-align: center;
 
-  @media (min-width: 1024px) {
-    .card {
-      width: 350px;
-      margin: 75px;
-    }
+              .title {
+                  display: table-cell;
+                  vertical-align: middle;
+                  color: #fff;
+                  font-size: 70px;
+                  height: 100px;
+                  font-weight: 900;
+                  letter-spacing: 10px;
+                  text-transform: uppercase;
+                  background-color: rgba(#000, 0.3);
+              }
+          }
+
+          .credit {
+              display: none;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              padding: 20px;
+              color: #fff;
+              font-size: 14px;
+
+              a {
+                  color: #fff;
+                  text-decoration: underline;
+                  font-weight: 700;
+
+                  &:hover {
+                      text-decoration: none;
+                  }
+              }
+          }
+      }
   }
 }
+          
 
+$css-carousel: (
+    slides: 4,
+    transition-speed: 1s
+);
+
+.css-carousel {
+    position: relative;
+
+    // hide input radio fields
+    input[name="carousel"] {
+        display: none;
+    }
+
+    // carousel navigation
+    .carousel-nav {
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 1;
+
+        label {
+            display: inline-block;
+            margin: 0 10px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.25s;
+        }
+    }
+
+    // active carousel navigation
+    @for $i from 1 through map_get($css-carousel, slides) {
+        #carousel-#{$i}:checked ~ .carousel-nav label[for="carousel-#{$i}"] {
+            background-color: blue;
+        }
+    }
+
+    // carousel slides
+    .carousel-slides {
+        width: 100%;
+        overflow: hidden;
+
+        .carousel-inner {
+            width: (100% * map_get($css-carousel, slides));
+            transition: margin map_get($css-carousel, transition-speed);
+        }
+
+        .carousel-item {
+            float: left;
+            width: (100% / map_get($css-carousel, slides));
+        }
+    }
+
+    // active carousel slides
+    @for $i from 1 through map_get($css-carousel, slides) {
+        #carousel-#{$i}:checked ~ .carousel-slides .carousel-inner {
+            margin-left: (-100% * ($i - 1));
+        }
+    }
+}

@@ -1,0 +1,168 @@
+body {
+  overflow-y: scroll;
+}
+
+p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+
+.ink-envy-container {
+
+  .hero-container {
+    background-color: #000;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+
+    .hero-image-container {
+      grid-column-start: 6;
+      grid-row-start: 2;
+      grid-row-end: 6;
+      margin-top: 100px;
+    }
+
+    .hero-image {
+        display: block;
+        margin: auto;
+    }
+
+    .hero-title {
+      color: #17F7FB;
+      font-size: 50px;
+      grid-column-start: 1;
+      grid-column-end: 12;
+      grid-row-start: 6;
+      grid-row-end: 7; 
+      text-align: center;
+    }
+
+    .proto-button {
+        background-color:transparent;
+        border:1px solid #fff;
+        // display: block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:20px;
+        font-weight:bold;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        padding:25px 40px;
+        text-decoration:none;
+        width: 269px;
+        display: flex;
+        justify-content: center;
+    }
+    .proto-button:hover {
+        color: #000;
+        background-color:#fff;
+    }
+    .proto-button:active {
+        position:relative;
+        top:1px;
+    }
+  }
+
+  .ink-envy-title {
+    grid-column-start: 2;
+    grid-row-start: 11;
+    grid-row-end: 12;
+    text-align: left;
+  }
+
+  .project-brief {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 12;
+    grid-row-end: 17;
+  }
+
+  .my-role {
+    grid-column-start: 7;
+    grid-column-end: 11;
+    grid-row-start: 12;
+    grid-row-end: 17;
+  }
+
+  .the-challenge {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 17;
+    grid-row-end: 20;
+
+    .footnote {
+      font-size: 12.36px;
+    }
+  }
+
+  .feats-for-users {
+    font-size: 20px;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 21;
+    grid-row-end: 24;
+    line-height: 30px;
+  }
+
+  .feats-for-users-image {
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 20;
+    grid-row-end: 24;
+  }
+
+  .feats-for-artists {
+    font-size: 20px;
+    grid-column-start: 7;
+    grid-column-end: 12;
+    grid-row-start: 26;
+    grid-row-end: 30;
+    line-height: 30px;
+  }
+
+  .feats-for-artists-image {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 25;
+    grid-row-end: 30;
+  }
+
+  .the-approach {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 30;
+    grid-row-end: 32;
+  }
+
+  .approach-diagram {
+    grid-column-start: 3;
+    grid-column-end: 12;
+    grid-row-start: 32;
+    grid-row-end: 34;
+    transform: scale(1.2)
+  }
+
+  .understanding-the-problem {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 35;
+    grid-row-end: 36;
+  }
+
+  .the-problem {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 36;
+    grid-row-end: 38;
+  }
+
+  .possible-problems {
+    font-size: 20px;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 21;
+    grid-row-end: 24;
+    line-height: 30px;
+  }
+}

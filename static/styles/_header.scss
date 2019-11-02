@@ -1,44 +1,48 @@
 .header-wrapper {
   align-items: center;
-  height: 60px;
+  background: linear-gradient(0.25turn, #0C0085, #000);
+  border-bottom: #fff solid 1px;
+  font-family: 'Muli';
+  height: 100px;
   display: flex;
 
   .header-title {
-    color: #000;
-    font-size: 20px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
     margin-left: 30px;
     position: absolute;
 
     &:visited {
-      color: #000;
+      color: #fff;
     }
   }
 
   .header-nav {
     ul {
       display: flex;
-      font-size: 14px;
+      font-size: 24px;
       margin-right: 6px;
-      margin-top: 0;
+      margin-top: 10px;
       position: absolute;
       right: 0;
       top: 25px;
 
       .header-mail {
-        color: #D735A7;
+        color: #fff;
         font-size: 20px;
 
         &:visited {
-          color: #D735A7;
+          color: #fff;
         }
       }
 
       .header-linkedin {
-        color: #373A6D;
+        color: #fff;
         font-size: 20px;
 
         &:visited {
-          color: #373A6D;
+          color: #fff;
         }
       }
     }
@@ -50,16 +54,29 @@
       a {
         text-decoration: none;
         padding-bottom: 8px;
-        text-transform: uppercase;
-        color: #333;
+        color: #fff;
     
         &:hover {
-          border-bottom: 2px solid #000;
+          border-bottom: 2px solid #fff;
         }
     
         &:visited {
-          color: #000;
+          color: #fff;
         }
+      }
+
+      .contact-me-button {
+        background-color: #0C0085;
+        border:1px solid #fff;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:20px;
+        font-weight:bold;
+        margin-top: -12px;
+        padding:15px 40px;
+        text-decoration:none;
+        display: flex;
+        justify-content: center;
       }
     }
   }
