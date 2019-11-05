@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>ZachBowles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <!-- download this and put it in assets in the future-->
-    <script src="https://kit.fontawesome.com/d11a9ce67f.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     {% assets "scss_all" %}
       <link rel=stylesheet type=text/css href="{{ url_for('static',filename='css/main.css') }}">
-    {% endassets %}    
+    {% endassets %}  
+    <!-- download this and put it in assets in the future-->
+    <script src="https://kit.fontawesome.com/d11a9ce67f.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900&display=swap" rel="stylesheet"> 
   </head>
 
   <body class="page">
@@ -20,7 +20,7 @@
       {% block main %}
         {{name}}
       {% endblock %}
-      {% include "/partials/footer.html" with context %}
     </div>
+    <script type="text/javascript" src="../static/js/header.js"></script>
   </body>
 </html>

@@ -8,26 +8,23 @@ html, body {
 
 .home-container {
     background: linear-gradient(0.25turn, #0C0085, #000);
+    font-size: 15px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
 
     .papers {
-        grid-column-start: 2;
-        grid-column-end: 6;
-        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-row-start: 1;
+        margin-top: 75px;
 
         .paper {
-            background: #fff;
+            background: #000;
             border-radius: 10px;
-            height: 444px;
-            left: 20%;
-            position: absolute;
-            right: 50px;
-            top: 210px;
+            height: 293px;
             transition: rotate 3s;
-            width: 269px;
+            width: 177.5px;
     
             &:hover {
                 z-index: 40;
@@ -37,6 +34,8 @@ html, body {
         .paper-1 {
             border: 2px solid #fff;
             box-shadow: 13px 11px 4px rgba(0, 0, 0, .5);
+            left: calc(50% - 88.75px);
+            position: absolute;
             transform: rotate(6deg); 
             z-index: 30; 
         }
@@ -44,6 +43,8 @@ html, body {
         .paper-2 {
             border: 2px solid #fff;
             box-shadow: 6px -4px 4px rgba(0, 0, 0, .5);
+            left: calc(50% - 88.75px);
+            position: absolute;
             transform: rotate(35deg);
             z-index: 25;
         }
@@ -51,6 +52,8 @@ html, body {
         .paper-3 {
             border: 2px solid #fff;
             box-shadow: 15px 12px 4px rgba(0, 0, 0, .5);
+            left: calc(50% - 88.75px);
+            position: absolute;
             transform: rotate(-14deg);
             z-index: 20;
         }
@@ -58,6 +61,8 @@ html, body {
         .paper-4 {
             border: 2px solid #fff;
             box-shadow: 15px 2px 4px rgba(0, 0, 0, .5);
+            left: calc(50% - 88.75px);
+            position: absolute;
             transform: rotate(11deg);
             z-index: 15;
         }
@@ -65,13 +70,60 @@ html, body {
     
     .homepage-text {
         color: #fff;
-        font-size: 27px;
-        grid-column-start: 9;
-        grid-column-end: 12;
-        height: 217px;
-        position: absolute;
-        top: 30vh;
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row-start: 5;
         z-index: 50;
+    }
+
+    .view-my-work-button {
+        background-color: #000;
+        border: 3px solid #fff;
+        border-radius: 30px;
+        cursor: pointer;
+        color:#fff;
+        font-weight: bold;
+        grid-column-start: 3;
+        margin: 50px auto;
+        padding:15px 40px;
+        text-decoration:none;
+        display: flex;
+        justify-content: center;
+        max-width: 269px;
+      }
+
+    @include breakpoint(m) {
+        .homepage-text {
+            color: #fff;
+            font-size: 20px;
+            grid-column-start: 8;
+            grid-column-end: 12;
+            grid-row-start: 3;
+            padding-bottom: 20px;
+            z-index: 50;
+        }
+
+        .papers {
+            display: block;
+            grid-column-start: 2;
+            grid-row-start: 3;
+            margin-top: 0;
+
+            .paper-1, .paper-2,
+            .paper-3, .paper-4 {
+                left: 13%;
+                height: 444px;
+                width: 269px;
+            }
+
+        }
+
+        .view-my-work-button {
+            font-size: 20px;
+            grid-column-start: 8;
+            grid-column-end: 10;
+            margin: 50px 0;
+        }
     }
 }
 

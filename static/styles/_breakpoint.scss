@@ -1,0 +1,66 @@
+@mixin breakpoint($point) {
+  @if $point == s {
+    @media #{'(min-width: 768px)'} { @content; }
+  } @else if $point == m {
+    @media #{'(min-width: 900px)'} { @content; }
+  } @else if $point == l {
+    @media #{'(min-width: 1024px)'} { @content; }
+  } @else if $point == xl {
+    @media #{'(min-width: 1280px)'} { @content; }
+  }
+}
+
+@mixin breakpoint-height($point) {
+  @if $point == s {
+    @media #{'(min-height: 500px)'} { @content; }
+  } @else if $point == m {
+    @media #{'(min-height: 800px)'} { @content; }
+  } @else if $point == l {
+    @media #{'(min-height: 1000px)'} { @content; }
+  } @else if $point == xl {
+    @media #{'(min-height: 1280px)'} { @content; }
+  }
+}
+
+/**
+ * Generally prefer mobile-first media queries but there are some cases where
+ * Screen height based rules are needed especially < 500px
+ */
+
+@mixin breakpoint-max-height($point) {
+  @if $point == s {
+    @media #{'(max-height: 550px)'} { @content; }
+  } @else if $point == m {
+    @media #{'(max-height: 800px)'} { @content; }
+  } @else if $point == l {
+    @media #{'(max-height: 1000px)'} { @content; }
+  } @else if $point == xl {
+    @media #{'(max-height: 1280px)'} { @content; }
+  }
+}
+
+/**
+ * These values will not show up in content, but can be
+ * queried by JavaScript to know which breakpoint is active.
+ * This way we can keep our JS and CSS in sync
+ */
+body::after {
+  content: 'xs';
+  display: none;
+
+  @include breakpoint(s) {
+    content: 's';
+  }
+
+  @include breakpoint(m) {
+    content: 'm';
+  }
+
+  @include breakpoint(l) {
+    content: 'l';
+  }
+
+  @include breakpoint(xl) {
+    content: 'xl';
+  }
+}
