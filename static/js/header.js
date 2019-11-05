@@ -4,11 +4,11 @@ const close = document.querySelector(".icon");
 function navToggle() {
   const compStylesMenu = window.getComputedStyle(menu);
   const top = compStylesMenu.getPropertyValue('top');
-  if (top === '-400px') {
+  if (top === '-410px') {
     menu.style.top = '0px';
 
   } else {
-    menu.style.top = '-400px';
+    menu.style.top = '-410px';
   }
 }
 

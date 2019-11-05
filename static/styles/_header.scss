@@ -2,14 +2,17 @@
   background-color: black;
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
+  box-shadow: 0 4px 9px #5E5E5E;
   height: 400px;
   position: absolute;
-  top: -400px;
+  top: -410px;
   transition: top 0.5s ease-in-out;
   width: 100%;
   z-index: 1000;
 
   .menulist {
+    padding: 0;
+    margin: 0;
     text-align: center;
     width: 100%;
 
