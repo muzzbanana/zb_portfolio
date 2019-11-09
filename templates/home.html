@@ -2,20 +2,27 @@
 {% block main %}
   <div class="home-container grid">
     <div class="papers">
-      <div class="paper-1 paper"></div>
-      <div class="paper-2 paper"></div>
-      <div class="paper-3 paper"></div>
-      <div class="paper-4 paper"></div>
-    </div>
-    <div class="homepage-text">
-        Hi, I’m <span style="color: #FCFC00; font-weight: 900">Zach!</span> I’m a 
-        <span style="color: #FCFC00; font-weight: 900">Digital Product Designer and Strategist</span>
-        based in  <span style="color: #FCFC00; font-weight: 900">Portland, OR</span>.
-        I work to design creative solutions that are accessible to all.
-        <a href="./work"><button class="view-my-work-button">
-          <p class="button-text">View my work &nbsp&nbsp&nbsp&nbsp</p>
-          <img class="arrow" src="../static/images/Icon/arrow_with_circle.png">
-        </button></a>
+      <h1 class="hello">hello</h1>
+      <div class="toggle-container">
+          <input class="checkbox" id="checkbox1" type="checkbox"/>
+          <label for="checkbox1" class="checkbox-label" onclick="lightToggle()">
+            <span class="off">ON</span>
+            <span class="on">OFF</span>
+          </label>
+        </div>
+        <div class="homepage-text">
+            Hi, I’m <span style="color: #FEFE00; font-weight: 900">Zach!</span> I’m a 
+            <span style="color: #FEFE00; font-weight: 900">Portland Based Digital Product Designer </span> and
+            <span style="color: #FEFE00; font-weight: 900">Strategist. </span>
+            <br><br>
+            I'm <span style="color: #FEFE00; font-weight: 900">Hard Working, Self Motivated,</span> and
+            <span style="color: #FEFE00; font-weight: 900">Naturally Curious.</span>
+            I'm interested in emerging technologies and their power to help all people.
+            <a href="./work"><button class="view-my-work-button">
+              <p class="button-text">View my work &nbsp&nbsp&nbsp&nbsp</p>
+              <img class="arrow" src="../static/images/Icon/arrow_with_circle.png">
+            </button></a>
+        </div>
     </div>
   </div>
 {% endblock %}

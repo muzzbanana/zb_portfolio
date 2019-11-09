@@ -34,3 +34,27 @@ function widthChange(mql) {
   }
 }
 
+function hello() {
+	var el = document.querySelector(".hello").eq(0);
+	var text = el.text();
+	var markup = '';
+	for(i = 0; i < text.length; i++) {
+		markup += '<span>'+text[i]+'</span>';
+	}
+	el.html(markup);
+};
+
+
+function lightToggle() {
+  const lights = document.querySelector(".hello");
+  const toggle = document.querySelector(".on");
+  const toggleStyle = window.getComputedStyle(toggle);
+  const opacity = toggleStyle.getPropertyValue('opacity');
+  if (opacity === '1') {
+    lights.style.animation = 'blur 6s linear infinite both, fade 10ms ease-in-out alternate infinite both';
+    lights.style.color = '#FEFE00';
+  } else {
+    lights.style.animation = 'blur 6s linear infinite both';
+    lights.style.color = 'gray';
+  }
+}
