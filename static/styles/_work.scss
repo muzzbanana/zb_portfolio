@@ -5,14 +5,21 @@
   left: 0;
   bottom: 0;
 
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 27.81px;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+  }
+
   .css-carousel {
       height: 100%;
-
-      .carousel-slides {
-        height: 45%;
-        margin: 15%;
-        width: 70vw;
-      }
 
       .carousel-inner,
       .carousel-item {
@@ -32,15 +39,31 @@
               text-align: center;
 
               .title {
-                  display: table-cell;
-                  vertical-align: middle;
-                  color: #fff;
-                  font-size: 70px;
-                  height: 100px;
-                  font-weight: 900;
-                  letter-spacing: 10px;
-                  text-transform: uppercase;
-                  background-color: rgba(#000, 0.3);
+                display: table-cell;
+                height: 40vh;
+                margin-left: 10vw;
+                margin-top: 2vh;
+                padding: 20px;
+                vertical-align: middle;
+                width: 40vw;
+              }
+
+              .human-slide {
+                border: 2px solid #fff;
+                background: linear-gradient(#0C0085, #000);
+                color: #fff;
+              }
+
+              .ink-envy-slide {
+                border: 2px solid #000;
+                color: #000;
+                background: #fff;
+              }
+
+              .estate-slide {
+                background: #000;
+                border: 2px solid #fefe00;
+                color: #fff;
               }
           }
 
@@ -91,12 +114,12 @@ $css-carousel: (
         z-index: 1;
 
         label {
+            background: #A9A8A8;
+            border-radius: 50%;
             display: inline-block;
             margin: 0 10px;
             width: 20px;
             height: 20px;
-            border: 2px solid #000;
-            border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.25s;
         }
@@ -105,12 +128,13 @@ $css-carousel: (
     // active carousel navigation
     @for $i from 1 through map_get($css-carousel, slides) {
         #carousel-#{$i}:checked ~ .carousel-nav label[for="carousel-#{$i}"] {
-            background-color: blue;
+            background-color: #FEFE00;
         }
     }
 
     // carousel slides
     .carousel-slides {
+        height: 100%;
         width: 100%;
         overflow: hidden;
 
@@ -119,9 +143,41 @@ $css-carousel: (
             transition: margin map_get($css-carousel, transition-speed);
         }
 
+        .ink-envy-bg {
+            background: #090067;
+        }
+
+        .human-bg {
+            background: #000;
+        }
+
+        .estate-bg {
+            background: #fff;
+        }
+
         .carousel-item {
             float: left;
             width: (100% / map_get($css-carousel, slides));
+
+            .carousel-image {
+                height: 60vh;
+                margin-left: 30vw;
+                margin-top: 10vh;
+                width: 70vw;
+
+            }
+
+            .ink-envy-image {
+                background: url('../images/ink_envy_carousel.png');
+            }
+
+            .human-image {
+                background: url('../images/giving_tree.png');
+            }
+
+            .estate-image {
+                background: url('../images/real_estate_carousel.png');
+            }
         }
     }
 

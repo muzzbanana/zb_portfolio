@@ -1,0 +1,98 @@
+.about-container {
+  .about-carousel {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .about-title {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: center;
+  }
+  .about-para {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 8;
+  }
+  .about-LA {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 10;
+  }
+  .about-LA-image {
+    grid-column-start: 7;
+    grid-column-end: 12;
+    grid-row-start: 8;
+    grid-row-end: 10;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+  .about-reed {
+    grid-column-start: 7;
+    grid-column-end: 12;
+    grid-row-start: 10;
+    grid-row-end: 12;
+  }
+  .about-reed-image {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 10;
+    grid-row-end: 12;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+  .about-after-reed {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 12;
+    grid-row-end: 14;
+  }
+  .about-after-reed-image {
+    grid-column-start: 7;
+    grid-column-end: 12;
+    grid-row-start: 12;
+    grid-row-end: 14;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+  .about-articles {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 15;
+    grid-row-end: 16;
+    text-align: center;
+  }
+  .about-code-of-ethics {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 16;
+    grid-row-end: 18;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
+    }
+  }
+}

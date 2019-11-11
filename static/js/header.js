@@ -46,15 +46,19 @@ function hello() {
 
 
 function lightToggle() {
+  const homeContainer = document.querySelector(".home-container");
   const lights = document.querySelector(".hello");
   const toggle = document.querySelector(".on");
   const toggleStyle = window.getComputedStyle(toggle);
   const opacity = toggleStyle.getPropertyValue('opacity');
+  // const containerStyle = window.getComputedStyle(homeContainer);
   if (opacity === '1') {
     lights.style.animation = 'blur 6s linear infinite both, fade 10ms ease-in-out alternate infinite both';
     lights.style.color = '#FEFE00';
+    homeContainer.style.filter = 'brightness(1.2)'
   } else {
     lights.style.animation = 'blur 6s linear infinite both';
     lights.style.color = 'gray';
+    homeContainer.style.filter = 'brightness(1.0)'
   }
 }
