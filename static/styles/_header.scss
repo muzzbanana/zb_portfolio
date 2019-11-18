@@ -96,23 +96,27 @@
     }
 
     .contact-me-button {
-      background-color: #0C0085;
-      border:1px solid #fff;
+      background-color: #fff;
+      border: 2px solid #000;
+      border-radius: 30px;
       cursor: pointer;
-      color: #ffffff;
-      font-size: 20px;
+      color:#000;
+      font-family: 'Muli';
+      font-size: 17px;
       font-weight: bold;
-      margin-top: -12px;
-      padding: 15px 40px;
-      text-decoration: none;
+      grid-column-start: 3;
+      line-height: 21px;
+      margin-top: -8px;
+      padding: 11px 22px;
+      text-decoration:none;
       display: flex;
       justify-content: center;
+
+      svg {
+          margin-top: 3px;
+      }
     }
   }
-
-  // .header-nav.responsive {
-  //   position: relative;
-  // }
 
   .header-nav a:not(:last-child) {
     display: none;
@@ -175,7 +179,11 @@
   }
 
   .header-wrapper {
-    height: 100px;
+    height: 75px;
+
+    .header-nav {
+      margin-top: 0;
+    }
 
     .header-title {
       font-size: 30px;

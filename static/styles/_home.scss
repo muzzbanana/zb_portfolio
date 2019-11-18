@@ -28,8 +28,10 @@ html, body {
 
         .hello {
             color: $neonColour1;
+            font-family: 'Monoton', cursive;
             text-transform: uppercase;
             font-size: 12vw;
+            height: 18vw;
             text-shadow: 0 0 .1em;
             animation: blur 6s linear infinite both;
             
@@ -216,7 +218,7 @@ html, body {
         border-radius: 30px;
         cursor: pointer;
         color:#fff;
-        font-weight: bold;
+        // font-weight: bold;
         grid-column-start: 3;
         margin: 50px auto;
         padding: 0 20px;
@@ -259,6 +261,7 @@ html, body {
 
             .hello {
                 font-size: 8vw;
+                height: 12vw;
                 margin-top: 125px;
 
                 &::before,
@@ -315,7 +318,7 @@ html, body {
                 grid-column-start: 8;
                 grid-column-end: 10;
                 margin: 50px 0;
-                padding: 0 27px 0 40px;
+                padding: -1px 27px 0 40px;
 
                 .button-text {
                     font-size: 20px;

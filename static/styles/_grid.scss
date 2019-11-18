@@ -3,5 +3,5 @@
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1em;
   grid-row-gap: 1em;
-  grid-auto-rows: 100px; 
+  // grid-auto-rows: calc(100px + calc(1440 / 100vw); 
 }

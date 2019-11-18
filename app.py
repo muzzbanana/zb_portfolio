@@ -46,6 +46,11 @@ def ink_envy():
     name = 'ink-envy'
     return render_template('ink-envy.html', name=name)
 
+@app.route('/resume', methods=['GET'])
+def resume():
+    name = 'resume'
+    return render_template('resume.html', name=name)
+
 @app.route('/about', methods=['GET'])
 def about():
     name = 'about'
@@ -59,7 +64,7 @@ def code_of_ethics():
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
 
 
 

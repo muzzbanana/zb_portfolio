@@ -43,6 +43,7 @@
                 height: 40vh;
                 margin-left: 10vw;
                 margin-top: 2vh;
+                max-width: 600px;
                 padding: 20px;
                 vertical-align: middle;
                 width: 40vw;
@@ -169,14 +170,17 @@ $css-carousel: (
 
             .ink-envy-image {
                 background: url('../images/ink_envy_carousel.png');
+                background-repeat: no-repeat;
             }
 
             .human-image {
                 background: url('../images/giving_tree.png');
+                background-repeat: no-repeat;
             }
 
             .estate-image {
                 background: url('../images/real_estate_carousel.png');
+                background-repeat: no-repeat;
             }
         }
     }
