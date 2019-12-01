@@ -51,7 +51,6 @@ function lightToggle() {
   const toggle = document.querySelector(".on");
   const toggleStyle = window.getComputedStyle(toggle);
   const opacity = toggleStyle.getPropertyValue('opacity');
-  // const containerStyle = window.getComputedStyle(homeContainer);
   if (opacity === '1') {
     lights.style.animation = 'blur 6s linear infinite both, fade 10ms ease-in-out alternate infinite both';
     lights.style.color = '#FEFE00';
@@ -62,3 +61,67 @@ function lightToggle() {
     homeContainer.style.filter = 'brightness(1.0)'
   }
 }
+
+function resumeBar() {
+  const skillsContainer = document.querySelector(".skills-block");
+  const skillsStyle = window.getComputedStyle(skillsContainer);
+  const chevron = document.querySelector(".chevron");
+  const contact = document.querySelector(".contact-details");
+  const design = document.querySelector(".design-details");
+  const tools = document.querySelector(".tools-details");
+  const column = skillsStyle.getPropertyValue('grid-column-end');
+
+  if (column === '1') {
+    skillsContainer.style.gridColumnEnd = '7';
+    skillsContainer.style.zIndex = '3';
+    chevron.style.float = 'right';
+    chevron.style.marginRight = '20px';
+    chevron.style.rotate = '180deg';
+    contact.style.display = 'block';
+    design.style.display = 'block';
+    tools.style.display = 'block';
+  } else {
+    skillsContainer.style.gridColumnEnd = '1';
+    skillsContainer.style.zIndex = '4';
+    chevron.style.float = 'none';
+    chevron.style.marginRight = '0';
+    chevron.style.rotate = '0deg';
+    contact.style.display = 'none';
+    design.style.display = 'none';
+    tools.style.display = 'none';
+  }
+}
+
+window.addEventListener('resize', resizeScreen);
+
+function resizeScreen() {
+  const skillsContainer = document.querySelector(".skills-block");
+  const chevron = document.querySelector(".chevron");
+  const contact = document.querySelector(".contact-details");
+  const design = document.querySelector(".design-details");
+  const tools = document.querySelector(".tools-details");
+
+  console.log('resizeScreen', window.innerWidth);
+  if (+window.innerWidth >= 768) {
+    chevron.style.display = 'none';
+    skillsContainer.style.zIndex = '3';
+    skillsContainer.style.gridColumnEnd = '4';
+    contact.style.display = 'block';
+    design.style.display = 'block';
+    tools.style.display = 'block';
+  } else {
+    skillsContainer.style.gridColumnEnd = '1';
+    skillsContainer.style.zIndex = '4';
+    chevron.style.display = 'block';
+    chevron.style.float = 'none';
+    chevron.style.marginRight = '0';
+    chevron.style.rotate = '0deg';
+    contact.style.display = 'none';
+    design.style.display = 'none';
+    tools.style.display = 'none';
+  }
+}
+
+window.onload = function() {
+  resizeScreen();
+};
