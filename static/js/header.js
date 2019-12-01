@@ -72,7 +72,7 @@ function resumeBar() {
   const column = skillsStyle.getPropertyValue('grid-column-end');
 
   if (column === '1') {
-    skillsContainer.style.gridColumnEnd = '7';
+    skillsContainer.style.gridColumnEnd = '5';
     skillsContainer.style.zIndex = '3';
     chevron.style.float = 'right';
     chevron.style.marginRight = '20px';
@@ -100,15 +100,36 @@ function resizeScreen() {
   const contact = document.querySelector(".contact-details");
   const design = document.querySelector(".design-details");
   const tools = document.querySelector(".tools-details");
+  const download = document.querySelector(".download-block");
+  const downloadButton = document.querySelector(".download-button");
+  const title = document.querySelector(".title-block");
+  const experience = document.querySelector(".experience-block");
+  const education = document.querySelector(".education-block");
+  const blackBG = document.querySelector(".black-bg");
 
   console.log('resizeScreen', window.innerWidth);
   if (+window.innerWidth >= 768) {
     chevron.style.display = 'none';
     skillsContainer.style.zIndex = '3';
     skillsContainer.style.gridColumnEnd = '4';
+    title.style.gridColumnStart = '3';
+    download.style.gridColumnEnd = '4';
+    experience.style.gridColumnStart = '4';
+    education.style.gridColumnStart = '4';
+    blackBG.style.gridColumnStart = '3';
     contact.style.display = 'block';
     design.style.display = 'block';
     tools.style.display = 'block';
+    downloadButton.style.display = 'flex';
+
+    if ( +window.innerWidth < 1200) {
+      skillsContainer.style.gridColumnEnd = '5';
+      title.style.gridColumnStart = '4';
+      download.style.gridColumnEnd = '5';
+      experience.style.gridColumnStart = '5';
+      education.style.gridColumnStart = '5';
+      blackBG.style.gridColumnStart = '4';
+    }
   } else {
     skillsContainer.style.gridColumnEnd = '1';
     skillsContainer.style.zIndex = '4';
@@ -119,6 +140,11 @@ function resizeScreen() {
     contact.style.display = 'none';
     design.style.display = 'none';
     tools.style.display = 'none';
+    title.style.gridColumnStart = '1';
+    downloadButton.style.display = 'none';
+    experience.style.gridColumnStart = '2';
+    education.style.gridColumnStart = '2';
+    blackBG.style.gridColumnStart = '1';
   }
 }
 
