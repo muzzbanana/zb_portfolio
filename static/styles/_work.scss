@@ -177,10 +177,6 @@ $css-carousel: (
             background: #000;
         }
 
-        .estate-bg {
-            background: #fff;
-        }
-
         .carousel-item {
             float: left;
             width: (100% / map_get($css-carousel, slides));
@@ -208,13 +204,6 @@ $css-carousel: (
 
             .human-image {
                 background: url('../images/humans_slide.png');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-            }
-
-            .estate-image {
-                background: url('../images/real_estate_carousel.png');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;

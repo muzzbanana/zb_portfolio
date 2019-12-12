@@ -1,160 +1,18 @@
 .about-container {
-  .about-carousel {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 2;
+  .profile-photo {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 1;
     grid-row-end: 4;
-  }
 
-  .about-css-carousel {
-    height: 100%;
-
-    .about-carousel-inner,
-    .about-carousel-item {
-        height: 100%;
+    .circle-container {
+      background: url(../images/profile_picture.jpg);
+      border: 3px solid #0C0085;
+      border-radius: 300px;
+      height: 250px;
+      margin: 50px auto 0;
+      width: 250px;
     }
-
-    .about-carousel-item {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      position: relative;
-    }
-
-        .credit {
-            display: none;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            padding: 20px;
-            color: #fff;
-            font-size: 14px;
-
-            a {
-                color: #fff;
-                text-decoration: underline;
-                font-weight: 700;
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-        
-
-  $about-css-carousel: (
-      slides: 8,
-      transition-speed: 1s
-  );
-
-  .about-css-carousel {
-      position: relative;
-
-      // hide input radio fields
-      input[name="about-carousel"] {
-          display: none;
-      }
-
-      // carousel navigation
-      .about-carousel-nav {
-          position: fixed;
-          bottom: 50px;
-          left: 0;
-          right: 0;
-          text-align: center;
-          z-index: 1;
-
-          label {
-              background: #A9A8A8;
-              border-radius: 50%;
-              display: inline-block;
-              margin: 0 10px;
-              width: 20px;
-              height: 20px;
-              cursor: pointer;
-              transition: background-color 0.25s;
-          }
-      }
-
-      // active carousel navigation
-      @for $i from 1 through map_get($about-css-carousel, slides) {
-          #about-carousel-#{$i}:checked ~ .about-carousel-nav label[for="about-carousel-#{$i}"] {
-              background-color: #FEFE00;
-          }
-      }
-
-      // carousel slides
-      .about-carousel-slides {
-          height: 308px;
-          width: 3200px;
-          overflow: hidden;
-
-          .about-carousel-inner {
-              width: 3200px;
-              transition: margin map_get($about-css-carousel, transition-speed);
-          }
-
-          .about-carousel-item {
-              float: left;
-              width: (3200px / map_get($about-css-carousel, slides));
-
-              .about-carousel-image {
-                height: 308px;
-                margin-left: 0;
-                margin-top: 0;
-                width: 400px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-
-              .first-image {
-                  background: url('../images/cuca_1.png');
-                  margin-right: 100px;
-              }
-
-              .second-image {
-                  background: url('../images/shaz_1.png');
-                  margin-right: 100px;
-              }
-
-              .third-image {
-                  background: url('../images/puppies.png');
-                  margin-right: 100px;
-              }
-              .fourth-image {
-                background: url('../images/cuca_2.png');
-                margin-right: 100px;
-              }
-              .fifth-image {
-                background: url('../images/fritz.png');
-                margin-right: 100px;
-              }
-              .sixth-image {
-                background: url('../images/fritz_django.png');
-                margin-right: 100px;
-              }
-              .seventh-image {
-                background: url('../images/django.png');
-                margin-right: 100px;
-              }
-              .eighth-image {
-                background: url('../images/shaz_2.png');
-              }
-          }
-      }
-
-      // active carousel slides
-      @for $i from 1 through map_get($about-css-carousel, slides) {
-          #about-carousel-#{$i}:checked ~ .about-carousel-slides .about-carousel-inner {
-              @if $i == 8 {
-                margin-left: 0;
-              } @else {
-                margin-left: (-12.5% * ($i - 1));
-              }
-          }
-      }
   }
 
   .about-title {

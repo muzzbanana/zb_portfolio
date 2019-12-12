@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
 from flask_assets import Environment, Bundle
+from htmlmin.main import minify
 import os.path
 
 app = Flask(__name__)
@@ -25,6 +26,19 @@ def dated_url_for(endpoint, **values):
                                  endpoint, filename)
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
+
+@app.after_request
+def response_minify(response):
+    """
+    minify html response to decrease site traffic
+    """
+    if response.content_type == u'text/html; charset=utf-8':
+        response.set_data(
+            minify(response.get_data(as_text=True))
+        )
+
+        return response
+    return response
 
 @app.route('/', methods=['GET'])
 def home():
@@ -64,7 +78,7 @@ def code_of_ethics():
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug=True, port=8000)
+    app.run(debug=True)
 
 
 
