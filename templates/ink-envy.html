@@ -1,0 +1,276 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<div class="ink-envy-container grid">
+    <div class="hero-container">
+        <div class="hero-image-container">
+            <img class="hero-image" src="../static/images/ink_envy_hero_image.png">
+        </div>
+        <div class="hero-title">
+            <h1>Ink Envy</h1>
+        </div>
+        <a href="" class="proto-button">View Prototype</a>
+    </div>
+    <div class="mobile-note">
+        <p>
+            Note: This case study has been modified from its original version to improve it’s performance on mobile.
+            To view the original case study, please use a desktop or tablet.
+        </p>
+    </div>
+  <div class="ink-envy-title">
+      <h1>Overview</h1>
+  </div>
+    <div class="project-brief">
+        <h2>Project Brief</h2>
+        <p>Ink Envy was the second app I created as a part of the Career Foundry UX Immersion course.
+        The initial idea was to help tattoo enthusiasts find inspiration for their next tattoo, but
+        after conducting extensive research and interviewing a sample of my user demographic, the app
+        expanded to include many features around traveling for both customers and artists.<br><br>
+        Using Ink Envy, tattoo enthusiasts can stay up to date with their favorite artists’ work,
+        book appointments, save photos for later inspiration, and opt in for notifications about
+        traveling tattoo artists.</p>
+    </div>
+    <div class="my-role">
+        <h2>My role</h2>
+        <p>Ink Envy was an entirely independent project. I was responsible for everything from researching
+            the competitive market, to designing the finished user interface. I conducted research,
+            strategized effective solutions, designed the the interface, and conducted user testing with
+            my target audience at multiple stages.<br><br></p>
+        <h2>Timeline and Tools</h2>
+        <p>July - October 2019<br>
+           Paper-pencil, Sketch, Invision</p>
+    </div>
+    <div class="the-challenge">
+        <h1>The Challenge</h1>
+        <p>Tattoos are incredibly popular - 36% of 18-25 year olds and 40% of 36-40 year old have tattoos.
+           It is a 1.65 billion dollar business in America. The challenge was to create an app that helps
+           users explore inspiration for tattoos, connect with artists, and reduce regret.</p>
+        <p class="footnote">All statistics can be found here:
+           https://www.statisticbrain.com/tattoo-statistics/</p>
+    </div>
+    <div class="feats-for-users">
+        <h2>Features for Users<br><br></h2>
+        <ul class="feats-for-users-list">
+          <li>Follow Users</li>
+          <li>Book Appointments</li>
+          <li>Save Photos</li>
+          <li>Massage Artists</li>
+          <li>Read Reviews</li>
+          <li>Connect with Traveling Artists</li>
+         </ul>
+    </div>
+    <div class="feats-for-users-image">
+        <img src="../static/images/feats_for_users.png">
+    </div>
+    <div class="feats-for-artists-image">
+        <img src="../static/images/feats_for_artists.png">
+    </div>
+    <div class="feats-for-artists">
+        <h2>Features for Users<br><br></h2>
+        <ul class="feats-for-artists-list">
+            <li>Book More Appointments</li>
+            <li>Set a travel schedule and get appointments before you leave!</li>
+            <li>Reach more customers</li>
+            <li>Integrate with Instagram and publish photos on both platforms in one place</li>
+            <li>Get certified reviews and enhance your trust with customers around the world</li>
+            </ul>
+    </div>
+    <div class="the-approach">
+        <h1>The Approach</h1>
+        <p>Ink Envy was designed with a user-centric mobile first approach, based on heuristic
+            research, validated assumptions and repeated user testing.</p>
+    </div>
+    <div class="approach-diagram">
+        <img src="../static/images/approach_diagram.png">
+    </div>
+
+    <div class="competitive-research">
+        <h1>Competitive Research</h1>
+    </div>
+    <div class="introduction">
+        <h2>Introduction</h2>
+        <p>To begin the project, I began conducting extensive research into the existing
+            market of Tattoo related apps. During this research I discovered two important
+            direct competitors - InkHunter and Tattoodo.  I then began to analyze their
+            apps and marketing strategies in order to strategize ways my app could secure a
+            place in the market.</p>
+    </div>
+    <div class="top-competitors">
+        <p>InkHunter<br>
+            A powerful augmented reality app that allows users to use their phone’s camera to
+            test tattoo ideas in real time.<br><br>
+            While the AR portion of InkHunter works very well and is simple to learn, the app is
+            missing some major features that can cause friction in the user experience.<br><br>
+            For example, the app advertises that users can “follow” artists, but the follow button
+            just redirects users to the artists Instagram page. Even worse, the app allows users to
+            continue as guests, but does not allow them to create accounts in app. Meaning, if you
+            skip the create account section, you cannot go back and create an account unless you
+            delete and re-download the app.<br><br>
+        </p>
+    </div>
+    <div class="top-competitors-image">
+        <img src="../static/images/ink_hunter.png">
+    </div>
+    <div class="ink-hunter-usability-image">
+        <img src="../static/images/ink_hunter_dashboard.png">
+    </div>
+    <div class="ink-hunter-differentiation-image">
+        <img src="../static/images/ink_hunter_differentiation.png">
+    </div>
+
+    <div class="tattoodo-image">
+        <img src="../static/images/tattoodo.png">
+    </div>
+    <div class="tattoodo-usability-image">
+        <img src="../static/images/ink_hunter_dashboard.png">
+    </div>
+    <div class="tattoodo-differentiation-image">
+        <img src="../static/images/ink_hunter_differentiation.png">
+    </div>
+    <div class="tattoodo">
+        <p>Tattoodo<br>
+            A large desktop and mobile platform that helps tattoo artists display their work and
+            connect with customers. Over 300,000 artists have signed up to display their work on
+            Tattoodo and they have raised over $15 million in funding since 2013.<br><br>
+            Tattoodo’s strengths lie in it’s booking platform. It is the only Tattoo focused app
+            that allows users to connect with real tattoo artists in the app and book appointments
+            directly with them.<br><br>
+            However, the app has some significant usability problems. For one, the “profile” page’s
+            purpose seems unclear and overlaps with the “Saved photos” page. The app also does not
+            allow users to search by location and style at the same time, which can cause friction
+            with the user experience.<br><br>
+            Finally, the overall aesthetic of the app feels antiquated and uninspiring, which means
+            the app could be surmounted by an app with a more friendly user experience and a more
+            aesthetically pleasing User Interface.<br><br>
+        </p>
+    </div>
+    
+    <div class="user-research">
+        <h1>User Research</h1>
+    </div>
+    <div class="user-research-summary">
+        <h2>Summary</h2>
+        <p>Once I had completed my market study, I began researching my target audience by interviewing people
+            in my netwok with tattoos or an interest in getting tattoos. This gave me further insights into
+            their knowledge of existing apps, their needs, their goals, and their frustrations.  I then began
+            to analyze the data by creating an affinity map, three user personas, and two user journeys. Two
+            user personas represented Customers or Users and One user Persona represented an Artist as I thought
+            it was important to understand both perspectives.</p>
+    </div>
+    <div class="user-research-image">
+        <img src="../static/images/user_research.png">
+    </div>
+    <div class="wireframes-and-proto">
+        <h1>Wireframes and Prototyping</h1>
+    </div>
+    <div class="wireframes-and-proto-intro">
+        <h2>Introduction</h2>
+        <p>After a long research process, it was time to begin planning out my app. I started by designing and
+            curating a card sorting exercise with a sample of my target audience. Then, I began sketching low fidelity
+            wireframes using a notebook and a pen, and finally, I turned those hand drawings into high fidelity
+            wireframes using Sketch.</p>
+    </div>
+    <div class="wireframes-and-proto-images">
+        <img src="../static/images/first_sketches_2.png">
+        <img src="../static/images/first_sketches_1.png">
+    </div>
+    <div class="first-wireframes">
+        <h2>High Fidelity Wireframes</h2>
+    </div>
+    <div class="first-wireframes-images">
+        <img src="../static/images/first_wireframes_1.png">
+        <!-- <img src="../static/images/first_wireframes_2.png">
+        <img src="../static/images/first_wireframes_3.png"> -->
+    </div>
+    <div class="a-b-testing">
+        <h1>Usability and A/B Testing</h1>
+    </div>
+    <div class="a-b-testing-intro">
+        <h1>Introduction</h1>
+        <p>Once I had finished creating a high fidelity prototype, I began designing a usability test to see how
+            easily real people within my target audience could complete specific tasks within the app. All of the
+            tests took place in person and lasted between 10-20 minutes.<br><br>
+            I also ran an A/B preference test with 20 volunteers to see if users preferred a dark
+            or light theme with 20 volunteers. 
+        </p>
+    </div>
+    <div class="a-b-testing-intro-image">
+        <img src="../static/images/a_b_testing.png">
+    </div>
+    <div class="a-b-testing-script">
+        <h1>Script</h1>
+        <p>For a detailed look at the Test Script, including a list of all tasks tested, feel free to explore
+            the complete script <a href="./">here.</a></p>
+    </div>
+    <div class="a-b-testing-methodology">
+        <h1>Methodology</h1>
+        <p>All 6 tests were taken in person, on my personal computer, with an offline version of my app. All tests were
+            recorded using Cloud.io screen recording software.</p>
+    </div>
+    <div class="a-b-testing-results">
+        <h1>Results</h1>
+        <p>After conducting 6 usability tests and 1 A/B preference test, I have found 2 high priority usability issues
+            with my design,  2 medium priority issues, and 1 low priority issue. Moreover, I have found that users are
+            equally in favor of a dark or light theme. While the light theme allows the colors and pictures to “pop”
+            more, the dark theme is easier on the eyes and makes the app stand out more. Ideally, I would like to build
+            both themes and allow users to switch back and forth, but for now, I will proceed with the dark theme. </p>
+    </div>
+
+    <div class="redefining-design">
+        <h1>Redefining the Design</h1>
+    </div>
+    <div class="redefining-design-intro">
+        <p>Once I had finished conducting my usability tests, organizing the data, and ranking the errors by their level of
+            severity, I began to refine the final designs for Ink Envy. This involved making significant changes to the
+            Artist’s profile pages, changing icons, and adjusting the the contrast on some buttons to increase the
+            accessibility of the app.</p>
+    </div>
+    <div class="change-1-image">
+        <img src="../static/images/change_1_before.png">
+        <img src="../static/images/change_1_after.png">
+    </div>
+    <div class="change-1">
+        <h2>Change #1</h2>
+        <ul class="change-1-list">
+            <li>I changed the booking icon to a button to emphasize it as a CTA.</li>
+            <li>I changed the messaging icon to make it more intuitive.</li>
+            <li>I split the name and the location of the artist into two lines to make it easier to differentiate between the two pieces of information.</li>
+            <li>I changed all of my navigation icons to more pixel perfect versions.</li>
+            <li>I enhanced the size of the text of the tags to make them more accessible.</li>
+        </ul>
+    </div>
+    <div class="change-2">
+        <h2>Change #2</h2>
+        <ul class="change-2-list">
+            <li>I changed the title of the screen to “Appointments”.</li>
+            <li>I added a message button to the booking card to make it easier to contact artists from your bookings page.</li>
+            <li>I increased the size of the copy on the bookings card to make it more accessible.</li>
+            <li>I changed the suggested artists menu to a Past Appointments menu. Despite not having evidince for this, I theorized that users with existing appointments would not want to be pressured into booking more appointments.</li>
+            <li>I made the past appointments a revolving carousel because it is more aesthetically pleasing.</li>
+        </ul>
+    </div>
+    <div class="change-2-image">
+            <img src="../static/images/change_2_before.png">
+            <img src="../static/images/change_2_after.png">
+    </div>
+
+    <div class="change-3-image">
+            <img src="../static/images/change_3_before.png">
+            <img src="../static/images/change_3_after.png">
+    </div>
+    <div class="change-3">
+        <h2>Change #3</h2>
+        <ul class="change-3-list">
+            <li>I added 3 new buttons, including a new Book Appointment CTA.</li>
+            <li>I added tags that help identify an artist’s specialties and allow users to explore similar artists more easily.</li>
+            <li>I added an outline for the star and dollar ratings to give users more context. This way, the ratings would have tangible meaning for the users.</li>
+        </ul>
+    </div>
+    <div class="finished-product">
+        <h2>Finished Product</h2>
+    </div>
+    <div class="finished-product-images">
+        <img src="../static/images/finished_product_photos.png">
+    </div>
+</div>
+{% endblock %}

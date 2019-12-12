@@ -1,26 +1,60 @@
 {% extends 'base.html' %}
 
 {% block main %}
-  <div class="work-container">
-    <a href="./">
-      <div class="ink-card  card">
-        <h1>Ink Envy</h1>
-      </div>
-    </a>
-    <a href="./">
-      <div class="roaster-card card">
-        <h1>RoasterTools</h1>
-      </div>
-    </a>
-    <a href="./">
-      <div class="hahu-card card">
-        <h1>HaHu</h1>
-      </div>
-    </a>
-    <a href="./">
-      <div class="ui-card card">
-        <h1>UI Project</h1>
-      </div>   
-    </a>
+<div class="content">
+    <div class="css-carousel">
+  
+        <!-- carousel controls -->
+        <input type="radio" name="carousel" id="carousel-1" checked />
+        <input type="radio" name="carousel" id="carousel-2" />
+        <input type="radio" name="carousel" id="carousel-3" />  
+        <!-- carousel navigation -->
+        <div class="carousel-nav">
+            <label for="carousel-1"></label>
+            <label for="carousel-2"></label>
+            <label for="carousel-3"></label>
+        </div>
+  
+        <!-- carousel slides -->
+        <div class="carousel-slides">
+            <div class="carousel-inner">
+                <div class="carousel-item human-bg">
+                    <div class="carousel-image human-image">
+                    </div>
+                    <div class="center">
+                        <div class="title human-slide">
+                            <h1>I Design for Humans</h1>
+                            <h2>Approach</h2>
+                            <p>
+                                My process is centered around lean methodology and user-centric approaches.
+                                I shape my designs through heuristic research, validated assumptions, and
+                                repeated user testing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ink-envy-bg">
+                    <a href="./ink-envy">
+                        <div class="carousel-image ink-envy-image"></div>
+                        <div class="center">
+                            <div class="title ink-envy-slide">
+                                <h1>Ink Envy</h1>
+                                <p>
+                                    Ink Envy was a mobile based platform I designed  as a part of the Career
+                                    Foundry UX immersion course.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item estate-bg">
+                    <div class="carousel-image estate-image"></div>
+                    <div class="center">
+                        <div class="title estate-slide">Project</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 {% endblock %}

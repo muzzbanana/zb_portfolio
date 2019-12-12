@@ -1,48 +1,205 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway';
+.drop-down-menu {
+  background-color: black;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  box-shadow: 0 4px 9px #5E5E5E;
+  height: 400px;
+  position: absolute;
+  top: -410px;
+  transition: top 0.5s ease-in-out;
+  width: 100%;
+  z-index: 1000;
 
-.header-wrapper {
-  border-bottom: #000 solid 1px;
-  display: flex;
-  max-width: 100%;
+  .menulist {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
 
-  .header-nav {
-    ul {
-      display: flex;
-      margin-right: 6px;
-      margin-top: 0;
-      position: absolute;
-      right: 0;
-      top: 25px;
-    }
-    
-    li {
-      list-style: none;
-      margin-right: 34px;
-    
-      a {
-        text-decoration: none;
-        padding-bottom: 8px;
-        text-transform: uppercase;
-        color: #333;
-        font-family: 'Raleway', serif;
-    
-        &:hover {
-          border-bottom: 2px solid #000;
-        }
-    
-        &:visited {
-          color: #000;
-        }
+    .menuitems {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-decoration: none;
+      list-style: none; 
+      font-weight: 300;
+      font-size: 24px;
+      display: inline-block;
+      position: relative;	
+      text-align: center;
+      color: #fff;
+      opacity: 1;
+      transition: all .5s ease-in-out;
+      top: 130px;
+
+      &:hover {
+        color: #FCFC00;
       }
     }
   }
+
+  .close-button {
+    top: 13px;
+    position: absolute;
+    right: 26px;
+  }
+}
+
+.header-wrapper {
+  align-items: center;
+  background: linear-gradient(0.25turn, #0C0085, #000);
+  box-shadow: 0px 2px 4px #000;
+  font-family: 'Muli';
+  height: 54px;
+  display: flex;
+  position: relative;
+
+  .header-title {
+    color: #fff;
+    display: flex;
+    font-size: 17px;
+    font-weight: 900;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 1001;
+
+    .design {
+      display: none;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    font-size: 24px;
+    margin-right: 6px;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    
+    a {
+      margin-right: 34px;
+      text-decoration: none;
+      padding-bottom: 8px;
+      color: #fff;
   
-  .logo {
-    margin-left: 30px;
-    background-size: 40px;
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+  
+      &:visited {
+        color: #fff;
+      }
+    }
+
+    .contact-me-button {
+      background-color: #fff;
+      border: 2px solid #000;
+      border-radius: 30px;
+      cursor: pointer;
+      color:#000;
+      font-family: 'Muli';
+      font-size: 17px;
+      font-weight: bold;
+      grid-column-start: 3;
+      line-height: 21px;
+      margin-top: -8px;
+      padding: 11px 22px;
+      text-decoration:none;
+      display: flex;
+      justify-content: center;
+
+      svg {
+          margin-top: 3px;
+      }
+    }
+  }
+
+  .header-nav a:not(:last-child) {
+    display: none;
+  }
+
+  .header-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .header-nav a.icon {
+    float: right;
+    display: flex;
+    margin-right: 26px;
+    margin-top: -11px;
+
+    &:hover {
+      border-bottom: none;
+
+      svg {
+
+        g {
+          stroke: #FCFC00;
+        }
+      }
+    }
+
+    &:visited {
+      border-bottom: none;
+      color: #FCFC00;
+    }
+  }
+
+  @include breakpoint(l) {
+    .header-nav a.icon {
+      display: none;
+    }
+  
+    .header-nav a:not(:last-child) {
+      display: block;
+    }
+    
+    // .header-nav.responsive a {
+    //   float: none;
+    //   display: block;
+    //   text-align: left;
+    // }   
   }
   
-  
 }
+
+@include breakpoint(s) {
+
+  .drop-down-menu {
+    .close-button {
+      top: 40px;
+      right: 37px;
+    }
+  }
+
+  .header-wrapper {
+    height: 75px;
+
+    .header-nav {
+      margin-top: 0;
+    }
+
+    .header-title {
+      font-size: 30px;
+      margin-left: 30px;
+  
+      .design {
+        display: block;
+      }
+    }
+
+    .header-nav a.icon {
+      margin-top: 7px;
+    }
+  }
+}
+
+
 
 

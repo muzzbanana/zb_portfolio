@@ -1,0 +1,222 @@
+.ethics-container {
+  .ethics-title {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    text-align: center;
+  }
+  .ethics-accessibility {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    padding-bottom: 30px;
+
+    @include breakpoint(m) {
+      grid-column-start: 2;
+      grid-column-end: 7;
+      grid-row-start: 5;
+      grid-row-end: 7;
+      padding-bottom: 0;
+    }
+  }
+  .ethics-accessibility-image {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 7;
+
+    img {
+      max-width: 100%;
+      margin: auto;
+      display: block;
+    }
+
+    @include breakpoint(m) {
+      grid-column-start: 7;
+      grid-column-end: 12;
+      grid-row-start: 5;
+      grid-row-end: 7;
+    }
+  }
+  .ethics-projects {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 11;
+    grid-row-end: 13;
+    padding-bottom: 30px;
+
+    @include breakpoint(m) {
+      grid-column-start: 7;
+      grid-column-end: 12;
+      grid-row-start: 8;
+      grid-row-end: 10;
+      padding-bottom: 0;
+    }
+  }
+
+  .ethics-projects-image {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 9;
+    grid-row-end: 11;
+
+    img {
+      max-width: 100%;
+      margin: auto;
+      display: block;
+    }
+
+    @include breakpoint(m) {
+      grid-column-start: 2;
+      grid-column-end: 7;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+  }
+
+  .ethics-limits {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 15;
+    grid-row-end: 17;
+    padding-bottom: 30px;
+
+    @include breakpoint(m) {
+      grid-column-start: 2;
+      grid-column-end: 7;
+      grid-row-start: 11;
+      grid-row-end: 13;
+      padding-bottom: 0;
+    }
+  }
+
+  .ethics-limits-image {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 13;
+    grid-row-end: 15;
+
+    img {
+      max-width: 100%;
+      margin: auto;
+      display: block;
+    }
+
+    @include breakpoint(m) {
+      grid-column-start: 7;
+      grid-column-end: 12;
+      grid-row-start: 11;
+      grid-row-end: 13;
+    }
+  }
+
+  .ethics-design {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 19;
+    grid-row-end: 21;
+    padding-bottom: 30px;
+
+    @include breakpoint(m) {
+      grid-column-start: 7;
+      grid-column-end: 12;
+      grid-row-start: 14;
+      grid-row-end: 16;
+      padding-bottom: 0;
+    }
+  }
+
+  .ethics-design-image {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 17;
+    grid-row-end: 19;
+
+    img {
+      max-width: 100%;
+      margin: auto;
+      display: block;
+    }
+
+    @include breakpoint(m) {
+      grid-column-start: 2;
+      grid-column-end: 7;
+      grid-row-start: 14;
+      grid-row-end: 16;
+    }
+  }
+
+  .ethics-data {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 23;
+    grid-row-end: 25;
+    padding-bottom: 30px;
+
+    @include breakpoint(m) {
+      grid-column-start: 2;
+      grid-column-end: 7;
+      grid-row-start: 17;
+      grid-row-end: 19;
+      padding-bottom: 0;
+    }
+  }
+
+  .ethics-data-image {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 21;
+    grid-row-end: 23;
+
+    img {
+      max-width: 100%;
+      margin: auto;
+      display: block;
+    }
+
+    @include breakpoint(m) {
+      grid-column-start: 7;
+      grid-column-end: 12;
+      grid-row-start: 17;
+      grid-row-end: 19;
+    }
+  }
+
+  .ethics-criticism {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 27;
+    grid-row-end: 29;
+    padding-bottom: 30px;
+
+    @include breakpoint(m) {
+      grid-column-start: 7;
+      grid-column-end: 12;
+      grid-row-start: 20;
+      grid-row-end: 22;
+      padding-bottom: 0;
+    }
+  }
+
+  .ethics-criticism-image {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 25;
+    grid-row-end: 27;
+
+    img {
+      max-width: 100%;
+      margin: auto;
+      display: block;
+    }
+
+    @include breakpoint(m) {
+      grid-column-start: 2;
+      grid-column-end: 7;
+      grid-row-start: 20;
+      grid-row-end: 22;
+    }
+  }
+}

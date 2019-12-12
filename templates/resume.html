@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="resume-container grid">
+  <div class="download-block">
+    <button class="download-button">
+        <p class="button-text">Download &nbsp&nbsp&nbsp&nbsp</p>
+        <img class="arrow" src="../static/images/Icon/arrow_with_circle.png">
+      </button>
+  </div>
+  <div class="title-block">
+    <div class="module">
+      <div class="module__top">
+        <div class="top__content">Product Designer</div>
+      </div>
+      <h1>Zachary Bowles</h1>
+    </div>
+    <button class="download-button">
+      <p class="button-text">Download &nbsp&nbsp&nbsp&nbsp</p>
+      <img class="arrow" src="../static/images/Icon/arrow_with_circle.png">
+    </button>
+  </div>
+  <div class="skills-block">
+    <div class="chevron" onclick="resumeBar()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+    </div>
+  </div>
+  <div class="contact-details">
+    <h1>Contact</h1>
+    <ul>
+      <li>zachbowles.com</li>
+      <li>znsbowles@gmail.com</li>
+      <li>626 993 7501</li>
+      <li>zachary-bowles-769291163</li>
+      <li>Zach Bowles</li>
+    </ul>
+  </div>
+  <div class="design-details">
+    <h1>Skills</h1>
+    <h2>Design</h2>
+    <ul>
+      <li>User flows</li>
+      <li>Wireframing</li>
+      <li>Prototyping</li>
+      <li>Interaction design</li>
+      <li>Interface design</li>
+      <li>User Personas</li>
+      <li>User Journeys</li>
+    </ul>
+
+    <h2>Research</h2>
+    <ul>
+      <li>User interviews</li>
+      <li>Competitive research</li>
+      <li>Comparative analysis</li>
+      <li>Usability testing</li>
+      <li>Surveys</li>
+    </ul>
+
+    <h2>Soft</h2>
+    <ul>
+      <li>Communication</li>
+      <li>Teamwork</li>
+      <li>Problem solving</li>
+      <li>Empathy</li>
+    </ul>
+  </div>
+  <div class="tools-details">
+    <h1>Tools</h1>
+    <ul>
+      <li>Sketch</li>
+      <li>InVision</li>
+      <li>Figma</li>
+      <li>Adobe Creative Suite</li>
+      <li>Abstract</li>
+      <li>Github</li>
+      <li>Slack</li>
+    </ul>
+  </div>
+  <div class="resume-summary">
+      <h1 class="section-title">Summary</h1>
+      <p>My work at a SaaS start-up gave me experience with small-business strategy,
+        marketing, sales, customer support and everything in between! This experience
+        has taught me how to effectively utilize my finite resources to help a small
+        company realize its potential. I look forward to applying the principles I
+        acquired towards designing digital experiences.<br></p>
+  </div>
+  <div class="experience-block">
+
+    <section class="timeline">
+
+        <div class="timeline__block">
+            <div class="timeline__midpoint"></div>
+            <div class="timeline__content timeline__content--left">
+                <div class="timeline__year">
+                  <h3>User Success Lead at RoasterTools</h3>
+                  <h2>March 2019 - Present</h2>
+                  <ul>
+                      <li>Conducted a usability report of the application and suggested
+                        solutions to improve the overall user experience.</li>
+                      <li>Created a new onboarding system and wrote help documentation to
+                        help new users learn the app faster.</li>
+                      <li>Compared user feature request data with subscription retention
+                        rates to concept a new business roadmap and strategy.</li>
+                    </ul>
+                </div>
+                <h3 class="timeline__text--left">
+                    March 2019 -<br>
+                    Present
+                </h3>
+            </div>
+        </div>
+
+        <div class="timeline__block">
+            <div class="timeline__midpoint"></div>
+            <div class="timeline__content timeline__content--left">
+                <div class="timeline__year">
+                  <h3>Marketing and Sales Associate at RoasterTools</h3>
+                  <h2>2018 - March 2019</h2>
+                    <ul>
+                      <li>Redesigned marketing strategy by migrating to a CRM and focussing on
+                        email outreach.</li>
+                      <li>Strategized effective outreach strategy to maximize lead engagement.</li>
+                      <li>Created a referral program as a low cost method of generating new leads.</li>
+                      <li>Created a new website marketing landing page that increased web traffic by
+                        30% through improved SEO</li>
+                    </ul>
+                </div>
+                <h3 class="timeline__text--left">
+                    2018 -<br>
+                    March 2019
+                </h3>
+            </div>
+        </div>
+
+        <div class="timeline__block">
+            <div class="timeline__midpoint"></div>
+            <div class="timeline__content timeline__content--left">
+                <div class="timeline__year">
+                  <h3>International Experience</h3>
+                  <h2>Summer 2016, 2017, 2018, 2019</h2>
+                  <ul>
+                    <li>Lived and studied in France; learned basic French in 6 months.</li>
+                    <li>Traveled extensively in both Europe and Latin America.</li>
+                    <li>Have experience communicating with non-English speakers, as well as personal
+                      knowledge of the challenges facing second-language speakers.</li>
+                  </ul>
+                </div>
+                <h3 class="timeline__text--left">
+                  Summers<br>
+                  2016 2017<br>
+                  2018 2019
+                </h3>
+            </div>
+        </div>
+
+    </section>  
+
+  </div>
+
+  <div class="black-bg"></div>
+
+  <div class="education-block">
+
+      <h1>Education</h1>
+      <section class="timeline">
+  
+          <div class="timeline__block">
+              <div class="timeline__midpoint"></div>
+              <div class="timeline__content timeline__content--left">
+                  <div class="timeline__year">
+                    <h3>Career Foundry</h3>
+                    <h2>2019</h2>
+                    <ul>
+                        <li>Intensive project-based UI Design Course.</li>
+                        <li>Broadened my understanding of Grids, Visual Hierarchy,
+                          UI Design Patters, Color theory, Typography, and Icon Design.</li>
+                        <li>Designed and created a fully responsive web-based Real Estate
+                          App that intended to help users invest in real estate with confidence.</li>
+                        <li>Intensive project-based UX Design Immersion Course.</li>
+                        <li>Mastered the fundamentals of user experience design while creating a
+                          native mobile app for Tattoo Artists and Enthusiasts.</li>
+                        <li>Became versed in Human Centered Design Principles and agile methodologies.</li>
+                        <li>Utilized Mobile first Design, Sprint strategies, and Lean UX strategies.</li>
+                      </ul>
+                  </div>
+                  <h3 class="timeline__text--left">
+                      2019
+                  </h3>
+              </div>
+          </div>
+  
+          <div class="timeline__block">
+              <div class="timeline__midpoint"></div>
+              <div class="timeline__content timeline__content--left">
+                  <div class="timeline__year">
+                    <h3>Reed College, Portland OR</h3>
+                    <h2>2015 - 2018</h2>
+                      <ul>
+                        <li>Transferred to highly selective liberal arts college to pursue rigorous
+                          interdisciplinary course study; extensive research, text analysis, writing;
+                          resulted in ability to meet weekly deadlines with high level of accuracy. </li>
+                        <li>Senior Thesis:  Conducted year-long independent research project on Federal
+                          narcotics laws requiring highly disciplined approach to project management;
+                          read 600 pages/week, incorporated weekly feedback, organized 300 citations and
+                          multiple manuscript versions.  Supervised by Professor Will Smiley (Ph.D. Yale).
+                          Resulted in 100-page publication, May, 2018.</li>
+                      </ul>
+                  </div>
+                  <h3 class="timeline__text--left">
+                      2015 -<br>
+                      2018
+                  </h3>
+              </div>
+          </div>
+  
+          <div class="timeline__block">
+              <div class="timeline__midpoint"></div>
+              <div class="timeline__content timeline__content--left">
+                  <div class="timeline__year">
+                    <h3>University of Arizona</h3>
+                    <h2>2013 - 2015</h2>
+                    <ul>
+                      <li>Two years of college-level courses in history, English, philosophy, and mathematics.</li>
+                    </ul>
+                  </div>
+                  <h3 class="timeline__text--left">
+                    2013 - <br>
+                    2015
+                  </h3>
+              </div>
+          </div>
+          <div class="timeline__block">
+            <div class="timeline__midpoint"></div>
+            <div class="timeline__content timeline__content--left">
+                <div class="timeline__year">
+                  <h3>Sciences Po Lilles</h3>
+                  <h2>2013 - 2015</h2>
+                  <ul>
+                    <li>Semester of courses taught in French and English.</li>
+                  </ul>
+                </div>
+                <h3 class="timeline__text--left">
+                  2013 - <br>
+                  2015
+                </h3>
+            </div>
+          </div>
+  
+      </section>  
+  
+    </div>
+
+</div>
+
+{% endblock %}
