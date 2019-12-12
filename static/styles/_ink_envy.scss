@@ -45,7 +45,7 @@ p {
         font-weight: bold;
         margin: 0 auto;
         margin-bottom: 100px;
-        padding: 25px 40px;
+        padding: 15px 0;
         text-decoration:none;
         width: 269px;
         display: flex;
@@ -58,6 +58,10 @@ p {
     .proto-button:active {
         position:relative;
         top:1px;
+    }
+
+    @include breakpoint(m) {
+      padding: 25px 40px;
     }
   }
 
@@ -682,7 +686,7 @@ p {
     grid-row-end: 96;
 
     @include breakpoint(m) {
-      grid-column-start: 2;
+      grid-column-start: 8;
       grid-column-end: 12;
       grid-row-start: 68;
       grid-row-end: 71;
@@ -698,7 +702,7 @@ p {
     display: flex;
 
     img {
-      max-width: 100%;
+      max-width: 50%;
     }
 
     @include breakpoint(m) {
@@ -733,7 +737,7 @@ p {
     display: flex;
 
     img {
-      max-width: 100%;
+      max-width: 50%;
     }
 
     @include breakpoint(m) {
@@ -768,7 +772,7 @@ p {
     display: flex;
 
     img {
-      max-width: 100%;
+      max-width: 50%;
     }
 
     @include breakpoint(m) {
