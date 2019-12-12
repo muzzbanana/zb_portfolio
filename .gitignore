@@ -33,3 +33,6 @@ env/
 
 # Ignore config file
 config.py
+
+# Ignore build
+build/

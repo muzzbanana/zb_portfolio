@@ -1,10 +1,20 @@
 .about-container {
-  .about-carousel {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 2;
+  .profile-photo {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 1;
     grid-row-end: 4;
+
+    .circle-container {
+      background: url(../images/profile_picture.jpg);
+      border: 3px solid #0C0085;
+      border-radius: 300px;
+      height: 250px;
+      margin: 50px auto 0;
+      width: 250px;
+    }
   }
+
   .about-title {
     grid-column-start: 2;
     grid-column-end: 12;
