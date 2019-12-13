@@ -112,7 +112,7 @@
     }
   }
 
-  .ethics-design {
+  .ethics-data {
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 19;
@@ -128,7 +128,7 @@
     }
   }
 
-  .ethics-design-image {
+  .ethics-data-image {
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 17;
@@ -148,7 +148,7 @@
     }
   }
 
-  .ethics-data {
+  .ethics-criticism {
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 23;
@@ -164,11 +164,12 @@
     }
   }
 
-  .ethics-data-image {
+  .ethics-criticism-image {
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 21;
     grid-row-end: 23;
+    margin-top: 0px;
 
     img {
       max-width: 100%;
@@ -181,42 +182,7 @@
       grid-column-end: 12;
       grid-row-start: 17;
       grid-row-end: 19;
-    }
-  }
-
-  .ethics-criticism {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 27;
-    grid-row-end: 29;
-    padding-bottom: 30px;
-
-    @include breakpoint(m) {
-      grid-column-start: 7;
-      grid-column-end: 12;
-      grid-row-start: 20;
-      grid-row-end: 22;
-      padding-bottom: 0;
-    }
-  }
-
-  .ethics-criticism-image {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 25;
-    grid-row-end: 27;
-
-    img {
-      max-width: 100%;
-      margin: auto;
-      display: block;
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 7;
-      grid-row-start: 20;
-      grid-row-end: 22;
+      margin-top: 60px;
     }
   }
 }
