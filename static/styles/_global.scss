@@ -13,21 +13,33 @@ h1 {
   font-weight: 900;
 
   @include breakpoint(s) {
-    font-size: 52.3px;
-    line-height: 66px;
+    font-size: 30px;
+    line-height: 40px;
     font-weight: 900;
+
+    @include breakpoint(l) {
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 900;
+    }
   }
 }
 
 h2 {
   font-size: 18px;
-  line-height: 25px;
+  line-height: 23px;
   font-weight: 600;
 
   @include breakpoint(s) {
-    font-size: 32.3px;
-    line-height: 41px;
-    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 900;
+
+    @include breakpoint(l) {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 900;
+    }
   }
 }
 
@@ -51,8 +63,14 @@ p {
   font-weight: 600;
 
   @include breakpoint(s) {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 22px;
     font-weight: 600;
+
+    @include breakpoint(l) {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 600;
+    }
   }
 }

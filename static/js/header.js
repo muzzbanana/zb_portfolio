@@ -1,6 +1,40 @@
 const menu = document.querySelector(".drop-down-menu");
 const close = document.querySelector(".icon");
 
+
+// // Get the container element
+// const headerNav = document.querySelector(".header-nav");
+
+// // Get all buttons with class="btn" inside the container
+// const navOptions = headerNav.querySelectorAll(".nav-option");
+
+// console.log(navOptions);
+
+// // Loop through the buttons and add the active class to the current/clicked button
+// for (let i = 0; i < navOptions.length; i++) {
+//   navOptions[i].addEventListener("click", function() {
+//     this.className = "nav-option active";
+    
+
+//     // If there's no active class
+//     if (current.length > 0) {
+//       current[0].className = current[0].className.replace(" active", "");
+//     }
+
+//     console.log(this);
+//     this.className = "nav-option active";
+//   });
+// }
+
+$(function() {
+  // $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+  const page = location.pathname.split("/")[1];
+  console.log(page, "nav-" + page);
+  const navOption = document.querySelector(".nav-" + page);
+  navOption.className += " active";
+});
+
+
 function navToggle() {
   const compStylesMenu = window.getComputedStyle(menu);
   const top = compStylesMenu.getPropertyValue('top');

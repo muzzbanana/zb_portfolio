@@ -85,6 +85,10 @@
     position: absolute;
     right: 0;
     top: 25px;
+
+    .active {
+      font-weight: 900;
+    }
     
     a {
       margin-right: 34px;
