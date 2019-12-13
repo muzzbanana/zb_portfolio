@@ -1,14 +1,20 @@
 .drop-down-menu {
   background-color: black;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
   box-shadow: 0 4px 9px #5E5E5E;
-  height: 400px;
+  height: 350px;
   position: absolute;
   top: -410px;
   transition: top 0.5s ease-in-out;
   width: 100%;
   z-index: 1000;
+
+  @include breakpoint(m) {
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    height: 400px;
+  }
 
   .menulist {
     padding: 0;
@@ -73,7 +79,7 @@
 
   .header-nav {
     display: flex;
-    font-size: 24px;
+    font-size: 20px;
     margin-right: 6px;
     margin-top: 10px;
     position: absolute;
@@ -87,11 +93,15 @@
       color: #fff;
   
       &:hover {
-        border-bottom: 2px solid #fff;
+        color: #FCFC00;
       }
-  
+
+      &:focus {
+      color: #FCFC00;
+      }
+
       &:visited {
-        color: #fff;
+        text-decoration: none;
       }
     }
 
@@ -107,10 +117,14 @@
       grid-column-start: 3;
       line-height: 21px;
       margin-top: -8px;
-      padding: 11px 22px;
+      padding: 10px 20px;
       text-decoration:none;
       display: flex;
       justify-content: center;
+
+      &:hover {
+        background-color: #FCFC00;
+      }
 
       svg {
           margin-top: 3px;
@@ -186,7 +200,7 @@
     }
 
     .header-title {
-      font-size: 30px;
+      font-size: 24px;
       margin-left: 30px;
   
       .design {

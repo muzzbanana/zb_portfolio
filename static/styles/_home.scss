@@ -237,6 +237,11 @@ html, body {
             position: relative;
             transform: scale(.4);
         }
+        &:hover {
+          background-color: white;
+          color: black;
+          border: 2px solid black;
+        }
       }
 
     @include breakpoint(m) {
@@ -331,6 +336,11 @@ html, body {
                     position: relative;
                     transform: scale(.5);
                 }
+                &:hover {
+          background-color: white;
+          color: black;
+          border: 2px solid black;
+        }
             }
 
         }
