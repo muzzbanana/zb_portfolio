@@ -72,7 +72,11 @@ function resumeBar() {
   const column = skillsStyle.getPropertyValue('grid-column-end');
 
   if (column === '1') {
-    skillsContainer.style.gridColumnEnd = '5';
+    if (+window.innerWidth >= 768) {
+      skillsContainer.style.gridColumnEnd = '5';
+    } else {
+      skillsContainer.style.gridColumnEnd = '9';
+    }
     skillsContainer.style.zIndex = '3';
     chevron.style.float = 'right';
     chevron.style.marginRight = '20px';
@@ -85,7 +89,7 @@ function resumeBar() {
     skillsContainer.style.zIndex = '4';
     chevron.style.float = 'none';
     chevron.style.marginRight = '0';
-    chevron.style.rotate = '0deg';
+    chevron.style.rotate = '180deg';
     contact.style.display = 'none';
     design.style.display = 'none';
     tools.style.display = 'none';

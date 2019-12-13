@@ -4,31 +4,15 @@
   z-index: -1;
 
   h1 {
-    font-size: 20px;
-
-    @include breakpoint(s) {
-        font-size: 45px;
-    }
+    text-align: left;
   }
 
   h2 {
-    font-size: 14px;
     text-align: left;
-
-    @include breakpoint(s) {
-        font-size: 27.81px;;
-    }
   }
 
   p {
-    font-size: 12px;
-    line-height: 16px;
     text-align: left;
-
-    @include breakpoint(s) {
-        font-size: 20px;
-        line-height: 28px;
-    }
   }
 
   .css-carousel {
@@ -70,7 +54,9 @@
                     height: 40vh;
                     margin-left: 10vw;
                     margin-top: 2vh;
-                    width: 30vw;
+                    max-width: 700px;
+                    min-width: 500px;
+                    width: 43vw;
                 }
               }
 

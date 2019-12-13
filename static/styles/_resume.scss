@@ -1,27 +1,3 @@
-h1 {
-  font-size: 32px;
-
-  @include breakpoint(l) {
-    font-size: 52.3px;
-  }
-}
-
-h2 {
-  font-size: 18px;
-
-  @include breakpoint(m) {
-    font-size: 32.36px;
-  }
-}
-
-p {
-  font-size: 16px;
-
-  @include breakpoint(m) {
-    font-size: 25px;
-  }
-}
-
 ul {
   font-size: 16px;
   font-weight: 600;
@@ -51,30 +27,28 @@ ul {
 
 
     .download-button {
-      background-color: #000;
-      border: 2px solid #fff;
-      border-radius: 30px;
+      background-color: #f9f7ff;
+      border: 2px solid #000;
+      border-radius: 40px;
       cursor: pointer;
-      color:#fff;
+      color:#000;
       display: none;
-      font-weight: bold;
       grid-column-start: 1;
       margin: auto;
-      padding: 0 20px;
-      text-decoration:none;
+      padding: 5px 25px;
+      text-decoration: none;
       display: flex;
       justify-content: center;
 
       .button-text {
-          font-size: 15px;
-          line-height: 8px;
+          font-size: 30px;
+          font-weight: 900;
+          line-height: 0;
           margin-left: 5px;
       }
 
-      img {
-          margin: -9px -9px -9px 0;
-          position: relative;
-          transform: scale(.4);
+      svg {
+        margin-top: 15px;
       }
 
       @include breakpoint(s) {
@@ -99,10 +73,10 @@ ul {
     }
 
     .module {
-      width: 300px;
-      height: 90px;
+      width: 200px;
+      height: 70px;
       position: relative;
-      margin: 80px auto;
+      margin: 30px auto 20px;
       border-radius: 3px;
       padding: 12px;
       box-sizing: padding-box;
@@ -112,6 +86,7 @@ ul {
       border-left: 5px solid #fff;
 
       @include breakpoint(s) {
+        margin: 80px auto;
         width: 360px;
         height: 100px;
 
@@ -183,30 +158,28 @@ ul {
     }
 
     .download-button {
-      background-color: #000;
-      border: 2px solid #fff;
-      border-radius: 30px;
+      background-color: #f9f7ff;
+      border: 2px solid #000;
+      border-radius: 40px;
       cursor: pointer;
-      color:#fff;
+      color:#000;
       display: block;
-      font-weight: bold;
       grid-column-start: 3;
       margin: 50px auto;
-      padding: 0 20px;
-      text-decoration:none;
+      padding: 2px 15px;
+      text-decoration: none;
       display: flex;
       justify-content: center;
 
       .button-text {
           font-size: 15px;
-          line-height: 8px;
+          font-weight: 900;
+          line-height: 0;
           margin-left: 5px;
       }
 
-      img {
-          margin: -9px -9px -9px 0;
-          position: relative;
-          transform: scale(.4);
+      svg {
+        scale: 0.6;
       }
 
       @include breakpoint(s) {
@@ -258,9 +231,16 @@ ul {
 
     color: #fff;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 8;
     grid-row-start: 3;
     grid-row-end: 5;
+
+    @include breakpoint(s) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
   }
 
   .design-details {
@@ -276,13 +256,20 @@ ul {
 
     color: #fff;
     grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 8;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 6;
 
-    @include breakpoint(m) {
-      grid-row-start: 6;
+    @include breakpoint(s) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 5;
       grid-row-end: 8;
+
+      @include breakpoint(m) {
+        grid-row-start: 6;
+        grid-row-end: 8;
+      }
     }
   }
 
@@ -299,17 +286,23 @@ ul {
 
     color: #fff;
     grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 7;
 
-    @include breakpoint(m) {
-      color: #000;
+    @include breakpoint(s) {
       grid-column-start: 1;
       grid-column-end: 4;
-      grid-row-start: 8;
-      grid-row-end: 10;
+      grid-row-start: 7;
+      grid-row-end: 8;
+
+      @include breakpoint(m) {
+        color: #000;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 8;
+        grid-row-end: 10;
+      }
     }
   }
 
