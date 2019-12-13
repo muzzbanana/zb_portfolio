@@ -320,6 +320,10 @@ ul {
     grid-row-end: 5;
     text-align: center;
 
+    p {
+      text-align: left;
+    }
+
     @include breakpoint(s) {
       grid-column-start: 5;
     }
