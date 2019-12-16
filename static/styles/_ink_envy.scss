@@ -354,6 +354,7 @@ body {
 
     img {
       max-width: 100%;
+      max-height: 100%;
       margin: auto;
       display: block;
     }
@@ -788,12 +789,13 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 91;
-      grid-row-end: 92;
+      grid-row-start: 78;
+      grid-row-end: 79;
     }
   }
 
   .finished-product-images {
+    display: flex;
     grid-column-start: 1;
     grid-column-end: 13;
     grid-row-start: 113;
@@ -802,12 +804,142 @@ body {
     @include breakpoint(m) {
       grid-column-start: 1;
       grid-column-end: 13;
-      grid-row-start: 92;
-      grid-row-end: 95;
+      grid-row-start: 79;
+      grid-row-end: 82;
     }
 
-    img {
-      max-width: 100%;
+    --bg-one: #973999;
+    --bg-two: #f8598b;
+    --bg-three: #f7bf00;
+    --bg-panel: #EBEBEB;
+    --color-headings: #333;
+    --color-text: #999;
+    --color-fun: #c44394;
+    --distance: 4rem;
+
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin: 0;
+    
+    .cards {
+      display: flex;
+      height: 70%;
+      margin-top: -11vh;
+    }
+    
+    .card {
+      z-index: 1;
+      background: var(--bg-panel);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: 0.2s;
+    }
+
+    .image-1 {
+      background: url(../images/final_appt_screen.png);
+      background-size: contain;
+      background-repeat: no-repeat;      
+      height: 14vw;
+      margin-left: -14rem;
+      padding: 7vw;
+      z-index: 1;
+
+      @include breakpoint(s) {
+        padding: 11vw;
+
+        @include breakpoint(m) {
+          height: 20vw;
+          padding: 10vw;
+        }
+      }
+    }
+
+    .image-2 {
+      background: url(../images/final_explore_screen.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 14vw;
+      margin-left: -14rem;
+      padding: 7vw;
+      z-index: 3;
+
+      @include breakpoint(s) {
+        padding: 11vw;
+
+        @include breakpoint(m) {
+          height: 20vw;
+          padding: 10vw;
+        }
+      }
+    }
+
+    .image-3 {
+      background: url(../images/final_home_screen.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 14vw;
+      margin-left: -14rem;
+      padding: 7vw;
+      z-index: 5;
+
+      @include breakpoint(s) {
+        padding: 11vw;
+
+        @include breakpoint(m) {
+          height: 20vw;
+          padding: 10vw;
+        }
+      }
+    }
+
+    .image-4 {
+      background: url(../images/final_artist_screen.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 14vw;
+      margin-left: -14rem;
+      padding: 7vw;
+      z-index: 3;
+
+      @include breakpoint(s) {
+        padding: 11vw;
+
+        @include breakpoint(m) {
+          height: 20vw;
+          padding: 10vw;
+        }
+      }
+    }
+
+    .image-5 {
+      background: url(../images/final_profile_screen.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 14vw;
+      margin-left: -14rem;
+      padding: 7vw;
+      z-index: 1;
+
+      @include breakpoint(s) {
+        padding: 11vw;
+
+        @include breakpoint(m) {
+          height: 20vw;
+          padding: 10vw;
+        }
+      }
+    }
+
+    .card:not(:first-child) {
+      margin-left: calc(var(--distance)*-1);
+    }
+    
+    .card:hover,
+    .card:focus-within {
+      z-index: 10;
+      transform: translateY(-2vh) scale(1.2);
     }
   }
 }

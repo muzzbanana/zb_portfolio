@@ -8,69 +8,63 @@ a {
 }
 
 h1 {
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 26px;
   font-weight: 900;
 
   @include breakpoint(s) {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 900;
+    font-size: 36.5px;
 
-    @include breakpoint(l) {
-      font-size: 40px;
-      line-height: 50px;
-      font-weight: 900;
+    @include breakpoint(m) {
+      font-size: 47px;
     }
   }
 }
 
 h2 {
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
 
   @include breakpoint(s) {
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 900;
+    font-size: 24.5px;
 
-    @include breakpoint(l) {
-      font-size: 30px;
-      line-height: 40px;
-      font-weight: 900;
+    @include breakpoint(m) {
+      font-size: 29px;
     }
   }
 }
 
 h3 {
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 400;
   font-style: italic;
 
   @include breakpoint(s) {
-    font-size: 32.3px;
-    line-height: 41px;
-    font-weight: 600;
-    font-style: italic;
+    font-size: 18px;
   }
 }
 
-p {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 600;
+h4 {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 0;
 
   @include breakpoint(s) {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 600;
+    font-size: 20px;
+  }
+}
 
-    @include breakpoint(l) {
+p, ul {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @include breakpoint(s) {
+    font-size: 15px;
+    line-height: 25px;
+
+    @include breakpoint(xl) {
       font-size: 20px;
-      line-height: 26px;
-      font-weight: 600;
+      line-height: 27px;
     }
   }
 }

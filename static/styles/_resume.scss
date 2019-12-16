@@ -1,16 +1,3 @@
-ul {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-
-  @include breakpoint(m) {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 30px;
-  }
-}
-
-
 .resume-container {
   .download-block {
     background: #fff;
@@ -41,14 +28,12 @@ ul {
       justify-content: center;
 
       .button-text {
-          font-size: 30px;
-          font-weight: 900;
-          line-height: 0;
-          margin-left: 5px;
+        margin-left: 5px;
       }
 
       svg {
-        margin-top: 15px;
+        margin-top: 12px;
+        scale: 0.85;
       }
 
       @include breakpoint(s) {
@@ -73,7 +58,7 @@ ul {
     }
 
     .module {
-      width: 200px;
+      width: 250px;
       height: 70px;
       position: relative;
       margin: 30px auto 20px;
@@ -86,13 +71,13 @@ ul {
       border-left: 5px solid #fff;
 
       @include breakpoint(s) {
-        margin: 80px auto;
+        margin: 80px auto 40px;
         width: 360px;
         height: 100px;
 
-        @include breakpoint(l) {
-          width: 500px;
-          height: 150px;
+        @include breakpoint(m) {
+          width: 400px;
+          height: 120px;
         }
       }
     }
@@ -103,7 +88,7 @@ ul {
       flex-direction: row;
       width: 100%;
       position: absolute;
-      bottom: -11px;
+      bottom: -5px;
       left: 0;
       
       &:before {
@@ -122,26 +107,25 @@ ul {
         height: 5px;
         border-top: 5px solid #fff;
       }
+
+      @include breakpoint(s) {
+        bottom: -5px;
+      }
     }
     
     .top__content {
       height: 18px;
       color: #fff;
-      font-size: 20px;
       font-weight: bold;
-      margin-top: -22px;
+      margin-top: -38px;
       padding: 10px;
       text-align: center;
 
       @include breakpoint(s) {
-        font-size: 22px;
-        height: 17px;
-        margin-top: -21px;
+        margin-top: -47px;
 
         @include breakpoint(l) {
-          font-size: 32px;
-          height: 26px;
-          margin-top: -30px;
+          margin-top: -47px;
         }
       }
     }
@@ -172,18 +156,33 @@ ul {
       justify-content: center;
 
       .button-text {
-          font-size: 15px;
-          font-weight: 900;
-          line-height: 0;
-          margin-left: 5px;
+        margin-left: 5px;
       }
 
       svg {
+        margin-top: 4px;
         scale: 0.6;
       }
 
       @include breakpoint(s) {
         display: none;
+      }
+    }
+
+    .location {
+      display: inline-flex;
+      margin: auto;
+
+      svg {
+        margin-top: 4px;
+        margin-right: 3px;
+        scale: 0.8;
+
+        @include breakpoint(s) {
+          margin-top: 13px;
+          margin-right: 10px;
+          scale: 1;
+        }
       }
     }
   }
@@ -193,20 +192,20 @@ ul {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
-    grid-row-end: 8;
+    grid-row-end: 9;
     padding-right: 10px;
     z-index: 4;
 
     .chevron {
       top: 50%;
       position: relative;
+      z-index: 15;
 
       svg {
         fill: #fff;
         display: block;
         margin: auto;
         scale: 1.5;
-        z-index: 10;
       }
     }
 
@@ -227,6 +226,26 @@ ul {
 
     h1 {
       text-align: center;
+    }
+
+    .contact-site {
+      list-style-image: url(../images/Icon/user.svg);
+    }
+
+    .contact-email {
+      list-style-image: url(../images/Icon/email.svg);
+    }
+
+    .contact-phone {
+      list-style-image: url(../images/Icon/phone.svg);
+    }
+
+    .contact-linkedin {
+      list-style-image: url(../images/Icon/Linkedin.svg);
+    }
+
+    .contact-behance {
+      list-style-image: url(../images/Icon/behance.svg);
     }
 
     color: #fff;
@@ -257,17 +276,14 @@ ul {
     color: #fff;
     grid-column-start: 1;
     grid-column-end: 8;
-    grid-row-start: 4;
-    grid-row-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 7;
 
     @include breakpoint(s) {
-      grid-column-start: 1;
       grid-column-end: 4;
-      grid-row-start: 5;
-      grid-row-end: 8;
 
       @include breakpoint(m) {
-        grid-row-start: 6;
+        grid-row-start: 5;
         grid-row-end: 8;
       }
     }
@@ -287,8 +303,8 @@ ul {
     color: #fff;
     grid-column-start: 1;
     grid-column-end: 8;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
 
     @include breakpoint(s) {
       grid-column-start: 1;
@@ -307,7 +323,7 @@ ul {
   }
 
   .resume-summary {
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 3;
     grid-row-end: 5;
@@ -325,11 +341,15 @@ ul {
   .experience-block {
     grid-column-start: 2;
     grid-column-end: 13;
-    grid-row-start: 6;
-    grid-row-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 9;
 
     @include breakpoint(s) {
       grid-column-start: 4;
+    }
+
+    @include breakpoint(m) {
+      grid-row-end: 8;
     }
 
     @include breakpoint(l) {
@@ -345,7 +365,7 @@ ul {
       color: $headline;
     }
 
-    h2 {
+    .dates {
       display: block;
     }
 
@@ -359,10 +379,14 @@ ul {
         position: absolute;
         top: 10px;
         /* to align with midline*/
-        left: 7px;
+        left: -18px;
         width: 4px;
         height: 97%;
         background-color: #000;
+
+        @include breakpoint(s) {
+          left: 7px;
+        }
       }
     }
 
@@ -384,9 +408,9 @@ ul {
     .timeline__midpoint {
       position: absolute;
       top: 6px;
-      left: -8px;
-      width: 34px;
-      height: 34px;
+      left: -27px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background-color: $primary-color;
       &:before {
@@ -396,11 +420,18 @@ ul {
         left: 16px;
         width: 15px;
       }
+
+      @include breakpoint(s) {
+        left: -8px;
+        width: 34px;
+        height: 34px;
+      }
     }
 
     .timeline__content {
       position: relative;
-      margin-left: 20px;
+      margin-left: -13px;
+      margin-right: 14px;
       p + p {
         padding-top: 0;
       }
@@ -408,6 +439,10 @@ ul {
         content: "";
         display: table;
         clear: both;
+      }
+
+      @include breakpoint(s) {
+        margin-left: 20px;
       }
     }
 
@@ -424,7 +459,8 @@ ul {
       top: -5%;
 
       ul {
-        padding-right: 47px;
+        padding-left: 16px;
+        padding-right: 5px;
       }
     }
 
@@ -447,7 +483,7 @@ ul {
         padding-right: 50px;
       }
 
-      h2 {
+      .dates {
         display: none;
       }
 
@@ -554,7 +590,7 @@ ul {
     background: #000;
     grid-column-start: 1;
     grid-column-end: 13;
-    grid-row-start: 8;
+    grid-row-start: 9;
     grid-row-end: 17;
     margin-left: 2em;
     margin-top: -2em;
@@ -564,17 +600,25 @@ ul {
       grid-column-start: 3;
       margin-left: calc(100vw /12 - 2em);
     }
+
+    @include breakpoint(m) {
+      grid-row-start: 8;
+    }
   }
 
   .education-block {
     background: #000;
     grid-column-start: 2;
     grid-column-end: 13;
-    grid-row-start: 8;
+    grid-row-start: 9;
     grid-row-end: 16;
 
     @include breakpoint(s) {
       grid-column-start: 4;
+    }
+
+    @include breakpoint(m) {
+      grid-row-start: 8;
     }
 
     @include breakpoint(l) {
@@ -590,7 +634,7 @@ ul {
       color: $headline;
     }
 
-    h2 {
+    .dates {
       display: block;
     }
 
@@ -604,10 +648,14 @@ ul {
         position: absolute;
         top: 10px;
         /* to align with midline*/
-        left: 7px;
+        left: -18px;
         width: 4px;
         height: 97%;
         background-color: #fff;
+
+        @include breakpoint(s) {
+          left: 7px;
+        }
       }
     }
 
@@ -629,9 +677,9 @@ ul {
     .timeline__midpoint {
       position: absolute;
       top: 6px;
-      left: -8px;
-      width: 34px;
-      height: 34px;
+      left: -27px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background-color: $primary-color;
       &:before {
@@ -641,11 +689,18 @@ ul {
         left: 16px;
         width: 15px;
       }
+
+      @include breakpoint(s) {
+        left: -8px;
+        width: 34px;
+        height: 34px;
+      }
     }
 
     .timeline__content {
       position: relative;
-      margin-left: 20px;
+      margin-left: -13px;
+      margin-right: 14px;
       p + p {
         padding-top: 0;
       }
@@ -653,6 +708,10 @@ ul {
         content: "";
         display: table;
         clear: both;
+      }
+
+      @include breakpoint(s) {
+        margin-left: 20px;
       }
     }
 
@@ -670,7 +729,8 @@ ul {
       top: -5%;
 
       ul {
-        padding-right: 47px;
+        padding-left: 16px;
+        padding-right: 5px;
       }
     }
 
@@ -693,7 +753,7 @@ ul {
         padding-right: 50px;
       }
 
-      h2 {
+      .dates {
         display: none;
       }
 

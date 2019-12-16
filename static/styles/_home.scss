@@ -245,7 +245,6 @@ html, body {
     @include breakpoint(m) {
         .homepage-text {
             color: #fff;
-            font-size: 20px;
             grid-column-start: 7;
             grid-column-end: 12;
             grid-row-start: 1;
