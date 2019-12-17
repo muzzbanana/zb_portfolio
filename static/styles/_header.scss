@@ -57,7 +57,8 @@
   font-family: 'Muli';
   height: 54px;
   display: flex;
-  position: relative;
+  position: sticky;
+  z-index: 100;
 
   .header-title {
     color: #fff;
@@ -122,8 +123,7 @@
       line-height: 21px;
       margin-top: -8px;
       padding: 10px 20px;
-      text-decoration:none;
-      display: flex;
+      text-decoration: none;
       justify-content: center;
 
       &:hover {
@@ -139,7 +139,7 @@
     }
   }
 
-  .header-nav a:not(:last-child) {
+  .header-nav a:not(:last-child), .contact-me-button{
     display: none;
   }
 
@@ -177,7 +177,7 @@
       display: none;
     }
   
-    .header-nav a:not(:last-child) {
+    .header-nav a:not(:last-child), .contact-me-button {
       display: block;
     }  
   }

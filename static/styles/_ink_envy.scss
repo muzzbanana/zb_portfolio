@@ -5,6 +5,10 @@ body {
 
 .ink-envy-container {
 
+  h1 {
+    color: #0C0085;
+  }
+
   .hero-container {
     background-color: #000;
     grid-column-start: 1;
@@ -25,16 +29,19 @@ body {
     }
 
     .hero-title {
-      color: #17F7FB;
-      font-size: 50px;
       text-align: center;
+
+      h1 {
+        color: #17F7FB;
+      }
     }
 
     .proto-button {
         background-color:transparent;
         border:1px solid #fff;
+        border-radius: 31.5px;
         cursor: pointer;
-        color:#ffffff;
+        color:#fff;
         font-size:20px;
         font-weight: bold;
         margin: 0 auto;
@@ -44,7 +51,11 @@ body {
         width: 269px;
         display: flex;
         justify-content: center;
-        border-radius: 31.5px;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
     }
     .proto-button:hover {
         color: #000;
@@ -127,7 +138,6 @@ body {
   }
 
   .feats-for-users {
-    font-size: 14px;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 14;
@@ -135,22 +145,11 @@ body {
     line-height: 18px;
 
     @include breakpoint(m) {
-      font-size: 32px;
       grid-column-start: 2;
       grid-column-end: 6;
       grid-row-start: 8;
       grid-row-end: 12;
       line-height: 41px;
-    }
-
-    h2 {
-      font-size: 32px;
-      line-height: 41px;
-    }
-
-    ul {
-      font-size: 20px;
-      line-height: 30px;
     }
   }
 
@@ -175,30 +174,16 @@ body {
   }
 
   .feats-for-artists {
-    font-size: 14px;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 21;
     grid-row-end: 23;
-    line-height: 18px;
 
     @include breakpoint(m) {
-      font-size: 32px;
       grid-column-start: 7;
       grid-column-end: 12;
       grid-row-start: 13;
       grid-row-end: 17;
-      line-height: 41px;
-    }
-
-    h2 {
-      font-size: 32px;
-      line-height: 41px;
-    }
-
-    ul {
-      font-size: 20px;
-      line-height: 30px;
     }
   }
 
@@ -215,12 +200,10 @@ body {
     }
 
     @include breakpoint(m) {
-      font-size: 32px;
       grid-column-start: 2;
       grid-column-end: 7;
       grid-row-start: 13;
       grid-row-end: 17;
-      line-height: 41px;
     }
   }
 
@@ -289,20 +272,17 @@ body {
   }
 
   .top-competitors {
-    font-size: 20px;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 34;
     grid-row-end: 38;
-    line-height: 30px;
+    margin: auto;
 
     @include breakpoint(m) {
-      font-size: 20px;
       grid-column-start: 2;
       grid-column-end: 7;
       grid-row-start: 26;
-      grid-row-end: 30;
-      line-height: 30px;
+      grid-row-end: 31;
     }
   }
 
@@ -310,56 +290,28 @@ body {
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 38;
-    grid-row-end: 40;
+    grid-row-end: 42;
 
     @include breakpoint(m) {
-      grid-column-start: 7;
+      grid-column-start: 8;
       grid-column-end: 12;
       grid-row-start: 26;
-      grid-row-end: 28;
-    }
-
-    img {
-      max-width: 100%;
-    }
-  }
-
-  .ink-hunter-usability-image {
-    grid-column-start: 2;
-    grid-column-end: 7;
-    grid-row-start: 40;
-    grid-row-end: 42;
-
-    @include breakpoint(m) {
-      grid-column-start: 7;
-      grid-column-end: 9;
-      grid-row-start: 28;
       grid-row-end: 31;
     }
 
-    img {
-      max-width: 100%;
-      margin: auto;
-      display: block;
-    }
-  }
+    .bottom-images {
+      display: flex;
+      padding-top: 30px;
 
-  .ink-hunter-differentiation-image {
-    grid-column-start: 7;
-    grid-column-end: 12;
-    grid-row-start: 40;
-    grid-row-end: 42;
-
-    @include breakpoint(m) {
-      grid-column-start: 10;
-      grid-column-end: 12;
-      grid-row-start: 28;
-      grid-row-end: 31;
+      img {
+        max-width: 40%;
+        margin: auto;
+        display: block;
+      }
     }
 
     img {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 80%;
       margin: auto;
       display: block;
     }
@@ -373,50 +325,24 @@ body {
 
     @include breakpoint(m) {
       grid-column-start: 2;
-      grid-column-end: 7;
+      grid-column-end: 6;
       grid-row-start: 32;
       grid-row-end: 34;
     }
 
-    img {
-      max-width: 100%;
-    }
-  }
+    .bottom-images {
+      display: flex;
+      padding-top: 30px;
 
-  .tattoodo-usability-image {
-    grid-column-start: 2;
-    grid-column-end: 7;
-    grid-row-start: 49;
-    grid-row-end: 51;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 4;
-      grid-row-start: 34;
-      grid-row-end: 37;
+      img {
+        max-width: 40%;
+        margin: auto;
+        display: block;
+      }
     }
 
     img {
-      max-width: 100%;
-      margin: auto;
-      display: block;
-    }
-  }
-  .tattoodo-differentiation-image {
-    grid-column-start: 7;
-    grid-column-end: 12;
-    grid-row-start: 49;
-    grid-row-end: 51;
-
-    @include breakpoint(m) {
-      grid-column-start: 5;
-      grid-column-end: 7;
-      grid-row-start: 34;
-      grid-row-end: 37;
-    }
-
-    img {
-      max-width: 100%;
+      max-width: 80%;
       margin: auto;
       display: block;
     }
@@ -427,14 +353,13 @@ body {
     grid-column-end: 12;
     grid-row-start: 42;
     grid-row-end: 47;
+    margin: auto;
 
     @include breakpoint(m) {
-      font-size: 20px;
       grid-column-start: 7;
       grid-column-end: 12;
       grid-row-start: 32;
       grid-row-end: 37;
-      line-height: 30px;
     }
   }
 
@@ -547,15 +472,11 @@ body {
   }
 
   .first-wireframes-images {
+    display: flex;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 70;
     grid-row-end: 73;
-
-    img {
-      max-width: 100%;
-      margin-right: 50px;
-    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
@@ -563,7 +484,145 @@ body {
       grid-row-start: 52;
       grid-row-end: 55;
     }
+
+    --distance: 4rem;
+
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin: 0;
+
+    .wireframe-container {
+    
+      h1 {
+        text-align: center;
+      }
+    
+      h2 {
+        text-align: left;
+      }
+    
+      p {
+        text-align: left;
+      }
+    
+      .wireframe-css-carousel {
+          overflow-y: scroll;
+          overflow-x: hidden;
+          height: 300%;
+    
+          .wireframe-carousel-inner,
+          .wireframe-carousel-item {
+              height: 100%;
+          }
+    
+          .wireframe-carousel-item {
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              position: relative;
+          }
+      }
+              
+    
+      $wireframe-css-carousel: (
+          slides: 6,
+          transition-speed: 1s
+      );
+    
+      .wireframe-css-carousel {
+          position: relative;
+      
+          // hide input radio fields
+          input[name="wireframe-carousel"] {
+              display: none;
+          }
+      
+          // wireframe-carousel navigation
+          .wireframe-carousel-nav {
+              display: flex;
+              padding-left: calc(50% - 150px);
+              text-align: center;
+              margin: 40px 0;
+              width: 100%;
+              z-index: 1;
+      
+              label {
+                  background: #A9A8A8;
+                  display: inline-block;
+                  margin: 0 10px 20px;
+                  width: 30px;
+                  height: 6px;
+                  cursor: pointer;
+                  transition: background-color 0.25s;
+              }
+
+              .label-small {
+                @include breakpoint(m) {
+                  display: none;
+                }
+              }
+
+              @include breakpoint(m) {
+                padding-left: calc(50% - 45px);
+              }
+          }
+      
+          // active wireframe-carousel navigation
+          @for $i from 1 through map_get($wireframe-css-carousel, slides) {
+              #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-nav label[for="wireframe-carousel-#{$i}"] {
+                  background-color: #0C0085;
+              }
+          }
+      
+          // wireframe-carousel slides
+          .wireframe-carousel-slides {
+              height: 100%;
+              width: 100%;
+              overflow: hidden;
+      
+              .wireframe-carousel-inner {
+                  width: (100% * map_get($wireframe-css-carousel, slides));
+                  transition:margin map_get($wireframe-css-carousel, transition-speed);
+
+                  @include breakpoint(m) {
+                    width: (33.3% * map_get($wireframe-css-carousel, slides));
+                  }
+              }
+      
+      
+              .wireframe-carousel-item {
+                  float: left;
+                  width: (100% / map_get($wireframe-css-carousel, slides));
+      
+                  .wireframe-carousel-image {
+                      display: flex;
+                      height: 70vh;
+
+                      img {
+                        max-height: 100%;
+                        max-width: 100%;
+                        margin: auto;
+                      }
+      
+                      @include breakpoint(m) {
+                          height: 70vh;
+                      }
+      
+                  }
+              }
+          }
+      
+          // active wireframe-carousel slides
+          @for $i from 1 through map_get($wireframe-css-carousel, slides) {
+              #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-slides .wireframe-carousel-inner {
+                  margin-left: (-100% * ($i - 1));
+              }
+          }
+      }
   }
+}
 
   .a-b-testing {
     grid-column-start: 2;
@@ -813,13 +872,6 @@ body {
       grid-row-end: 82;
     }
 
-    --bg-one: #973999;
-    --bg-two: #f8598b;
-    --bg-three: #f7bf00;
-    --bg-panel: #EBEBEB;
-    --color-headings: #333;
-    --color-text: #999;
-    --color-fun: #c44394;
     --distance: 4rem;
 
     height: 100vh;
@@ -829,15 +881,17 @@ body {
     margin: 0;
     
     .cards {
-      display: flex;
+      display: none;
       height: 70%;
       margin-top: -11vh;
+
+      @include breakpoint(m) {
+        display: flex;
+      }
     }
     
     .card {
       z-index: 1;
-      background: var(--bg-panel);
-      border-radius: 1rem;
       padding: 2rem;
       transition: 0.2s;
     }
@@ -847,8 +901,8 @@ body {
       background-size: contain;
       background-repeat: no-repeat;      
       height: 14vw;
-      margin-left: -14rem;
-      padding: 7vw;
+      margin-left: 0;
+      padding: 9vh;
       z-index: 1;
 
       @include breakpoint(s) {
@@ -867,7 +921,7 @@ body {
       background-repeat: no-repeat;
       height: 14vw;
       margin-left: -14rem;
-      padding: 7vw;
+      padding: 9vh;
       z-index: 3;
 
       @include breakpoint(s) {
@@ -886,7 +940,7 @@ body {
       background-repeat: no-repeat;
       height: 14vw;
       margin-left: -14rem;
-      padding: 7vw;
+      padding: 9vh;
       z-index: 5;
 
       @include breakpoint(s) {
@@ -905,7 +959,7 @@ body {
       background-repeat: no-repeat;
       height: 14vw;
       margin-left: -14rem;
-      padding: 7vw;
+      padding: 9vh;
       z-index: 3;
 
       @include breakpoint(s) {
@@ -924,7 +978,7 @@ body {
       background-repeat: no-repeat;
       height: 14vw;
       margin-left: -14rem;
-      padding: 7vw;
+      padding: 9vh;
       z-index: 1;
 
       @include breakpoint(s) {
@@ -946,5 +1000,128 @@ body {
       z-index: 10;
       transform: translateY(-2vh) scale(1.2);
     }
+  }
+
+  .proto-container {
+
+    @include breakpoint(m) {
+      display: none;
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    h2 {
+      text-align: left;
+    }
+  
+    p {
+      text-align: left;
+    }
+  
+    .proto-css-carousel {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 300%;
+  
+        .proto-carousel-inner,
+        .proto-carousel-item {
+            height: 100%;
+        }
+  
+        .proto-carousel-item {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+    }
+  }
+            
+  
+  $proto-css-carousel: (
+      slides: 5,
+      transition-speed: 1s
+  );
+  
+  .proto-css-carousel {
+      position: relative;
+  
+      // hide input radio fields
+      input[name="proto-carousel"] {
+          display: none;
+      }
+  
+      // proto-carousel navigation
+      .proto-carousel-nav {
+          display: flex;
+          padding-left: calc(50% - 125px);
+          text-align: center;
+          margin: 40px 0;
+          width: 100%;
+          z-index: 1;
+  
+          label {
+              background: #A9A8A8;
+              display: inline-block;
+              margin: 0 10px 20px;
+              width: 30px;
+              height: 6px;
+              cursor: pointer;
+              transition: background-color 0.25s;
+          }
+      }
+  
+      // active proto-carousel navigation
+      @for $i from 1 through map_get($proto-css-carousel, slides) {
+          #proto-carousel-#{$i}:checked ~ .proto-carousel-nav label[for="proto-carousel-#{$i}"] {
+              background-color: #0C0085;
+          }
+      }
+  
+      // proto-carousel slides
+      .proto-carousel-slides {
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+  
+          .proto-carousel-inner {
+              width: (100% * map_get($proto-css-carousel, slides));
+              transition: margin map_get($proto-css-carousel, transition-speed);
+          }
+  
+  
+          .proto-carousel-item {
+              float: left;
+              width: (100% / map_get($proto-css-carousel, slides));
+  
+              .proto-carousel-image {
+                  display: flex;
+                  height: 70vh;
+
+                  img {
+                    max-height: 100%;
+                    max-width: 100%;
+                    margin: auto;
+                  }
+  
+                  @include breakpoint(m) {
+                      height: 70vh;
+                      margin-left: 30vw;
+                      margin-top: 10vh;
+                      width: 70vw;
+                  }
+  
+              }
+          }
+      }
+  
+      // active proto-carousel slides
+      @for $i from 1 through map_get($proto-css-carousel, slides) {
+          #proto-carousel-#{$i}:checked ~ .proto-carousel-slides .proto-carousel-inner {
+              margin-left: (-100% * ($i - 1));
+          }
+      }
   }
 }
