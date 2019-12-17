@@ -129,6 +129,9 @@
       &:hover {
         background-color: #FCFC00;
       }
+      &:focus {
+        color: #FCFC00;
+        }
 
       svg {
           margin-top: 3px;
