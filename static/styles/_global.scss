@@ -7,7 +7,64 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: 'construction';
-  src: url('../fonts/stoney-billy/STONB___.TTF') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}  
+h1 {
+  font-size: 26px;
+  font-weight: 900;
+
+  @include breakpoint(s) {
+    font-size: 36.5px;
+
+    @include breakpoint(m) {
+      font-size: 47px;
+    }
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+
+  @include breakpoint(s) {
+    font-size: 24.5px;
+
+    @include breakpoint(m) {
+      font-size: 29px;
+    }
+  }
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+
+  @include breakpoint(s) {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 0;
+
+  @include breakpoint(s) {
+    font-size: 20px;
+  }
+}
+
+p, ul {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @include breakpoint(s) {
+    font-size: 15px;
+    line-height: 25px;
+
+    @include breakpoint(xl) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}

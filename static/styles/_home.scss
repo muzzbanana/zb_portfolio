@@ -27,31 +27,17 @@ html, body {
 
 
         .hello {
+            border-top: 5px solid;
+            border-bottom: 5px solid;
             color: $neonColour1;
             font-family: 'Monoton', cursive;
             text-transform: uppercase;
             font-size: 12vw;
+            line-height: 18vw;
             height: 18vw;
             text-shadow: 0 0 .1em;
             animation: blur 6s linear infinite both;
             
-            &::before,
-            &::after {
-                position: absolute;
-                content: '';
-                left: 9%;
-                width: 80%;
-                height: .015em;
-                background-color: $neonColour2;
-                transform: rotateZ(-4.75deg);
-                box-shadow: 0 0 .1em $neonColour2;
-            }
-            &::before {
-                top: -12%;
-            }
-            &::after {
-                bottom: -6%;
-            }
             
             span {
                 display: inline-block;
@@ -228,26 +214,37 @@ html, body {
 
         .button-text {
             font-size: 15px;
-            line-height: 8px;
+            line-height: 22px;
             margin-left: 5px;
         }
 
-        img {
-            margin: -9px -9px -9px 0;
-            position: relative;
-            transform: scale(.4);
+        svg {
+          margin: 13px 13px 13px 0;
+          position: relative;
+          transform: scale(1);
+
+          path {
+            fill: #fff;
+          }
         }
+
         &:hover {
           background-color: white;
           color: black;
           border: 2px solid black;
+
+          svg {
+  
+            path {
+              fill: #000;
+            }
+          }
         }
       }
 
     @include breakpoint(m) {
         .homepage-text {
             color: #fff;
-            font-size: 20px;
             grid-column-start: 7;
             grid-column-end: 12;
             grid-row-start: 1;
@@ -267,6 +264,7 @@ html, body {
             .hello {
                 font-size: 8vw;
                 height: 12vw;
+                line-height: 12vw;
                 margin-top: 125px;
 
                 &::before,
@@ -326,36 +324,37 @@ html, body {
                 padding: -1px 27px 0 40px;
 
                 .button-text {
-                    font-size: 20px;
-                    line-height: 18px;
+                  font-size: 20px;
+                  // line-height: 18px;
                 }
     
-                img {
-                    margin-right: -15px;
-                    padding-top: 10px;
-                    position: relative;
-                    transform: scale(.5);
+                svg {
+                  margin: 17px 13px 13px 0;
+                  // padding-top: 10px;
+                  position: relative;
+                  transform: scale(1.2);
                 }
+
                 &:hover {
-          background-color: white;
-          color: black;
-          border: 2px solid black;
-        }
+                  background-color: white;
+                  color: black;
+                  border: 2px solid black;
+                }
             }
 
         }
-    }
 
-    @include breakpoint(xl) {
-        .hello {
-          font-size: 15vw;
-          margin-top: 200px;
-        }
-
-        .homepage-text {
-            font-size: 30px;
-            padding: 5vw 0 0 5vw;
-        }
+        @include breakpoint(xl) {
+          .hello {
+            font-size: 15vw;
+            margin-top: 200px;
+          }
+  
+          .homepage-text {
+              font-size: 30px;
+              padding: 5vw 0 0 5vw;
+          }
+      }
     }
 }
 
