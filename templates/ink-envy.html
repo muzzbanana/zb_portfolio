@@ -110,22 +110,18 @@
     </div>
     <div class="top-competitors-image">
         <img src="../static/images/ink_hunter.png">
-    </div>
-    <div class="ink-hunter-usability-image">
-        <img src="../static/images/ink_hunter_dashboard.png">
-    </div>
-    <div class="ink-hunter-differentiation-image">
-        <img src="../static/images/ink_hunter_differentiation.png">
+        <div class="bottom-images">
+            <img src="../static/images/ink_hunter_dashboard.png">
+            <img src="../static/images/ink_hunter_differentiation.png">
+        </div>
     </div>
 
     <div class="tattoodo-image">
         <img src="../static/images/tattoodo.png">
-    </div>
-    <div class="tattoodo-usability-image">
-        <img src="../static/images/ink_hunter_dashboard.png">
-    </div>
-    <div class="tattoodo-differentiation-image">
-        <img src="../static/images/ink_hunter_differentiation.png">
+        <div class="bottom-images">
+            <img src="../static/images/ink_hunter_dashboard.png">
+            <img src="../static/images/ink_hunter_differentiation.png">
+        </div>
     </div>
     <div class="tattoodo">
         <h2>Tattoodo</h2>
@@ -178,9 +174,61 @@
         <h2>High Fidelity Wireframes</h2>
     </div>
     <div class="first-wireframes-images">
-        <img src="../static/images/first_wireframes_1.png">
-        <!-- <img src="../static/images/first_wireframes_2.png">
-        <img src="../static/images/first_wireframes_3.png"> -->
+        <div class="wireframe-container">
+            <div class="wireframe-css-carousel">
+                <!-- carousel controls -->
+                <input type="radio" name="wireframe-carousel" id="wireframe-carousel-1" checked />
+                <input type="radio" name="wireframe-carousel" id="wireframe-carousel-2" />
+                <input type="radio" name="wireframe-carousel" id="wireframe-carousel-3" />
+                <input type="radio" name="wireframe-carousel" id="wireframe-carousel-4" />
+                <input type="radio" name="wireframe-carousel" id="wireframe-carousel-5" />
+                <input type="radio" name="wireframe-carousel" id="wireframe-carousel-6" />
+                <!-- wireframe-carousel slides -->
+                <div class="wireframe-carousel-slides">
+                    <div class="wireframe-carousel-inner">
+                        <div class="wireframe-carousel-item">
+                            <div class="wireframe-carousel-image">
+                                <img src="../static/images/first_wireframe_feed.png">
+                            </div>
+                        </div>
+                        <div class="wireframe-carousel-item">
+                            <div class="wireframe-carousel-image">
+                                <img src="../static/images/first_wireframe_explore.png">
+                            </div>
+                        </div>
+                        <div class="wireframe-carousel-item">
+                            <div class="wireframe-carousel-image">
+                                <img src="../static/images/first_wireframe_appt.png">
+                            </div>
+                        </div>
+                        <div class="wireframe-carousel-item">
+                            <div class="wireframe-carousel-image">
+                                <img src="../static/images/first_wireframe_artist.png">
+                            </div>
+                        </div>
+                        <div class="wireframe-carousel-item">
+                            <div class="wireframe-carousel-image">
+                                <img src="../static/images/first_wireframe_review.png">
+                            </div>
+                        </div>
+                        <div class="wireframe-carousel-item">
+                            <div class="wireframe-carousel-image">
+                                <img src="../static/images/first_wireframe_notifications.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- wireframe-carousel navigation -->
+                <div class="wireframe-carousel-nav">
+                    <label class="label-always" for="wireframe-carousel-1"></label>
+                    <label class="label-always" for="wireframe-carousel-2"></label>
+                    <label class="label-small" for="wireframe-carousel-3"></label>
+                    <label class="label-small" for="wireframe-carousel-4"></label>
+                    <label class="label-small" for="wireframe-carousel-5"></label>
+                    <label class="label-small" for="wireframe-carousel-6"></label>
+                </div>
+            </div>
+        </div>  
     </div>
     <div class="a-b-testing">
         <h1>Usability and A/B Testing</h1>
@@ -282,6 +330,54 @@
             <div class="card image-5">
             </div>
         </div>
+        <div class="proto-container">
+            <div class="proto-css-carousel">
+                <!-- carousel controls -->
+                <input type="radio" name="proto-carousel" id="proto-carousel-1" checked />
+                <input type="radio" name="proto-carousel" id="proto-carousel-2" />
+                <input type="radio" name="proto-carousel" id="proto-carousel-3" />
+                <input type="radio" name="proto-carousel" id="proto-carousel-4" />
+                <input type="radio" name="proto-carousel" id="proto-carousel-5" />
+                <!-- proto-carousel slides -->
+                <div class="proto-carousel-slides">
+                    <div class="proto-carousel-inner">
+                        <div class="proto-carousel-item">
+                            <div class="proto-carousel-image">
+                                <img src="../static/images/final_appt_screen.png">
+                            </div>
+                        </div>
+                        <div class="proto-carousel-item">
+                            <div class="proto-carousel-image">
+                                <img src="../static/images/final_explore_screen.png">
+                            </div>
+                        </div>
+                        <div class="proto-carousel-item">
+                            <div class="proto-carousel-image">
+                                <img src="../static/images/final_home_screen.png">
+                            </div>
+                        </div>
+                        <div class="proto-carousel-item">
+                            <div class="proto-carousel-image">
+                                <img src="../static/images/final_artist_screen.png">
+                            </div>
+                        </div>
+                        <div class="proto-carousel-item">
+                            <div class="proto-carousel-image">
+                                <img src="../static/images/final_profile_screen.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- proto-carousel navigation -->
+                <div class="proto-carousel-nav">
+                    <label for="proto-carousel-1"></label>
+                    <label for="proto-carousel-2"></label>
+                    <label for="proto-carousel-3"></label>
+                    <label for="proto-carousel-4"></label>
+                    <label for="proto-carousel-5"></label>
+                </div>
+            </div>
+        </div>      
     </div>
 </div>
 {% endblock %}

@@ -1,11 +1,9 @@
 const menu = document.querySelector(".drop-down-menu");
 const close = document.querySelector(".icon");
 
-$(function() {
-  const page = location.pathname.split("/")[1];
-  const navOption = document.querySelector(".nav-" + page);
-  navOption.className += " active";
-});
+const page = location.pathname.split("/")[1];
+const navOption = document.querySelector(".nav-" + page);
+navOption.className += " active";
 
 
 function navToggle() {
@@ -23,6 +21,22 @@ function navToggle() {
 const mql = window.matchMedia("(min-width: 768px)");
 mql.addListener(widthChange);
 widthChange(mql);
+
+const header = document.querySelector('.header-wrapper');
+
+// Initial state
+var scrollPos = 0;
+// adding scroll event
+window.addEventListener('scroll', function(){
+  // detects new state and compares it with the new one
+  if ((document.body.getBoundingClientRect()).top > scrollPos) {
+    header.style.top = '0';
+  } else {
+    header.style.top = 'unset';
+  }
+	// saves the new position for iteration.
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
 
 
 function widthChange(mql) {
@@ -107,58 +121,60 @@ function resumeBar() {
 window.addEventListener('resize', resizeScreen);
 
 function resizeScreen() {
-  console.log('resize');
-  const skillsContainer = document.querySelector(".skills-block");
-  const chevron = document.querySelector(".chevron");
-  const contact = document.querySelector(".contact-details");
-  const design = document.querySelector(".design-details");
-  const tools = document.querySelector(".tools-details");
-  const download = document.querySelector(".download-block");
-  const downloadButton = document.querySelector(".download-button");
-  const title = document.querySelector(".title-block");
-  const experience = document.querySelector(".experience-block");
-  const education = document.querySelector(".education-block");
-  const blackBG = document.querySelector(".black-bg");
+  if (page === 'resume') {
+    const skillsContainer = document.querySelector(".skills-block");
+    const chevron = document.querySelector(".chevron");
+    const contact = document.querySelector(".contact-details");
+    const design = document.querySelector(".design-details");
+    const tools = document.querySelector(".tools-details");
+    const download = document.querySelector(".download-block");
+    const downloadButton = document.querySelector(".download-button");
+    const title = document.querySelector(".title-block");
+    const experience = document.querySelector(".experience-block");
+    const education = document.querySelector(".education-block");
+    const blackBG = document.querySelector(".black-bg");
 
-  console.log('resizeScreen', window.innerWidth);
-  if (+window.innerWidth >= 768) {
-    chevron.style.display = 'none';
-    skillsContainer.style.zIndex = '3';
-    skillsContainer.style.gridColumnEnd = '4';
-    title.style.gridColumnStart = '3';
-    download.style.gridColumnEnd = '4';
-    experience.style.gridColumnStart = '4';
-    education.style.gridColumnStart = '4';
-    blackBG.style.gridColumnStart = '3';
-    contact.style.display = 'block';
-    design.style.display = 'block';
-    tools.style.display = 'block';
-    downloadButton.style.display = 'flex';
+    console.log('resizeScreen', window.innerWidth);
+    if (+window.innerWidth >= 768) {
+      chevron.style.display = 'none';
+      skillsContainer.style.zIndex = '3';
+      skillsContainer.style.gridColumnEnd = '4';
+      title.style.gridColumnStart = '3';
+      download.style.gridColumnEnd = '4';
+      experience.style.gridColumnStart = '4';
+      education.style.gridColumnStart = '4';
+      blackBG.style.gridColumnStart = '3';
+      contact.style.display = 'block';
+      design.style.display = 'block';
+      tools.style.display = 'block';
+      downloadButton.style.display = 'flex';
 
-    if ( +window.innerWidth < 1200) {
-      skillsContainer.style.gridColumnEnd = '5';
-      title.style.gridColumnStart = '4';
-      download.style.gridColumnEnd = '5';
-      experience.style.gridColumnStart = '5';
-      education.style.gridColumnStart = '5';
-      blackBG.style.gridColumnStart = '4';
+      if ( +window.innerWidth < 1200) {
+        skillsContainer.style.gridColumnEnd = '5';
+        title.style.gridColumnStart = '4';
+        download.style.gridColumnEnd = '5';
+        experience.style.gridColumnStart = '5';
+        education.style.gridColumnStart = '5';
+        blackBG.style.gridColumnStart = '4';
+      }
+    } else {
+      skillsContainer.style.gridColumnEnd = '1';
+      skillsContainer.style.zIndex = '4';
+      chevron.style.display = 'block';
+      chevron.style.float = 'none';
+      chevron.style.marginRight = '0';
+      chevron.style.rotate = '0';
+      contact.style.display = 'none';
+      design.style.display = 'none';
+      tools.style.display = 'none';
+      title.style.gridColumnStart = '1';
+      downloadButton.style.display = 'none';
+      experience.style.gridColumnStart = '2';
+      education.style.gridColumnStart = '2';
+      blackBG.style.gridColumnStart = '1';
     }
-  } else {
-    skillsContainer.style.gridColumnEnd = '1';
-    skillsContainer.style.zIndex = '4';
-    chevron.style.display = 'block';
-    chevron.style.float = 'none';
-    chevron.style.marginRight = '0';
-    chevron.style.rotate = '0';
-    contact.style.display = 'none';
-    design.style.display = 'none';
-    tools.style.display = 'none';
-    title.style.gridColumnStart = '1';
-    downloadButton.style.display = 'none';
-    experience.style.gridColumnStart = '2';
-    education.style.gridColumnStart = '2';
-    blackBG.style.gridColumnStart = '1';
   }
+  
 }
 
 window.onload = function() {
