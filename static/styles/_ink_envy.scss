@@ -6,7 +6,7 @@ body {
 .ink-envy-container {
 
   h1 {
-    color: #0C0085;
+    color: #090067;
   }
 
   .hero-container {
@@ -110,6 +110,7 @@ body {
     grid-column-end: 12;
     grid-row-start: 8;
     grid-row-end: 10;
+
 
     .footnote {
       font-size: 12.36px;
@@ -240,16 +241,27 @@ body {
   }
 
   .competitive-research {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 31;
     grid-row-end: 32;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 23;
       grid-row-end: 24;
+      margin-top: 100px
     }
   }
 
@@ -360,16 +372,27 @@ body {
   }
 
   .user-research {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 52;
     grid-row-end: 53;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 38;
       grid-row-end: 39;
+      margin-top: 150px;
     }
   }
 
@@ -408,16 +431,27 @@ body {
   }
 
   .wireframes-and-proto {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 59;
     grid-row-end: 60;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 43;
       grid-row-end: 44;
+      margin-top: 150px;
     }
   }
 
@@ -506,7 +540,7 @@ body {
       .wireframe-css-carousel {
           overflow-y: scroll;
           overflow-x: hidden;
-          height: 300%;
+          height: 100%;
     
           .wireframe-carousel-inner,
           .wireframe-carousel-item {
@@ -568,7 +602,7 @@ body {
           // active wireframe-carousel navigation
           @for $i from 1 through map_get($wireframe-css-carousel, slides) {
               #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-nav label[for="wireframe-carousel-#{$i}"] {
-                  background-color: #0C0085;
+                  background-color: #090067;
               }
           }
       
@@ -579,12 +613,12 @@ body {
               overflow: hidden;
       
               .wireframe-carousel-inner {
-                  width: (100% * map_get($wireframe-css-carousel, slides));
-                  transition:margin map_get($wireframe-css-carousel, transition-speed);
+                @include breakpoint(m) {
+                  width: (33.3% * map_get($wireframe-css-carousel, slides));
+                }
 
-                  @include breakpoint(m) {
-                    width: (33.3% * map_get($wireframe-css-carousel, slides));
-                  }
+                width: (100% * map_get($wireframe-css-carousel, slides));
+                transition:margin map_get($wireframe-css-carousel, transition-speed);
               }
       
       
@@ -621,16 +655,27 @@ body {
 }
 
   .a-b-testing {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 74;
     grid-row-end: 75;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 56;
       grid-row-end: 57;
+      margin-top: 150px;
     }
   }
 
@@ -709,16 +754,27 @@ body {
   }
 
   .redefining-design {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 90;
     grid-row-end: 91;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 65;
       grid-row-end: 66;
+      margin-top: 100px;
     }
   }
   .redefining-design-intro {
@@ -757,7 +813,8 @@ body {
     display: flex;
 
     img {
-      max-width: 50%;
+      max-width: 44%;
+      margin: 0 1.5%;
     }
 
     @include breakpoint(m) {
@@ -792,7 +849,8 @@ body {
     display: flex;
 
     img {
-      max-width: 50%;
+      max-width: 44%;
+      margin: 0 1.5%;
     }
 
     @include breakpoint(m) {
@@ -827,7 +885,8 @@ body {
     display: flex;
 
     img {
-      max-width: 50%;
+      max-width: 44%;
+      margin: 0 1.5%;
     }
 
     @include breakpoint(m) {
@@ -841,16 +900,27 @@ body {
   }
 
   .finished-product {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 112;
     grid-row-end: 113;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 78;
       grid-row-end: 79;
+      margin-top: 150px;
     }
   }
 
@@ -1019,7 +1089,7 @@ body {
     .proto-css-carousel {
         overflow-y: scroll;
         overflow-x: hidden;
-        height: 300%;
+        height: 100%;
   
         .proto-carousel-inner,
         .proto-carousel-item {
@@ -1072,7 +1142,7 @@ body {
       // active proto-carousel navigation
       @for $i from 1 through map_get($proto-css-carousel, slides) {
           #proto-carousel-#{$i}:checked ~ .proto-carousel-nav label[for="proto-carousel-#{$i}"] {
-              background-color: #0C0085;
+              background-color: #090067;
           }
       }
   
