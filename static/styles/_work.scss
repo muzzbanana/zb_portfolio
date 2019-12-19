@@ -245,7 +245,7 @@ $css-carousel: (
     // carousel navigation
     .carousel-nav {
         display: flex;
-        padding-left: calc(50% - 65px);
+        padding-left: calc(50% - 75px);
         position: absolute;
         text-align: center;
         bottom: 30px;
@@ -254,10 +254,11 @@ $css-carousel: (
 
         label {
             background: #A9A8A8;
+            border-radius: 20px;
             display: inline-block;
-            margin: 0 10px 20px;
-            width: 45px;
-            height: 6px;
+            margin: 0 15px 20px;
+            width: 46px;
+            height: 13px;
             cursor: pointer;
             transition: background-color 0.25s;
         }
@@ -267,6 +268,9 @@ $css-carousel: (
     @for $i from 1 through map_get($css-carousel, slides) {
         #carousel-#{$i}:checked ~ .carousel-nav label[for="carousel-#{$i}"] {
             background-color: #FEFE00;
+            margin-top: -10px;
+            transition: all .5s ease-out;
+            scale: 1.2;
         }
     }
 

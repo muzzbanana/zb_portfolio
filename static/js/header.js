@@ -3,7 +3,9 @@ const close = document.querySelector(".icon");
 
 const page = location.pathname.split("/")[1];
 const navOption = document.querySelector(".nav-" + page);
-navOption.className += " active";
+if (navOption) {
+  navOption.className += " active";
+}
 
 
 function navToggle() {

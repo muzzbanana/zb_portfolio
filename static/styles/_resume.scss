@@ -186,7 +186,7 @@
 
     .location {
       display: inline-flex;
-      margin: auto;
+      margin: auto auto 30px;
 
       svg {
         margin-top: 4px;
@@ -343,18 +343,36 @@
 
   .resume-summary {
     grid-column-start: 2;
-    grid-column-end: 12;
+    grid-column-end: 13;
     grid-row-start: 3;
     grid-row-end: 5;
+    margin: auto;
     text-align: center;
 
     p {
+      margin: auto;
       text-align: left;
+      width: 90%;
+
+      @include breakpoint(xl) {
+        margin: auto;
+        width: 80%;
+      }
     }
 
     @include breakpoint(s) {
       grid-column-start: 5;
+
+      @include breakpoint(xl) {
+        grid-column-start: 4;
+      }
     }
+
+    @include breakpoint(m) {
+      grid-column-end: 13;
+    }
+
+    
   }
 
   .experience-block {
@@ -372,7 +390,10 @@
     }
 
     @include breakpoint(l) {
-      padding-right: 100px;
+
+      section {
+        padding-right: 100px;
+      }
     }
 
     $headline: #000;
@@ -566,6 +587,10 @@
         position: relative;
         width: 90%;
         margin-top: 0;
+
+        @include breakpoint(l) {
+          width: 80%;
+        }
       }
       .timeline__text--left {
         display: block;
@@ -642,6 +667,10 @@
 
     @include breakpoint(l) {
       padding-right: 100px;
+
+      section {
+        padding-right: 100px;
+      }
     }
 
     $headline: #fff;
@@ -844,6 +873,10 @@
         position: absolute;
         width: 90%;
         margin-top: 0;
+
+        @include breakpoint(l) {
+          width: 80%;
+        }
       }
       .timeline__text--left {
         color: #fff;
