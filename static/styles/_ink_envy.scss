@@ -6,7 +6,7 @@ body {
 .ink-envy-container {
 
   h1 {
-    color: #0C0085;
+    color: #090067;
   }
 
   .hero-container {
@@ -39,7 +39,7 @@ body {
     .proto-button {
         background-color:transparent;
         border:1px solid #fff;
-        border-radius: 30px;
+        border-radius: 31.5px;
         cursor: pointer;
         color:#fff;
         font-size:20px;
@@ -56,19 +56,21 @@ body {
           background-color: #fff;
           color: #000;
         }
-    }
-    .proto-button:hover {
-        color: #000;
-        background-color:#fff;
-    }
-    .proto-button:active {
-        position:relative;
-        top:1px;
-    }
 
-    @include breakpoint(m) {
-      padding: 25px 40px;
-    }
+        &:hover {
+          color: #000;
+          background-color:#fff;
+        }
+
+        &:active {
+            position:relative;
+            top:1px;
+        }
+  
+        @include breakpoint(m) {
+          padding: 25px 40px;
+        }
+      }
   }
 
   .mobile-note {
@@ -111,6 +113,7 @@ body {
     grid-row-start: 8;
     grid-row-end: 10;
 
+
     .footnote {
       font-size: 12.36px;
     }
@@ -142,7 +145,7 @@ body {
     grid-column-end: 12;
     grid-row-start: 14;
     grid-row-end: 16;
-    line-height: 18px;
+    margin: auto 0;
 
     @include breakpoint(m) {
       grid-column-start: 2;
@@ -178,6 +181,7 @@ body {
     grid-column-end: 12;
     grid-row-start: 21;
     grid-row-end: 23;
+    margin: auto 0;
 
     @include breakpoint(m) {
       grid-column-start: 7;
@@ -227,6 +231,10 @@ body {
     grid-row-start: 29;
     grid-row-end: 31;
 
+    h2 {
+      margin-top: 50px;
+    }
+
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
@@ -237,19 +245,34 @@ body {
     img {
       max-width: 100%;
     }
+  
+    .skip-link {
+      text-decoration: underline;
+    }
   }
 
   .competitive-research {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 31;
     grid-row-end: 32;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 23;
       grid-row-end: 24;
+      margin-top: 100px
     }
   }
 
@@ -360,16 +383,27 @@ body {
   }
 
   .user-research {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 52;
     grid-row-end: 53;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 38;
       grid-row-end: 39;
+      margin-top: 150px;
     }
   }
 
@@ -408,16 +442,27 @@ body {
   }
 
   .wireframes-and-proto {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 59;
     grid-row-end: 60;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 43;
       grid-row-end: 44;
+      margin-top: 150px;
     }
   }
 
@@ -506,7 +551,7 @@ body {
       .wireframe-css-carousel {
           overflow-y: scroll;
           overflow-x: hidden;
-          height: 300%;
+          height: 100%;
     
           .wireframe-carousel-inner,
           .wireframe-carousel-item {
@@ -538,7 +583,7 @@ body {
           // wireframe-carousel navigation
           .wireframe-carousel-nav {
               display: flex;
-              padding-left: calc(50% - 150px);
+              padding-left: calc(50% - 198px);
               text-align: center;
               margin: 40px 0;
               width: 100%;
@@ -546,10 +591,11 @@ body {
       
               label {
                   background: #A9A8A8;
+                  border-radius: 20px;
                   display: inline-block;
                   margin: 0 10px 20px;
-                  width: 30px;
-                  height: 6px;
+                  width: 46px;
+                  height: 13px;
                   cursor: pointer;
                   transition: background-color 0.25s;
               }
@@ -561,14 +607,17 @@ body {
               }
 
               @include breakpoint(m) {
-                padding-left: calc(50% - 45px);
+                padding-left: calc(50% - 66px);
               }
           }
       
           // active wireframe-carousel navigation
           @for $i from 1 through map_get($wireframe-css-carousel, slides) {
               #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-nav label[for="wireframe-carousel-#{$i}"] {
-                  background-color: #0C0085;
+                  background-color: #090067;
+                  margin-top: -10px;
+                  transition: all .5s ease-out;
+                  scale: 1.2;
               }
           }
       
@@ -579,12 +628,12 @@ body {
               overflow: hidden;
       
               .wireframe-carousel-inner {
-                  width: (100% * map_get($wireframe-css-carousel, slides));
-                  transition:margin map_get($wireframe-css-carousel, transition-speed);
+                width: (100% * map_get($wireframe-css-carousel, slides));
+                transition:margin map_get($wireframe-css-carousel, transition-speed);
 
-                  @include breakpoint(m) {
-                    width: (33.3% * map_get($wireframe-css-carousel, slides));
-                  }
+                @include breakpoint(m) {
+                  width: (33.3% * map_get($wireframe-css-carousel, slides));
+                }
               }
       
       
@@ -621,16 +670,27 @@ body {
 }
 
   .a-b-testing {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 74;
     grid-row-end: 75;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 56;
       grid-row-end: 57;
+      margin-top: 150px;
     }
   }
 
@@ -709,16 +769,27 @@ body {
   }
 
   .redefining-design {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 90;
     grid-row-end: 91;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 65;
       grid-row-end: 66;
+      margin-top: 100px;
     }
   }
   .redefining-design-intro {
@@ -757,7 +828,8 @@ body {
     display: flex;
 
     img {
-      max-width: 50%;
+      max-width: 44%;
+      margin: 0 1.5%;
     }
 
     @include breakpoint(m) {
@@ -792,7 +864,8 @@ body {
     display: flex;
 
     img {
-      max-width: 50%;
+      max-width: 44%;
+      margin: 0 1.5%;
     }
 
     @include breakpoint(m) {
@@ -827,7 +900,8 @@ body {
     display: flex;
 
     img {
-      max-width: 50%;
+      max-width: 44%;
+      margin: 0 1.5%;
     }
 
     @include breakpoint(m) {
@@ -841,16 +915,27 @@ body {
   }
 
   .finished-product {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 112;
     grid-row-end: 113;
+    margin-top: 100px;
+
+    h1 {
+      padding-top: 100px;
+
+      @include breakpoint(m) {
+        padding-top: 150px;
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
       grid-row-start: 78;
       grid-row-end: 79;
+      margin-top: 150px;
     }
   }
 
@@ -873,7 +958,6 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    overflow: hidden;
     margin: 0;
     
     .cards {
@@ -883,6 +967,9 @@ body {
 
       @include breakpoint(m) {
         display: flex;
+        height: unset;
+        margin-top: 11vh;
+        margin-bottom: 80px;
       }
     }
     
@@ -996,128 +1083,166 @@ body {
       z-index: 10;
       transform: translateY(-2vh) scale(1.2);
     }
-  }
 
-  .proto-container {
+    .proto-button {
+      background-color: #000;
+      border: 1px solid #000;
+      border-radius: 31.5px;
+      box-shadow: -30px -30px 80px 0 #FFFFFF, 30px 30px 80px 0 rgba(0,0,0,0.25);
+      cursor: pointer;
+      color:#fff;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      padding: 15px 0;
+      text-decoration:none;
+      width: 269px;
+      display: flex;
+      justify-content: center;
 
-    @include breakpoint(m) {
-      display: none;
-    }
-  
-    h1 {
-      text-align: center;
-    }
-  
-    h2 {
-      text-align: left;
-    }
-  
-    p {
-      text-align: left;
-    }
-  
-    .proto-css-carousel {
-        overflow-y: scroll;
-        overflow-x: hidden;
-        height: 300%;
-  
-        .proto-carousel-inner,
-        .proto-carousel-item {
-            height: 100%;
-        }
-  
-        .proto-carousel-item {
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-        }
-    }
-  }
-            
-  
-  $proto-css-carousel: (
-      slides: 5,
-      transition-speed: 1s
-  );
-  
-  .proto-css-carousel {
-      position: relative;
-  
-      // hide input radio fields
-      input[name="proto-carousel"] {
-          display: none;
+      &:hover {
+        color: #000;
+        background-color:#fff;
       }
-  
-      // proto-carousel navigation
-      .proto-carousel-nav {
-          display: flex;
-          padding-left: calc(50% - 125px);
-          text-align: center;
-          margin: 40px 0;
-          width: 100%;
-          z-index: 1;
-  
-          label {
-              background: #A9A8A8;
-              display: inline-block;
-              margin: 0 10px 20px;
-              width: 30px;
-              height: 6px;
-              cursor: pointer;
-              transition: background-color 0.25s;
-          }
+
+      &:focus {
+        color: #000;
+        background-color:#fff;
       }
-  
-      // active proto-carousel navigation
-      @for $i from 1 through map_get($proto-css-carousel, slides) {
-          #proto-carousel-#{$i}:checked ~ .proto-carousel-nav label[for="proto-carousel-#{$i}"] {
-              background-color: #0C0085;
-          }
+
+      &:active {
+          position:relative;
+          top:1px;
       }
-  
-      // proto-carousel slides
-      .proto-carousel-slides {
+
+      @include breakpoint(m) {
+        padding: 25px 40px;
+      }
+    }
+
+    .proto-container {
+
+      @include breakpoint(m) {
+        display: none;
+      }
+    
+      h1 {
+        text-align: center;
+      }
+    
+      h2 {
+        text-align: left;
+      }
+    
+      p {
+        text-align: left;
+      }
+    
+      .proto-css-carousel {
+          overflow-y: scroll;
+          overflow-x: hidden;
           height: 100%;
-          width: 100%;
-          overflow: hidden;
-  
-          .proto-carousel-inner {
-              width: (100% * map_get($proto-css-carousel, slides));
-              transition: margin map_get($proto-css-carousel, transition-speed);
-          }
-  
-  
+    
+          .proto-carousel-inner,
           .proto-carousel-item {
-              float: left;
-              width: (100% / map_get($proto-css-carousel, slides));
+              height: 100%;
+          }
+    
+          .proto-carousel-item {
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              position: relative;
+          }
+      }
+    }
+              
+    
+    $proto-css-carousel: (
+        slides: 5,
+        transition-speed: 1s
+    );
+    
+    .proto-css-carousel {
+        position: relative;
+    
+        // hide input radio fields
+        input[name="proto-carousel"] {
+            display: none;
+        }
+    
+        // proto-carousel navigation
+        .proto-carousel-nav {
+            display: flex;
+            padding-left: calc(50% - 125px);
+            text-align: center;
+            margin: 40px 0;
+            width: 100%;
+            z-index: 1;
+    
+            label {
+                background: #A9A8A8;
+                display: inline-block;
+                margin: 0 10px 20px;
+                width: 30px;
+                height: 6px;
+                cursor: pointer;
+                transition: background-color 0.25s;
+            }
+        }
+    
+        // active proto-carousel navigation
+        @for $i from 1 through map_get($proto-css-carousel, slides) {
+            #proto-carousel-#{$i}:checked ~ .proto-carousel-nav label[for="proto-carousel-#{$i}"] {
+                background-color: #090067;
+            }
+        }
+    
+        // proto-carousel slides
+        .proto-carousel-slides {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+    
+            .proto-carousel-inner {
+                width: (100% * map_get($proto-css-carousel, slides));
+                transition: margin map_get($proto-css-carousel, transition-speed);
+            }
+    
+    
+            .proto-carousel-item {
+                float: left;
+                width: (100% / map_get($proto-css-carousel, slides));
+    
+                .proto-carousel-image {
+                    display: flex;
+                    height: 70vh;
   
-              .proto-carousel-image {
-                  display: flex;
-                  height: 70vh;
+                    img {
+                      max-height: 100%;
+                      max-width: 100%;
+                      margin: auto;
+                    }
+    
+                    @include breakpoint(m) {
+                        height: 70vh;
+                        margin-left: 30vw;
+                        margin-top: 10vh;
+                        width: 70vw;
+                    }
+    
+                }
+            }
+        }
+    
+        // active proto-carousel slides
+        @for $i from 1 through map_get($proto-css-carousel, slides) {
+            #proto-carousel-#{$i}:checked ~ .proto-carousel-slides .proto-carousel-inner {
+                margin-left: (-100% * ($i - 1));
+            }
+        }
+    }
 
-                  img {
-                    max-height: 100%;
-                    max-width: 100%;
-                    margin: auto;
-                  }
-  
-                  @include breakpoint(m) {
-                      height: 70vh;
-                      margin-left: 30vw;
-                      margin-top: 10vh;
-                      width: 70vw;
-                  }
-  
-              }
-          }
-      }
-  
-      // active proto-carousel slides
-      @for $i from 1 through map_get($proto-css-carousel, slides) {
-          #proto-carousel-#{$i}:checked ~ .proto-carousel-slides .proto-carousel-inner {
-              margin-left: (-100% * ($i - 1));
-          }
-      }
   }
 }

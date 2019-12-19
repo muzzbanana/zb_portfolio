@@ -12,19 +12,23 @@
       grid-column-end: 4;
     }
 
+    a {
+      margin: auto;
+    }
+
 
     .download-button {
-      background-color: #f9f7ff;
       border: 2px solid #000;
-      border-radius: 40px;
+      border-radius: 44px;
+      box-shadow: -30px -30px 80px 0 #FFFFFF, 30px 30px 80px 0 rgba(195,194,206,0.50);
       cursor: pointer;
       color:#000;
-      display: none;
+      display: flex;
       grid-column-start: 1;
       margin: auto;
       padding: 5px 25px;
+      text-align: justify;
       text-decoration: none;
-      display: flex;
       justify-content: center;
 
       .button-text {
@@ -39,11 +43,22 @@
       @include breakpoint(s) {
         display: flex;
       }
+
+      &:hover {
+        background: #000;
+        color: #fff;
+
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
     }
   }
 
   .title-block {
-    background: linear-gradient(0.25turn, #0C0085, #000);
+    background: linear-gradient(48deg, #090067 0%, #000000 54%);
     color: #fff;
     grid-column-start: 1;
     grid-column-end: 13;
@@ -171,7 +186,7 @@
 
     .location {
       display: inline-flex;
-      margin: auto;
+      margin: auto auto 30px;
 
       svg {
         margin-top: 4px;
@@ -188,7 +203,7 @@
   }
 
   .skills-block {
-    background: linear-gradient(0.33turn, #0C0085, #000);
+    background: linear-gradient(232deg, #090067 21%, #020202 35%);
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
@@ -328,18 +343,36 @@
 
   .resume-summary {
     grid-column-start: 2;
-    grid-column-end: 12;
+    grid-column-end: 13;
     grid-row-start: 3;
     grid-row-end: 5;
+    margin: auto;
     text-align: center;
 
     p {
+      margin: auto;
       text-align: left;
+      width: 90%;
+
+      @include breakpoint(xl) {
+        margin: auto;
+        width: 80%;
+      }
     }
 
     @include breakpoint(s) {
       grid-column-start: 5;
+
+      @include breakpoint(xl) {
+        grid-column-start: 4;
+      }
     }
+
+    @include breakpoint(m) {
+      grid-column-end: 13;
+    }
+
+    
   }
 
   .experience-block {
@@ -357,7 +390,10 @@
     }
 
     @include breakpoint(l) {
-      padding-right: 100px;
+
+      section {
+        padding-right: 100px;
+      }
     }
 
     $headline: #000;
@@ -551,6 +587,10 @@
         position: relative;
         width: 90%;
         margin-top: 0;
+
+        @include breakpoint(l) {
+          width: 80%;
+        }
       }
       .timeline__text--left {
         display: block;
@@ -627,6 +667,10 @@
 
     @include breakpoint(l) {
       padding-right: 100px;
+
+      section {
+        padding-right: 100px;
+      }
     }
 
     $headline: #fff;
@@ -736,6 +780,14 @@
         padding-left: 16px;
         padding-right: 5px;
       }
+
+      h2 {
+        line-height: 14px;
+
+        p {
+          font-style: italic;
+        }
+      }
     }
 
     .timeline__midpoint--highlight .timeline__year {
@@ -821,6 +873,10 @@
         position: absolute;
         width: 90%;
         margin-top: 0;
+
+        @include breakpoint(l) {
+          width: 80%;
+        }
       }
       .timeline__text--left {
         color: #fff;

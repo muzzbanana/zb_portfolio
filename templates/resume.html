@@ -2,10 +2,12 @@
 {% block main %}
 <div class="resume-container grid">
   <div class="download-block">
-    <button class="download-button">
+    <a href="../static/docs/file.pdf" download>
+      <button class="download-button">
         <h4 class="button-text">Download &nbsp&nbsp&nbsp&nbsp</h4>
         <svg width="29" height="28" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#000"><path d="M14.535 27.696H4.217a3.913 3.913 0 01-3.326-1.748 3.77 3.77 0 01-.678-2.165v-7.826a1.226 1.226 0 01.77-1.227 1.226 1.226 0 011.408.21c.284.255.441.622.43 1.003v7.748c-.01.418.178.815.51 1.07.215.17.482.262.756.26h20.791a1.304 1.304 0 001.396-1.408v-7.656a1.304 1.304 0 011.643-1.305 1.304 1.304 0 01.953 1.33v7.683a3.913 3.913 0 01-3.913 3.913l-10.422.118z"/><path d="M13.53 18.422V1.726a1.5 1.5 0 01.17-.783 1.304 1.304 0 012.44.666v16.813l.195-.157 3.195-2.608a1.304 1.304 0 011.5-.066 1.304 1.304 0 01.144 2.166l-5.335 4.265a1.526 1.526 0 01-1.93 0l-5.387-4.279a1.304 1.304 0 01-.196-1.786 1.304 1.304 0 011.84-.196l2.308 1.852 1.056.809z"/></g></svg>
       </button>
+    </a>
   </div>
   <div class="title-block">
     <div class="module">
@@ -18,10 +20,12 @@
       <svg width="20" height="29" xmlns="http://www.w3.org/2000/svg"><path d="M10 13.368c-1.579 0-2.857-1.298-2.857-2.9 0-1.603 1.278-2.9 2.857-2.9 1.579 0 2.857 1.297 2.857 2.9 0 1.602-1.278 2.9-2.857 2.9M10 0C4.477 0 0 4.544 0 10.15 0 15.756 10 29 10 29s10-13.244 10-18.85C20 4.544 15.523 0 10 0" fill="#FFF" fill-rule="evenodd"/></svg>
       <h3> Portland, OR, USA</h3>
     </div>
-    <button class="download-button">
-      <h4 class="button-text">Download &nbsp&nbsp&nbsp&nbsp</h4>
-      <svg width="29" height="28" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#000"><path d="M14.535 27.696H4.217a3.913 3.913 0 01-3.326-1.748 3.77 3.77 0 01-.678-2.165v-7.826a1.226 1.226 0 01.77-1.227 1.226 1.226 0 011.408.21c.284.255.441.622.43 1.003v7.748c-.01.418.178.815.51 1.07.215.17.482.262.756.26h20.791a1.304 1.304 0 001.396-1.408v-7.656a1.304 1.304 0 011.643-1.305 1.304 1.304 0 01.953 1.33v7.683a3.913 3.913 0 01-3.913 3.913l-10.422.118z"/><path d="M13.53 18.422V1.726a1.5 1.5 0 01.17-.783 1.304 1.304 0 012.44.666v16.813l.195-.157 3.195-2.608a1.304 1.304 0 011.5-.066 1.304 1.304 0 01.144 2.166l-5.335 4.265a1.526 1.526 0 01-1.93 0l-5.387-4.279a1.304 1.304 0 01-.196-1.786 1.304 1.304 0 011.84-.196l2.308 1.852 1.056.809z"/></g></svg>
-    </button>
+    <a href="../static/docs/file.pdf" download>
+      <button class="download-button">
+        <h4 class="button-text">Download &nbsp&nbsp&nbsp&nbsp</h4>
+        <svg width="29" height="28" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#000"><path d="M14.535 27.696H4.217a3.913 3.913 0 01-3.326-1.748 3.77 3.77 0 01-.678-2.165v-7.826a1.226 1.226 0 01.77-1.227 1.226 1.226 0 011.408.21c.284.255.441.622.43 1.003v7.748c-.01.418.178.815.51 1.07.215.17.482.262.756.26h20.791a1.304 1.304 0 001.396-1.408v-7.656a1.304 1.304 0 011.643-1.305 1.304 1.304 0 01.953 1.33v7.683a3.913 3.913 0 01-3.913 3.913l-10.422.118z"/><path d="M13.53 18.422V1.726a1.5 1.5 0 01.17-.783 1.304 1.304 0 012.44.666v16.813l.195-.157 3.195-2.608a1.304 1.304 0 011.5-.066 1.304 1.304 0 01.144 2.166l-5.335 4.265a1.526 1.526 0 01-1.93 0l-5.387-4.279a1.304 1.304 0 01-.196-1.786 1.304 1.304 0 011.84-.196l2.308 1.852 1.056.809z"/></g></svg>
+      </button>
+    </a>
   </div>
   <div class="skills-block">
     <div class="chevron" onclick="resumeBar()">
@@ -48,6 +52,7 @@
       <li>Interface design</li>
       <li>User Personas</li>
       <li>User Journeys</li>
+      <li>HTML / CSS</li>
     </ul>
 
     <h2>Research</h2>
@@ -171,7 +176,7 @@
               <div class="timeline__midpoint"></div>
               <div class="timeline__content timeline__content--left">
                   <div class="timeline__year">
-                    <h2>Career Foundry</h2>
+                    <h2>Career Foundry <br><span><p>Certificate in UX/UI Design</p></h2>
                     <p class="dates">2019</p>
                     <ul>
                         <li>Intensive project-based UI Design Course.</li>
@@ -196,7 +201,7 @@
               <div class="timeline__midpoint"></div>
               <div class="timeline__content timeline__content--left">
                   <div class="timeline__year">
-                    <h2>Reed College, Portland OR</h2>
+                    <h2>Reed College, Portland OR <br><span><p>Bachelor of Arts, History</p></span></h2>
                     <p class="dates">2015 - 2018</p>
                       <ul>
                         <li>Transferred to highly selective liberal arts college to pursue rigorous
