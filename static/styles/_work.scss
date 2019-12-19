@@ -2,6 +2,8 @@
   position: fixed;
   height: 100%;
   z-index: -1;
+  overflow-y: scroll;
+      overflow-x: hidden;
 
   h1 {
     text-align: center;
@@ -247,7 +249,7 @@ $css-carousel: (
         text-align: center;
         top: 86vh;
         width: 100%;
-        z-index: 1;
+        z-index: 10;
 
         label {
             background: #A9A8A8;
