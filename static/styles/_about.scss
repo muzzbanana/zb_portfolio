@@ -34,13 +34,25 @@
     grid-column-end: 12;
     grid-row-start: 10;
     grid-row-end: 12;
+    margin: auto;
+
+    a {
+      text-decoration: underline;
+      
+      &:visited {
+        color: inherit;
+      }
+
+      &:hover, &:focus {
+        color: #090067; 
+      }
+    }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 7;
       grid-row-start: 8;
       grid-row-end: 10;
-      margin-top: 100px;
     }
   }
   .about-LA-image {
@@ -69,13 +81,13 @@
     grid-column-end: 12;
     grid-row-start: 14;
     grid-row-end: 16;
+    margin: auto;
 
     @include breakpoint(m) {
       grid-column-start: 7;
       grid-column-end: 12;
       grid-row-start: 10;
       grid-row-end: 12;
-      margin-top: 50px;
     }
   }
 
@@ -104,13 +116,13 @@
     grid-column-end: 12;
     grid-row-start: 18;
     grid-row-end: 20;
+    margin: auto;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 7;
       grid-row-start: 12;
       grid-row-end: 14;
-      margin-top: 30px;
     }
   }
 
