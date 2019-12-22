@@ -36,6 +36,18 @@
     grid-row-end: 12;
     margin: auto;
 
+    a {
+      text-decoration: underline;
+      
+      &:visited {
+        color: inherit;
+      }
+
+      &:hover, &:focus {
+        color: #090067; 
+      }
+    }
+
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 7;
