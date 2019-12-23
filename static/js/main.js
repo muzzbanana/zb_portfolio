@@ -171,8 +171,8 @@ function resizeScreen() {
       tools.style.display = 'none';
       title.style.gridColumnStart = '1';
       downloadButton.style.display = 'none';
-      experience.style.gridColumnStart = '2';
-      education.style.gridColumnStart = '2';
+      experience.style.gridColumnStart = '3';
+      education.style.gridColumnStart = '3';
       blackBG.style.gridColumnStart = '1';
     }
   }

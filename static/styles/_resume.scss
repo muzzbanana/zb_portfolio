@@ -342,15 +342,13 @@
   }
 
   .resume-summary {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 13;
     grid-row-start: 3;
     grid-row-end: 5;
-    margin: auto;
     text-align: center;
 
     p {
-      margin: auto;
       text-align: left;
       width: 90%;
 
@@ -376,7 +374,7 @@
   }
 
   .experience-block {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 13;
     grid-row-start: 5;
     grid-row-end: 9;
@@ -652,7 +650,7 @@
 
   .education-block {
     background: #000;
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 13;
     grid-row-start: 9;
     grid-row-end: 16;
@@ -782,7 +780,7 @@
       }
 
       h2 {
-        line-height: 14px;
+        line-height: 28px;
 
         p {
           font-style: italic;
