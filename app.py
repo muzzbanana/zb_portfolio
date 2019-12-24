@@ -1,9 +1,10 @@
 from flask import Flask, render_template, url_for
 from flask_assets import Environment, Bundle
-from htmlmin.main import minify
+from flask_minify import minify
 import os.path
 
 app = Flask(__name__)
+minify(app=app)
 assets = Environment(app)
 assets.url = app.static_url_path
 scss = Bundle('styles/*.scss', filters='pyscss', output='css/main.css')
@@ -26,19 +27,6 @@ def dated_url_for(endpoint, **values):
                                  endpoint, filename)
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
-
-@app.after_request
-def response_minify(response):
-    """
-    minify html response to decrease site traffic
-    """
-    if response.content_type == u'text/html; charset=utf-8':
-        response.set_data(
-            minify(response.get_data(as_text=True))
-        )
-
-        return response
-    return response
 
 @app.route('/', methods=['GET'])
 def home():
