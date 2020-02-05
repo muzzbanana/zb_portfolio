@@ -2,29 +2,24 @@
 {% block main %}
   <div class="home-container grid">
     <div class="papers">
-      <h1 class="hello">welcome</h1>
-      <div class="toggle-container">
-          <input class="checkbox" id="checkbox1" type="checkbox"/>
-          <label for="checkbox1" class="checkbox-label" onclick="lightToggle()">
-            <span class="off">ON</span>
-            <span class="on">OFF</span>
-          </label>
-        </div>
-        <div class="homepage-text">
-            Hi, I’m <span style="color: #FEFE00; font-weight: 900">Zach!</span> I’m a 
-            <span style="color: #FEFE00; font-weight: 900">Portland Based UX/UI Designer </span> and
-            <span style="color: #FEFE00; font-weight: 900">Strategist. </span>
-            <br><br>
-            I’m passionate about developing impactful products 
-            that are <span style="color: #FEFE00; font-weight: 900">creative</span> and <span style="color: #FEFE00; font-weight: 900">universally accessible</span>. 
-            My intrinsic curiosity and <span style="color: #FEFE00; font-weight: 900">detail-oriented
-            </span> nature drive me to find <span style="color: #FEFE00; font-weight: 900"> elegant solutions
-            </span> to digital design challenges.
-            <button onclick="window.location.href = './work';" class="view-my-work-button">
-              <p class="button-text">View my work &nbsp&nbsp&nbsp&nbsp</p>
-              <svg data-name="Layer 1" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.29 144.29"><path d="M72.15 0a72.15 72.15 0 1072.14 72.13A72.14 72.14 0 0072.15 0zm13.26 100.28l-.07-18h-54l.06-18.08 53.88-.07-.07-17.87 27 27z" fill="#231f20"/></svg>
-            </button>
-        </div>
+      <div class="top-border"></div>
+        <h1 class="hello"> welcome!</h1>
+      <div class="bottom-border"></div>
+    </div>
+    <div class="homepage-text">
+      Hi, I’m <span style="font-weight: 900">Zach</span>, a
+      <span style="font-weight: 900">UX/UI Designer </span> and
+      <span style="font-weight: 900">Strategist </span> based in Portland, OR.
+      <br><br>
+      I’m passionate about developing impactful products 
+      that are <span style="font-weight: 900">creative</span> and <span style="font-weight: 900">universally accessible</span>. 
+      My intrinsic curiosity and <span style="font-weight: 900">detail-oriented
+      </span> nature drive me to find <span style="font-weight: 900"> elegant solutions
+      </span> to digital design challenges.
+      <button onclick="window.location.href = './work';" class="view-my-work-button">
+        <p class="button-text">View my work &nbsp&nbsp&nbsp&nbsp</p>
+        <svg data-name="Layer 1" width="28" height="28" stroke="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.29 144.29"><path d="M72.15 0a72.15 72.15 0 1072.14 72.13A72.14 72.14 0 0072.15 0zm13.26 100.28l-.07-18h-54l.06-18.08 53.88-.07-.07-17.87 27 27z" fill="#000"/></svg>
+      </button>
     </div>
   </div>
 {% endblock %}
