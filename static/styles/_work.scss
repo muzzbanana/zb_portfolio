@@ -1,6 +1,6 @@
 .content {
   position: sticky;
-  height: 100%;
+  height: calc(100vh - 95px);
   overflow: hidden;
 
   h1 {

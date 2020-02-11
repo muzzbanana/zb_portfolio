@@ -454,6 +454,9 @@ body {
   }
 
   .wireframes-and-proto-images {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
     grid-column-start: 2;
     grid-column-end: 12;
 
@@ -463,7 +466,18 @@ body {
     }
 
     img {
-      max-width: 100%;
+      display: inline-flex;
+      max-height: 350px;
+      padding: 10px;
+    }
+
+    .landscape-image {
+      max-width: 50%;
+      object-fit: contain;
+    }
+
+    .portrait-image {
+      max-width: 33%;
     }
   }
 
@@ -487,145 +501,118 @@ body {
       grid-column-end: 12;
     }
 
-    --distance: 4rem;
-
-    height: 100vh;
+    height: 400px;
     display: grid;
     place-items: center;
     overflow: hidden;
     margin: 0;
 
+    @include breakpoint(s) {
+      height: 650px;
+    }
+
     .wireframe-container {
     
-      h1 {
-        text-align: center;
-      }
-    
-      h2 {
-        text-align: left;
-      }
-    
-      p {
-        text-align: left;
-      }
-    
-      .wireframe-css-carousel {
-          overflow-y: scroll;
-          overflow-x: hidden;
-          height: 100%;
-    
-          .wireframe-carousel-inner,
-          .wireframe-carousel-item {
-              height: 100%;
-          }
-    
-          .wireframe-carousel-item {
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-              position: relative;
-          }
-      }
-              
-    
-      $wireframe-css-carousel: (
-          slides: 6,
-          transition-speed: 1s
-      );
-    
-      .wireframe-css-carousel {
+      .wireframe-carousel {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        font-family: Arial;
+      
+        &__list {
+          display: flex;
+          list-style: none;
           position: relative;
-      
-          // hide input radio fields
-          input[name="wireframe-carousel"] {
-              display: none;
-          }
-      
-          // wireframe-carousel navigation
-          .wireframe-carousel-nav {
-              display: flex;
-              padding-left: calc(50% - 150px);
-              text-align: center;
-              margin: 40px 0;
-              width: 100%;
-              z-index: 1;
-      
-              label {
-                  background: #A9A8A8;
-                  border-radius: 20px;
-                  display: inline-block;
-                  margin: 0 10px 20px;
-                  width: 30px;
-                  height: 9px;
-                  cursor: pointer;
-                  transition: background-color 0.25s;
-              }
+          width: 100%;
+          height: 3600px;
+          margin-left: -40px;
+          justify-content: center;
+          perspective: 360px;
 
-              .label-small {
-                @include breakpoint(m) {
-                  display: none;
-                }
-              }
+          @include breakpoint(s) {
+            perspective: 500px;
+            height: 500px;
+          }
+        }
+        
+        &__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0px;
+          width: 164px;
+          height: 356px;
+          border-radius: 12px;
+          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+          position: absolute;
+          transition: all .3s ease-in;
 
-              @include breakpoint(m) {
-                padding-left: calc(50% - 66px);
-              }
+          @include breakpoint(s) {
+            width: 227px;
+            height: 491px;
+          }
+          
+          &:nth-child(1) {
+            background: center / contain no-repeat url(../images/first_wireframe_appt.png);
+          }
+          &:nth-child(2) {
+            background: center / contain no-repeat url(../images/first_wireframe_artist.png);
+          }
+          &:nth-child(3) {
+            background: center / contain no-repeat url(../images/first_wireframe_feed.png);
+          }
+          &:nth-child(4) {
+            background: center / contain no-repeat url(../images/first_wireframe_notifications.png);
+          }
+          &:nth-child(5) {
+            background: center / contain no-repeat url(../images/first_wireframe_review.png);
+          }
+          &:nth-child(6) {
+            background: center / contain no-repeat url(../images/first_wireframe_explore.png)
+          }
+          
+          &[data-pos="2"] {
+            z-index: 5;
+          }
+          
+          &[data-pos="1"],
+          &[data-pos="3"] {
+            opacity: 0.7;
+            filter: blur(1px) grayscale(10%);
+          }
+          
+          &[data-pos="1"] {
+            transform: translateX(-40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="3"] {
+            transform: translateX(40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="0"],
+          &[data-pos="4"] {
+            opacity: 0.4;
+            filter: blur(3px) grayscale(20%);
+          }
+          
+          &[data-pos="0"] {
+            transform: translateX(-70%) scale(.8);
+            z-index: 3;
+          }
+          
+          &[data-pos="4"] {
+            transform: translateX(70%) scale(.8);
+            z-index: 3;
           }
       
-          // active wireframe-carousel navigation
-          @for $i from 1 through map_get($wireframe-css-carousel, slides) {
-              #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-nav label[for="wireframe-carousel-#{$i}"] {
-                  background-color: $dark-blue;
-                  margin-top: -10px;
-                  transition: all .5s ease-out;
-                  scale: 1.2;
-              }
+          &[data-pos="5"] {
+            transform: scale(.8);
+            z-index: 2;
           }
-      
-          // wireframe-carousel slides
-          .wireframe-carousel-slides {
-              height: 100%;
-              width: 100%;
-              overflow: hidden;
-      
-              .wireframe-carousel-inner {
-                width: (100% * map_get($wireframe-css-carousel, slides));
-                transition:margin map_get($wireframe-css-carousel, transition-speed);
-
-                @include breakpoint(m) {
-                  width: (33.3% * map_get($wireframe-css-carousel, slides));
-                }
-              }
-      
-      
-              .wireframe-carousel-item {
-                  float: left;
-                  width: (100% / map_get($wireframe-css-carousel, slides));
-      
-                  .wireframe-carousel-image {
-                      display: flex;
-                      height: 70vh;
-
-                      img {
-                        max-height: 100%;
-                        max-width: 100%;
-                        margin: auto;
-                      }
-      
-                      @include breakpoint(m) {
-                          height: 70vh;
-                      }
-      
-                  }
-              }
-          }
-      
-          // active wireframe-carousel slides
-          @for $i from 1 through map_get($wireframe-css-carousel, slides) {
-              #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-slides .wireframe-carousel-inner {
-                  margin-left: (-100% * ($i - 1));
-              }
-          }
+        }
       }
   }
 }
@@ -634,8 +621,6 @@ body {
     border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    // grid-row-start: 74;
-    // grid-row-end: 75;
 
     h1 {
       padding-top: 100px;
@@ -650,7 +635,7 @@ body {
       grid-column-end: 12;
       // grid-row-start: 56;
       // grid-row-end: 57;
-      margin-top: 150px;
+      margin-top: 80px;
     }
   }
 
@@ -896,7 +881,6 @@ body {
   }
 
   .finished-product-images {
-    display: flex;
     grid-column-start: 1;
     grid-column-end: 13;
 
@@ -905,153 +889,127 @@ body {
       grid-column-end: 13;
     }
 
-    --distance: 4rem;
-
-    height: 100vh;
+    height: 400px;
     display: grid;
     place-items: center;
+    overflow: hidden;
     margin: 0;
-    
-    .cards {
-      display: none;
-      height: 70%;
-      margin-top: -11vh;
 
-      @include breakpoint(m) {
+    @include breakpoint(s) {
+      height: 650px;
+    }
+
+    .final-proto-container {
+    
+      .final-proto-carousel {
         display: flex;
-        height: unset;
-        margin-top: 11vh;
-        margin-bottom: 80px;
-      }
-    }
-    
-    .card {
-      z-index: 1;
-      padding: 2rem;
-      transition: all 0.4s ease-out;
-    }
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        font-family: Arial;
+      
+        &__list {
+          display: flex;
+          list-style: none;
+          position: relative;
+          width: 100%;
+          height: 3600px;
+          margin-left: -40px;
+          justify-content: center;
+          perspective: 360px;
 
-    .image-1 {
-      background: url(../images/final_appt_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;      
-      height: 14vw;
-      margin-left: 0;
-      padding: 9vh;
-      z-index: 1;
+          @include breakpoint(s) {
+            perspective: 500px;
+            height: 500px;
+          }
+        }
+        
+        &__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0px;
+          width: 164px;
+          height: 356px;
+          position: absolute;
+          transition: all .3s ease-in;
 
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 14vw;
-          padding: 8vw;
+          @include breakpoint(s) {
+            width: 227px;
+            height: 491px;
+          }
+          
+          &:nth-child(1) {
+            background: center / contain no-repeat url(../images/final_appt_screen.png);
+          }
+          &:nth-child(2) {
+            background: center / contain no-repeat url(../images/final_artist_screen.png);
+          }
+          &:nth-child(3) {
+            background: center / contain no-repeat url(../images/final_home_screen.png);
+          }
+          &:nth-child(4) {
+            background: center / contain no-repeat url(../images/final_profile_screen.png);
+          }
+          &:nth-child(5) {
+            background: center / contain no-repeat url(../images/final_explore_screen.png);
+          }
+          
+          &[data-pos="2"] {
+            z-index: 5;
+          }
+          
+          &[data-pos="1"],
+          &[data-pos="3"] {
+            opacity: 0.7;
+            filter: blur(1px) grayscale(10%);
+          }
+          
+          &[data-pos="1"] {
+            transform: translateX(-40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="3"] {
+            transform: translateX(40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="0"],
+          &[data-pos="4"] {
+            opacity: 0.4;
+            filter: blur(3px) grayscale(20%);
+          }
+          
+          &[data-pos="0"] {
+            transform: translateX(-70%) scale(.8);
+            z-index: 3;
+          }
+          
+          &[data-pos="4"] {
+            transform: translateX(70%) scale(.8);
+            z-index: 3;
+          }
         }
       }
-    }
-
-    .image-2 {
-      background: url(../images/final_explore_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 3;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 14vw;
-          padding: 8vw;
-        }
-      }
-    }
-
-    .image-3 {
-      background: url(../images/final_home_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 5;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 14vw;
-          padding: 8vw;
-        }
-      }
-    }
-
-    .image-4 {
-      background: url(../images/final_artist_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 3;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 14vw;
-          padding: 8vw;
-        }
-      }
-    }
-
-    .image-5 {
-      background: url(../images/final_profile_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 1;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 14vw;
-          padding: 8vw;
-        }
-      }
-    }
-
-    .card:not(:first-child) {
-      margin-left: calc(var(--distance)*-1);
-    }
-    
-    .card:hover,
-    .card:focus-within {
-      z-index: 10;
-      transform: translateY(-2vh) scale(1.2);
     }
 
     .proto-button {
       background-color: $white;
       border-radius: 30px;
+      border: none;
       box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
       cursor: pointer;
       color:#000;
       display: flex;
-      font-weight: 900;
       font-size: 14px;
-      margin: 0 auto;
-      margin-bottom: 100px;
+      font-weight: 900;
+      margin: 0 auto 50px;
       padding: 15px 0;
-      text-decoration:none;
-      width: 180px;
+      text-decoration: none;
       justify-content: center;
       transition: all ease-in-out 300ms;
+      width: 180px;
 
       &:hover {
         box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
@@ -1064,129 +1022,5 @@ body {
         width: 269px;
       }
     }
-
-    .proto-container {
-
-      @include breakpoint(m) {
-        display: none;
-      }
-    
-      h1 {
-        text-align: center;
-      }
-    
-      h2 {
-        text-align: left;
-      }
-    
-      p {
-        text-align: left;
-      }
-    
-      .proto-css-carousel {
-          overflow-y: scroll;
-          overflow-x: hidden;
-          height: 100%;
-    
-          .proto-carousel-inner,
-          .proto-carousel-item {
-              height: 100%;
-          }
-    
-          .proto-carousel-item {
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-              position: relative;
-          }
-      }
-    }
-              
-    
-    $proto-css-carousel: (
-        slides: 5,
-        transition-speed: 1s
-    );
-    
-    .proto-css-carousel {
-        position: relative;
-    
-        // hide input radio fields
-        input[name="proto-carousel"] {
-            display: none;
-        }
-    
-        // proto-carousel navigation
-        .proto-carousel-nav {
-            display: flex;
-            padding-left: calc(50% - 125px);
-            text-align: center;
-            margin: 40px 0;
-            width: 100%;
-            z-index: 1;
-    
-            label {
-                background: #A9A8A8;
-                display: inline-block;
-                margin: 0 10px 20px;
-                width: 30px;
-                height: 6px;
-                cursor: pointer;
-                transition: background-color 0.25s;
-            }
-        }
-    
-        // active proto-carousel navigation
-        @for $i from 1 through map_get($proto-css-carousel, slides) {
-            #proto-carousel-#{$i}:checked ~ .proto-carousel-nav label[for="proto-carousel-#{$i}"] {
-                background-color: $dark-blue;
-            }
-        }
-    
-        // proto-carousel slides
-        .proto-carousel-slides {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-    
-            .proto-carousel-inner {
-                width: (100% * map_get($proto-css-carousel, slides));
-                transition: margin map_get($proto-css-carousel, transition-speed);
-            }
-    
-    
-            .proto-carousel-item {
-                float: left;
-                width: (100% / map_get($proto-css-carousel, slides));
-    
-                .proto-carousel-image {
-                    display: flex;
-                    height: 70vh;
-  
-                    img {
-                      max-height: 100%;
-                      max-width: 100%;
-                      margin: auto;
-                    }
-    
-                    @include breakpoint(m) {
-                        height: 70vh;
-                        margin-left: 30vw;
-                        margin-top: 10vh;
-                        width: 70vw;
-                    }
-    
-                }
-            }
-        }
-    
-        // active proto-carousel slides
-        @for $i from 1 through map_get($proto-css-carousel, slides) {
-            #proto-carousel-#{$i}:checked ~ .proto-carousel-slides .proto-carousel-inner {
-                margin-left: (-100% * ($i - 1));
-            }
-        }
-    }
-
   }
 }
