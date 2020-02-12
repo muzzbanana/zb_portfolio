@@ -4,11 +4,11 @@ from flask_minify import minify
 import os.path
 
 app = Flask(__name__)
-minify(app=app)
 assets = Environment(app)
 assets.url = app.static_url_path
 scss = Bundle('styles/*.scss', filters='pyscss', output='css/main.css')
 assets.register('scss_all', scss)
+minify(app=app)
 
 @app.before_request
 def before_request():
@@ -66,7 +66,7 @@ def code_of_ethics():
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=7000)
 
 
 

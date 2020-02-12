@@ -6,112 +6,76 @@ body {
 .ink-envy-container {
 
   h1 {
-    color: #090067;
+    color: $dark-blue;
   }
 
   .hero-container {
-    background-color: #000;
     grid-column-start: 1;
     grid-column-end: 13;
-    grid-row-start: 1;
-    grid-row-end: 2;
     text-align: left;
     width: 100%;
 
     .hero-image-container {
-      margin-top: 100px;
 
       .hero-image {
         display: block;
         margin: auto;
         max-width: 90%;
-    }
-    }
-
-    .hero-title {
-      text-align: center;
-
-      h1 {
-        color: #17F7FB;
       }
     }
 
     .proto-button {
-        background-color:transparent;
-        border:1px solid #fff;
-        border-radius: 31.5px;
+        background-color: $white;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
         cursor: pointer;
-        color:#fff;
-        font-size:20px;
-        font-weight: bold;
-        margin: 0 auto;
-        margin-bottom: 100px;
-        padding: 15px 0;
-        text-decoration:none;
-        width: 269px;
+        color:#000;
         display: flex;
+        font-size: 14px;
+        font-weight: 900;
+        grid-column-start: 3;
+        margin: 0 auto 50px;
+        padding: 15px 0;
+        text-decoration: none;
         justify-content: center;
+        transition: all ease-in-out 300ms;
+        width: 180px;
 
         &:hover {
-          background-color: #fff;
-          color: #000;
+          box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
+          transform: translate(0px, -10px);
         }
 
-        &:hover {
-          color: #000;
-          background-color:#fff;
-        }
-
-        &:active {
-            position:relative;
-            top:1px;
-        }
-  
         @include breakpoint(m) {
-          padding: 20px 20px;
+          font-size: 20px;
+          padding: 20px 0;
+          width: 269px;
         }
       }
   }
 
-  .mobile-note {
-    display: block;
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    @include breakpoint(m) {
-      display: none;
-    }
-  }
-
   .ink-envy-title {
+    border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    padding-top: 80px;
     text-align: left;
   }
 
   .project-brief {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 5;
-    grid-row-end: 7;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 6;
-      grid-row-start: 5;
-      grid-row-end: 7;
     }
   }
 
   .the-challenge {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 8;
-    grid-row-end: 10;
 
 
     .footnote {
@@ -121,37 +85,27 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 7;
-      grid-row-end: 8;
     }
   }
 
   .my-role {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 11;
-    grid-row-end: 13;
 
     @include breakpoint(m) {
       grid-column-start: 7;
       grid-column-end: 12;
-      grid-row-start: 5;
-      grid-row-end: 7;
     }
   }
 
   .feats-for-users {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 14;
-    grid-row-end: 16;
     margin: auto 0;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 6;
-      grid-row-start: 8;
-      grid-row-end: 12;
       line-height: 41px;
     }
   }
@@ -159,8 +113,6 @@ body {
   .feats-for-users-image {
     grid-column-start: 1;
     grid-column-end: 13;
-    grid-row-start: 17;
-    grid-row-end: 20;
 
     img {
       display: block;
@@ -169,67 +121,67 @@ body {
     }
 
     @include breakpoint(m) {
-      grid-column-start: 8;
+      grid-column-start: 6;
       grid-column-end: 11;
-      grid-row-start: 8;
-      grid-row-end: 12;
     }
   }
 
   .feats-for-artists {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 21;
-    grid-row-end: 23;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
     margin: auto 0;
 
-    @include breakpoint(m) {
-      grid-column-start: 7;
-      grid-column-end: 12;
-      grid-row-start: 13;
-      grid-row-end: 17;
-    }
-  }
-
-  .feats-for-artists-image {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 24;
-    grid-row-end: 26;
-
-    img {
-      display: block;
-      margin: auto;
-      max-width: 100%;
+    .feats-for-artists-image {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      grid-row-start: 2;
+  
+      img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+  
+      @include breakpoint(m) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+      }
     }
 
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 7;
-      grid-row-start: 13;
-      grid-row-end: 17;
+    .feats-for-artists-text {
+      grid-column-start: 1;
+      grid-column-end: 8;
+      grid-row-start: 1;
+  
+      img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+  
+      @include breakpoint(m) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+      }
     }
   }
 
   .the-approach {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 27;
-    grid-row-end: 29;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 18;
-      grid-row-end: 20;
     }
   }
 
   .approach-diagram {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 29;
-    grid-row-end: 31;
 
     h2 {
       margin-top: 50px;
@@ -238,8 +190,6 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 20;
-      grid-row-end: 22;
     }
 
     img {
@@ -254,7 +204,7 @@ body {
       }
 
       &:hover, &:focus {
-        color: #090067; 
+        color: $dark-blue; 
       }
     }
   }
@@ -263,8 +213,6 @@ body {
     border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 31;
-    grid-row-end: 32;
     margin-top: 100px;
 
     h1 {
@@ -278,8 +226,6 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 23;
-      grid-row-end: 24;
       margin-top: 100px
     }
   }
@@ -287,43 +233,31 @@ body {
   .introduction {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 32;
-    grid-row-end: 34;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 24;
-      grid-row-end: 26;
     }
   }
 
   .top-competitors {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 34;
-    grid-row-end: 38;
     margin: auto;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 7;
-      grid-row-start: 26;
-      grid-row-end: 31;
     }
   }
 
   .top-competitors-image {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 38;
-    grid-row-end: 42;
 
     @include breakpoint(m) {
       grid-column-start: 8;
       grid-column-end: 12;
-      grid-row-start: 26;
-      grid-row-end: 31;
     }
 
     .bottom-images {
@@ -344,49 +278,100 @@ body {
     }
   }
 
-  .tattoodo-image {
+  .feats-for-artists {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 47;
-    grid-row-end: 49;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: auto 0;
 
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 6;
-      grid-row-start: 32;
-      grid-row-end: 34;
-    }
-
-    .bottom-images {
-      display: flex;
-      padding-top: 30px;
-
+    .feats-for-artists-image {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      grid-row-start: 2;
+  
       img {
-        max-width: 40%;
-        margin: auto;
         display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+  
+      @include breakpoint(m) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
       }
     }
 
-    img {
-      max-width: 80%;
-      margin: auto;
-      display: block;
+    .feats-for-artists-text {
+      grid-column-start: 1;
+      grid-column-end: 8;
+      grid-row-start: 1;
+  
+      img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+  
+      @include breakpoint(m) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+      }
     }
   }
 
   .tattoodo {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 42;
-    grid-row-end: 47;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: auto 0;
 
-    @include breakpoint(m) {
-      grid-column-start: 7;
-      grid-column-end: 12;
-      grid-row-start: 32;
-      grid-row-end: 37;
+    .tattoodo-image {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      grid-row-start: 2;
+  
+      .bottom-images {
+        display: flex;
+        padding-top: 30px;
+  
+        img {
+          max-width: 40%;
+          margin: auto;
+          display: block;
+        }
+      }
+  
+      img {
+        max-width: 80%;
+        margin: auto;
+        display: block;
+      }
+  
+      @include breakpoint(m) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+      }
+    }
+
+    .tattoodo-text {
+      grid-column-start: 1;
+      grid-column-end: 8;
+      grid-row-start: 1;
+  
+      img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+      }
+  
+      @include breakpoint(m) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+      }
     }
   }
 
@@ -394,8 +379,6 @@ body {
     border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 52;
-    grid-row-end: 53;
     margin-top: 100px;
 
     h1 {
@@ -409,8 +392,6 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 38;
-      grid-row-end: 39;
       margin-top: 150px;
     }
   }
@@ -418,28 +399,20 @@ body {
   .user-research-summary {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 53;
-    grid-row-end: 56;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 6;
-      grid-row-start: 39;
-      grid-row-end: 42;
     }
   }
 
   .user-research-image {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 56;
-    grid-row-end: 59;
 
     @include breakpoint(m) {
       grid-column-start: 7;
       grid-column-end: 12;
-      grid-row-start: 39;
-      grid-row-end: 42;
     }
 
     img {
@@ -453,8 +426,6 @@ body {
     border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 59;
-    grid-row-end: 60;
     margin-top: 100px;
 
     h1 {
@@ -468,8 +439,6 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 43;
-      grid-row-end: 44;
       margin-top: 150px;
     }
   }
@@ -477,46 +446,48 @@ body {
   .wireframes-and-proto-intro {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 60;
-    grid-row-end: 62;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 44;
-      grid-row-end: 46;
     }
   }
 
   .wireframes-and-proto-images {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 62;
-    grid-row-end: 69;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 47;
-      grid-row-end: 50;
     }
 
     img {
-      max-width: 100%;
+      display: inline-flex;
+      max-height: 350px;
+      padding: 10px;
+    }
+
+    .landscape-image {
+      max-width: 50%;
+      object-fit: contain;
+    }
+
+    .portrait-image {
+      max-width: 33%;
     }
   }
 
   .first-wireframes {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 69;
-    grid-row-end: 70;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 51;
-      grid-row-end: 52;
     }
   }
 
@@ -524,155 +495,124 @@ body {
     display: flex;
     grid-column-start: 1;
     grid-column-end: 13;
-    grid-row-start: 70;
-    grid-row-end: 73;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 52;
-      grid-row-end: 55;
     }
 
-    --distance: 4rem;
-
-    height: 100vh;
+    height: 400px;
     display: grid;
     place-items: center;
     overflow: hidden;
     margin: 0;
 
+    @include breakpoint(s) {
+      height: 650px;
+    }
+
     .wireframe-container {
     
-      h1 {
-        text-align: center;
-      }
-    
-      h2 {
-        text-align: left;
-      }
-    
-      p {
-        text-align: left;
-      }
-    
-      .wireframe-css-carousel {
-          overflow-y: scroll;
-          overflow-x: hidden;
-          height: 100%;
-    
-          .wireframe-carousel-inner,
-          .wireframe-carousel-item {
-              height: 100%;
-          }
-    
-          .wireframe-carousel-item {
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-              position: relative;
-          }
-      }
-              
-    
-      $wireframe-css-carousel: (
-          slides: 6,
-          transition-speed: 1s
-      );
-    
-      .wireframe-css-carousel {
+      .wireframe-carousel {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        font-family: Arial;
+      
+        &__list {
+          display: flex;
+          list-style: none;
           position: relative;
-      
-          // hide input radio fields
-          input[name="wireframe-carousel"] {
-              display: none;
-          }
-      
-          // wireframe-carousel navigation
-          .wireframe-carousel-nav {
-              display: flex;
-              padding-left: calc(50% - 150px);
-              text-align: center;
-              margin: 40px 0;
-              width: 100%;
-              z-index: 1;
-      
-              label {
-                  background: #A9A8A8;
-                  border-radius: 20px;
-                  display: inline-block;
-                  margin: 0 10px 20px;
-                  width: 30px;
-                  height: 9px;
-                  cursor: pointer;
-                  transition: background-color 0.25s;
-              }
+          width: 100%;
+          height: 3600px;
+          margin-left: -40px;
+          justify-content: center;
+          perspective: 360px;
 
-              .label-small {
-                @include breakpoint(m) {
-                  display: none;
-                }
-              }
+          @include breakpoint(s) {
+            perspective: 500px;
+            height: 500px;
+          }
+        }
+        
+        &__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0px;
+          width: 164px;
+          height: 356px;
+          border-radius: 12px;
+          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+          position: absolute;
+          transition: all .3s ease-in;
 
-              @include breakpoint(m) {
-                padding-left: calc(50% - 66px);
-              }
+          @include breakpoint(s) {
+            width: 227px;
+            height: 491px;
+          }
+          
+          &:nth-child(1) {
+            background: center / contain no-repeat url(../images/first_wireframe_appt.png);
+          }
+          &:nth-child(2) {
+            background: center / contain no-repeat url(../images/first_wireframe_artist.png);
+          }
+          &:nth-child(3) {
+            background: center / contain no-repeat url(../images/first_wireframe_feed.png);
+          }
+          &:nth-child(4) {
+            background: center / contain no-repeat url(../images/first_wireframe_notifications.png);
+          }
+          &:nth-child(5) {
+            background: center / contain no-repeat url(../images/first_wireframe_review.png);
+          }
+          &:nth-child(6) {
+            background: center / contain no-repeat url(../images/first_wireframe_explore.png)
+          }
+          
+          &[data-pos="2"] {
+            z-index: 5;
+          }
+          
+          &[data-pos="1"],
+          &[data-pos="3"] {
+            opacity: 0.7;
+            filter: blur(1px) grayscale(10%);
+          }
+          
+          &[data-pos="1"] {
+            transform: translateX(-40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="3"] {
+            transform: translateX(40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="0"],
+          &[data-pos="4"] {
+            opacity: 0.4;
+            filter: blur(3px) grayscale(20%);
+          }
+          
+          &[data-pos="0"] {
+            transform: translateX(-70%) scale(.8);
+            z-index: 3;
+          }
+          
+          &[data-pos="4"] {
+            transform: translateX(70%) scale(.8);
+            z-index: 3;
           }
       
-          // active wireframe-carousel navigation
-          @for $i from 1 through map_get($wireframe-css-carousel, slides) {
-              #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-nav label[for="wireframe-carousel-#{$i}"] {
-                  background-color: #090067;
-                  margin-top: -10px;
-                  transition: all .5s ease-out;
-                  scale: 1.2;
-              }
+          &[data-pos="5"] {
+            transform: scale(.8);
+            z-index: 2;
           }
-      
-          // wireframe-carousel slides
-          .wireframe-carousel-slides {
-              height: 100%;
-              width: 100%;
-              overflow: hidden;
-      
-              .wireframe-carousel-inner {
-                width: (100% * map_get($wireframe-css-carousel, slides));
-                transition:margin map_get($wireframe-css-carousel, transition-speed);
-
-                @include breakpoint(m) {
-                  width: (33.3% * map_get($wireframe-css-carousel, slides));
-                }
-              }
-      
-      
-              .wireframe-carousel-item {
-                  float: left;
-                  width: (100% / map_get($wireframe-css-carousel, slides));
-      
-                  .wireframe-carousel-image {
-                      display: flex;
-                      height: 70vh;
-
-                      img {
-                        max-height: 100%;
-                        max-width: 100%;
-                        margin: auto;
-                      }
-      
-                      @include breakpoint(m) {
-                          height: 70vh;
-                      }
-      
-                  }
-              }
-          }
-      
-          // active wireframe-carousel slides
-          @for $i from 1 through map_get($wireframe-css-carousel, slides) {
-              #wireframe-carousel-#{$i}:checked ~ .wireframe-carousel-slides .wireframe-carousel-inner {
-                  margin-left: (-100% * ($i - 1));
-              }
-          }
+        }
       }
   }
 }
@@ -681,9 +621,6 @@ body {
     border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 74;
-    grid-row-end: 75;
-    margin-top: 100px;
 
     h1 {
       padding-top: 100px;
@@ -696,31 +633,31 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 56;
-      grid-row-end: 57;
-      margin-top: 150px;
+      // grid-row-start: 56;
+      // grid-row-end: 57;
+      margin-top: 80px;
     }
   }
 
   .a-b-testing-intro {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 76;
-    grid-row-end: 79;
+    // grid-row-start: 76;
+    // grid-row-end: 79;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 7;
-      grid-row-start: 57;
-      grid-row-end: 60;
+      // grid-row-start: 57;
+      // grid-row-end: 60;
     }
   }
 
   .a-b-testing-intro-image {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 79;
-    grid-row-end: 82;
+    // grid-row-start: 79;
+    // grid-row-end: 82;
 
     img {
       max-width: 100%;
@@ -729,16 +666,16 @@ body {
     @include breakpoint(m) {
       grid-column-start: 7;
       grid-column-end: 12;
-      grid-row-start: 57;
-      grid-row-end: 60;
+      // grid-row-start: 57;
+      // grid-row-end: 60;
     }
   }
 
   .a-b-testing-script {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 82;
-    grid-row-end: 84;
+    // grid-row-start: 82;
+    // grid-row-end: 84;
 
     a {
       text-decoration: underline;
@@ -748,43 +685,33 @@ body {
       }
 
       &:hover, &:focus {
-        color: #090067; 
+        color: $dark-blue; 
       }
     }
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 7;
-      grid-row-start: 60;
-      grid-row-end: 62;
     }
   }
 
   .a-b-testing-methodology {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 84;
-    grid-row-end: 86;
 
     @include breakpoint(m) {
       grid-column-start: 7;
       grid-column-end: 12;
-      grid-row-start: 60;
-      grid-row-end: 62;
     }
   }
 
   .a-b-testing-results {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 86;
-    grid-row-end: 89;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 62;
-      grid-row-end: 64;
     }
   }
 
@@ -792,8 +719,6 @@ body {
     border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 90;
-    grid-row-end: 91;
     margin-top: 100px;
 
     h1 {
@@ -807,130 +732,130 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 65;
-      grid-row-end: 66;
       margin-top: 100px;
     }
   }
   .redefining-design-intro {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 91;
-    grid-row-end: 93;
 
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 66;
-      grid-row-end: 68;
     }
   }
+
   .change-1 {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 93;
-    grid-row-end: 96;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: auto 0;
 
-    @include breakpoint(m) {
-      grid-column-start: 8;
-      grid-column-end: 12;
-      grid-row-start: 68;
-      grid-row-end: 71;
-      margin: auto;
-    }
-  }
-  .change-1-image {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 96;
-    grid-row-end: 99;
-    margin: auto;
-    display: flex;
-
-    img {
-      max-width: 44%;
-      margin: 0 1.5%;
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 8;
-      grid-row-start: 68;
-      grid-row-end: 71;
+    .change-1-image {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      grid-row-start: 2;
       margin: auto;
       display: flex;
+
+      img {
+        max-width: 44%;
+        margin: 0 1.5%;
+      }
+    
+      @include breakpoint(m) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+      }
+    }
+
+    .change-1-text {
+      grid-column-start: 1;
+      grid-column-end: 8;
+      grid-row-start: 1;
+  
+      @include breakpoint(m) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+      }
     }
   }
+
   .change-2 {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 99;
-    grid-row-end: 102;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: auto 0;
 
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 6;
-      grid-row-start: 71;
-      grid-row-end: 74;
-      margin: auto;
-    }
-  }
-  .change-2-image {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 102;
-    grid-row-end: 105;
-    margin: auto;
-    display: flex;
-
-    img {
-      max-width: 44%;
-      margin: 0 1.5%;
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 6;
-      grid-column-end: 12;
-      grid-row-start: 71;
-      grid-row-end: 74;
+    .change-2-image {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      grid-row-start: 2;
       margin: auto;
       display: flex;
+
+      img {
+        max-width: 44%;
+        margin: 0 1.5%;
+      }
+    
+      @include breakpoint(m) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+      }
+    }
+
+    .change-2-text {
+      grid-column-start: 1;
+      grid-column-end: 8;
+      grid-row-start: 1;
+  
+      @include breakpoint(m) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+      }
     }
   }
+
   .change-3 {
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 105;
-    grid-row-end: 108;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: auto 0;
 
-    @include breakpoint(m) {
-      grid-column-start: 8;
-      grid-column-end: 12;
-      grid-row-start:74;
-      grid-row-end: 77;
-      margin: auto;
-    }
-  }
-  .change-3-image {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 108;
-    grid-row-end: 111;
-    margin: auto;
-    display: flex;
-
-    img {
-      max-width: 44%;
-      margin: 0 1.5%;
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 8;
-      grid-row-start: 74;
-      grid-row-end: 77;
+    .change-3-image {
+      grid-column-start: 1;
+      grid-column-end: 9;
+      grid-row-start: 2;
       margin: auto;
       display: flex;
+
+      img {
+        max-width: 44%;
+        margin: 0 1.5%;
+      }
+    
+      @include breakpoint(m) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+      }
+    }
+
+    .change-3-text {
+      grid-column-start: 1;
+      grid-column-end: 8;
+      grid-row-start: 1;
+  
+      @include breakpoint(m) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+      }
     }
   }
 
@@ -938,8 +863,6 @@ body {
     border-top: 1px solid;
     grid-column-start: 2;
     grid-column-end: 12;
-    grid-row-start: 112;
-    grid-row-end: 113;
     margin-top: 100px;
 
     h1 {
@@ -953,316 +876,151 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      grid-row-start: 78;
-      grid-row-end: 79;
       margin-top: 150px;
     }
   }
 
   .finished-product-images {
-    display: flex;
     grid-column-start: 1;
     grid-column-end: 13;
-    grid-row-start: 113;
-    grid-row-end: 116;
 
     @include breakpoint(m) {
       grid-column-start: 1;
       grid-column-end: 13;
-      grid-row-start: 79;
-      grid-row-end: 82;
     }
 
-    --distance: 4rem;
-
-    height: 100vh;
+    height: 400px;
     display: grid;
     place-items: center;
+    overflow: hidden;
     margin: 0;
-    
-    .cards {
-      display: none;
-      height: 70%;
-      margin-top: -11vh;
 
-      @include breakpoint(m) {
+    @include breakpoint(s) {
+      height: 650px;
+    }
+
+    .final-proto-container {
+    
+      .final-proto-carousel {
         display: flex;
-        height: unset;
-        margin-top: 11vh;
-        margin-bottom: 80px;
-      }
-    }
-    
-    .card {
-      z-index: 1;
-      padding: 2rem;
-      transition: 0.2s;
-    }
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        font-family: Arial;
+      
+        &__list {
+          display: flex;
+          list-style: none;
+          position: relative;
+          width: 100%;
+          height: 3600px;
+          margin-left: -40px;
+          justify-content: center;
+          perspective: 360px;
 
-    .image-1 {
-      background: url(../images/final_appt_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;      
-      height: 14vw;
-      margin-left: 0;
-      padding: 9vh;
-      z-index: 1;
+          @include breakpoint(s) {
+            perspective: 500px;
+            height: 500px;
+          }
+        }
+        
+        &__item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0px;
+          width: 164px;
+          height: 356px;
+          position: absolute;
+          transition: all .3s ease-in;
 
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 20vw;
-          padding: 10vw;
+          @include breakpoint(s) {
+            width: 227px;
+            height: 491px;
+          }
+          
+          &:nth-child(1) {
+            background: center / contain no-repeat url(../images/final_appt_screen.png);
+          }
+          &:nth-child(2) {
+            background: center / contain no-repeat url(../images/final_artist_screen.png);
+          }
+          &:nth-child(3) {
+            background: center / contain no-repeat url(../images/final_home_screen.png);
+          }
+          &:nth-child(4) {
+            background: center / contain no-repeat url(../images/final_profile_screen.png);
+          }
+          &:nth-child(5) {
+            background: center / contain no-repeat url(../images/final_explore_screen.png);
+          }
+          
+          &[data-pos="2"] {
+            z-index: 5;
+          }
+          
+          &[data-pos="1"],
+          &[data-pos="3"] {
+            opacity: 0.7;
+            filter: blur(1px) grayscale(10%);
+          }
+          
+          &[data-pos="1"] {
+            transform: translateX(-40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="3"] {
+            transform: translateX(40%) scale(.9);
+            z-index: 4;
+          }
+          
+          &[data-pos="0"],
+          &[data-pos="4"] {
+            opacity: 0.4;
+            filter: blur(3px) grayscale(20%);
+          }
+          
+          &[data-pos="0"] {
+            transform: translateX(-70%) scale(.8);
+            z-index: 3;
+          }
+          
+          &[data-pos="4"] {
+            transform: translateX(70%) scale(.8);
+            z-index: 3;
+          }
         }
       }
-    }
-
-    .image-2 {
-      background: url(../images/final_explore_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 3;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 20vw;
-          padding: 10vw;
-        }
-      }
-    }
-
-    .image-3 {
-      background: url(../images/final_home_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 5;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 20vw;
-          padding: 10vw;
-        }
-      }
-    }
-
-    .image-4 {
-      background: url(../images/final_artist_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 3;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 20vw;
-          padding: 10vw;
-        }
-      }
-    }
-
-    .image-5 {
-      background: url(../images/final_profile_screen.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 14vw;
-      margin-left: -14rem;
-      padding: 9vh;
-      z-index: 1;
-
-      @include breakpoint(s) {
-        padding: 11vw;
-
-        @include breakpoint(m) {
-          height: 20vw;
-          padding: 10vw;
-        }
-      }
-    }
-
-    .card:not(:first-child) {
-      margin-left: calc(var(--distance)*-1);
-    }
-    
-    .card:hover,
-    .card:focus-within {
-      z-index: 10;
-      transform: translateY(-2vh) scale(1.2);
     }
 
     .proto-button {
-      background-color: #000;
-      border: 1px solid #000;
-      border-radius: 31.5px;
-      box-shadow: -30px -30px 80px 0 #FFFFFF, 30px 30px 80px 0 rgba(0,0,0,0.25);
+      background-color: $white;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
       cursor: pointer;
-      color:#fff;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 0 auto;
-      margin-bottom: 100px;
-      padding: 15px 0;
-      text-decoration:none;
-      width: 269px;
+      color:#000;
       display: flex;
+      font-size: 14px;
+      font-weight: 900;
+      margin: 0 auto 50px;
+      padding: 15px 0;
+      text-decoration: none;
       justify-content: center;
+      transition: all ease-in-out 300ms;
+      width: 180px;
 
       &:hover {
-        color: #000;
-        background-color:#fff;
-      }
-
-      &:focus {
-        color: #000;
-        background-color:#fff;
-      }
-
-      &:active {
-          position:relative;
-          top:1px;
+        box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
+        transform: translate(0px, -10px);
       }
 
       @include breakpoint(m) {
-        padding: 20px 20px;
+        font-size: 20px;
+        padding: 20px 0;
+        width: 269px;
       }
     }
-
-    .proto-container {
-
-      @include breakpoint(m) {
-        display: none;
-      }
-    
-      h1 {
-        text-align: center;
-      }
-    
-      h2 {
-        text-align: left;
-      }
-    
-      p {
-        text-align: left;
-      }
-    
-      .proto-css-carousel {
-          overflow-y: scroll;
-          overflow-x: hidden;
-          height: 100%;
-    
-          .proto-carousel-inner,
-          .proto-carousel-item {
-              height: 100%;
-          }
-    
-          .proto-carousel-item {
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-              position: relative;
-          }
-      }
-    }
-              
-    
-    $proto-css-carousel: (
-        slides: 5,
-        transition-speed: 1s
-    );
-    
-    .proto-css-carousel {
-        position: relative;
-    
-        // hide input radio fields
-        input[name="proto-carousel"] {
-            display: none;
-        }
-    
-        // proto-carousel navigation
-        .proto-carousel-nav {
-            display: flex;
-            padding-left: calc(50% - 125px);
-            text-align: center;
-            margin: 40px 0;
-            width: 100%;
-            z-index: 1;
-    
-            label {
-                background: #A9A8A8;
-                display: inline-block;
-                margin: 0 10px 20px;
-                width: 30px;
-                height: 6px;
-                cursor: pointer;
-                transition: background-color 0.25s;
-            }
-        }
-    
-        // active proto-carousel navigation
-        @for $i from 1 through map_get($proto-css-carousel, slides) {
-            #proto-carousel-#{$i}:checked ~ .proto-carousel-nav label[for="proto-carousel-#{$i}"] {
-                background-color: #090067;
-            }
-        }
-    
-        // proto-carousel slides
-        .proto-carousel-slides {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-    
-            .proto-carousel-inner {
-                width: (100% * map_get($proto-css-carousel, slides));
-                transition: margin map_get($proto-css-carousel, transition-speed);
-            }
-    
-    
-            .proto-carousel-item {
-                float: left;
-                width: (100% / map_get($proto-css-carousel, slides));
-    
-                .proto-carousel-image {
-                    display: flex;
-                    height: 70vh;
-  
-                    img {
-                      max-height: 100%;
-                      max-width: 100%;
-                      margin: auto;
-                    }
-    
-                    @include breakpoint(m) {
-                        height: 70vh;
-                        margin-left: 30vw;
-                        margin-top: 10vh;
-                        width: 70vw;
-                    }
-    
-                }
-            }
-        }
-    
-        // active proto-carousel slides
-        @for $i from 1 through map_get($proto-css-carousel, slides) {
-            #proto-carousel-#{$i}:checked ~ .proto-carousel-slides .proto-carousel-inner {
-                margin-left: (-100% * ($i - 1));
-            }
-        }
-    }
-
   }
 }

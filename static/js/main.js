@@ -1,28 +1,30 @@
 const menu = document.querySelector(".drop-down-menu");
-const close = document.querySelector(".icon");
+const menuItems = document.querySelector(".menuitems");
+const menuList = document.querySelector(".menulist");
 
 const page = location.pathname.split("/")[1];
 const navOption = document.querySelector(".nav-" + page);
+const inkEnvyImage = document.querySelector(".ink-envy-image");
+const inkEnvyInfo = document.querySelector(".ink-envy-slide");
 if (navOption) {
   navOption.className += " active";
 }
-
 
 function navToggle() {
   const compStylesMenu = window.getComputedStyle(menu);
   const top = compStylesMenu.getPropertyValue('top');
   if (top === '-410px') {
     menu.style.top = '0px';
-
+    menu.setAttribute('aria-hidden', false);
+    menuItems.setAttribute('aria-hidden', false);
+    menuList.setAttribute('aria-hidden', false);
   } else {
     menu.style.top = '-410px';
+    menu.setAttribute('aria-hidden', true);
+    menuItems.setAttribute('aria-hidden', true);
+    menuList.setAttribute('aria-hidden', true);
   }
 }
-
-// media query event handler
-const mql = window.matchMedia("(min-width: 768px)");
-mql.addListener(widthChange);
-widthChange(mql);
 
 const header = document.querySelector('.header-wrapper');
 
@@ -34,59 +36,15 @@ window.addEventListener('scroll', function(){
   if ((document.body.getBoundingClientRect()).top > scrollPos) {
     header.style.top = '0';
   } else {
-    header.style.top = 'unset';
+    header.style.top = '-410px';
   }
 	// saves the new position for iteration.
 	scrollPos = (document.body.getBoundingClientRect()).top;
 });
 
-
-function widthChange(mql) {
-  if (mql.matches) {
-    const svg = document.querySelector(".hamburger-svg")
-    const group = document.querySelector(".hamburger-group")
-    svg.setAttribute('width', '62px');
-    svg.setAttribute('height', '27px');
-    group.setAttribute('d', "M1.5 1.5h59 M24.5 13.5h36.465 M37.5 25.5h22.534")
-  } else {
-    const svg = document.querySelector(".hamburger-svg")
-    const group = document.querySelector(".hamburger-group")
-    svg.setAttribute('width', '38px');
-    svg.setAttribute('height', '10px');
-    group.setAttribute('d', "M1 1.5h36M23 8.5h14")
-  }
-}
-
-function hello() {
-	var el = document.querySelector(".hello").eq(0);
-	var text = el.text();
-	var markup = '';
-	for(i = 0; i < text.length; i++) {
-		markup += '<span>'+text[i]+'</span>';
-	}
-	el.html(markup);
-};
-
-
-function lightToggle() {
-  const homeContainer = document.querySelector(".home-container");
-  const lights = document.querySelector(".hello");
-  const toggle = document.querySelector(".on");
-  const toggleStyle = window.getComputedStyle(toggle);
-  const opacity = toggleStyle.getPropertyValue('opacity');
-  if (opacity === '1') {
-    lights.style.animation = 'blur 6s linear infinite both, fade 10ms ease-in-out alternate infinite both';
-    lights.style.color = '#FEFE00';
-    homeContainer.style.filter = 'brightness(1.2)'
-  } else {
-    lights.style.animation = 'blur 6s linear infinite both';
-    lights.style.color = 'gray';
-    homeContainer.style.filter = 'brightness(1.0)'
-  }
-}
-
 function resumeBar() {
   const skillsContainer = document.querySelector(".skills-block");
+  const leftSide = document.querySelector(".left-side");
   const skillsStyle = window.getComputedStyle(skillsContainer);
   const chevron = document.querySelector(".chevron");
   const contact = document.querySelector(".contact-details");
@@ -95,12 +53,25 @@ function resumeBar() {
   const column = skillsStyle.getPropertyValue('grid-column-end');
 
   if (column === '1') {
-    console.log('180');
-    if (+window.innerWidth >= 768) {
+    chevron.href = "#";
+    if (+window.innerWidth >= 400) {
+      skillsContainer.style.gridColumnEnd = '7';
+      leftSide.style.gridColumnEnd = '7'
+      chevron.style.left = '40%';
+    } else if (+window.innerWidth >= 500){ 
+      skillsContainer.style.gridColumnEnd = '6';
+      leftSide.style.gridColumnEnd = '6'
+      chevron.style.left = '35%';
+    } else if (+window.innerWidth >= 600){ 
       skillsContainer.style.gridColumnEnd = '5';
+      leftSide.style.gridColumnEnd = '5'
+      chevron.style.left = '30%';
     } else {
       skillsContainer.style.gridColumnEnd = '9';
+      leftSide.style.gridColumnEnd = '9';
+      chevron.style.left = '50%';
     }
+    chevron.classList.add("paused");
     skillsContainer.style.zIndex = '3';
     chevron.style.float = 'right';
     chevron.style.rotate = '180deg';
@@ -108,13 +79,16 @@ function resumeBar() {
     design.style.display = 'block';
     tools.style.display = 'block';
   } else {
-    console.log('0');
+    chevron.href = "#contact-details";
     skillsContainer.style.gridColumnEnd = '1';
+    leftSide.style.gridColumnEnd = '3';
     skillsContainer.style.zIndex = '4';
     chevron.style.float = 'none';
     chevron.style.marginRight = '0';
     chevron.style.rotate = '360deg';
     contact.style.display = 'none';
+    chevron.style.left = '10%';
+    chevron.classList.remove("paused");
     design.style.display = 'none';
     tools.style.display = 'none';
   }
@@ -133,37 +107,35 @@ function resizeScreen() {
     const downloadButton = document.querySelector(".download-button");
     const title = document.querySelector(".title-block");
     const experience = document.querySelector(".experience-block");
-    const education = document.querySelector(".education-block");
-    const blackBG = document.querySelector(".black-bg");
+    const leftSide = document.querySelector(".left-side");
 
-    console.log('resizeScreen', window.innerWidth);
     if (+window.innerWidth >= 768) {
       chevron.style.display = 'none';
       skillsContainer.style.zIndex = '3';
       skillsContainer.style.gridColumnEnd = '4';
+      leftSide.style.gridColumnEnd = '4';
       title.style.gridColumnStart = '3';
       download.style.gridColumnEnd = '4';
       experience.style.gridColumnStart = '4';
-      education.style.gridColumnStart = '4';
-      blackBG.style.gridColumnStart = '3';
       contact.style.display = 'block';
       design.style.display = 'block';
       tools.style.display = 'block';
       downloadButton.style.display = 'flex';
 
-      if ( +window.innerWidth < 1200) {
+      if ( +window.innerWidth < 1280) {
         skillsContainer.style.gridColumnEnd = '5';
+        leftSide.style.gridColumnEnd = '5';
         title.style.gridColumnStart = '4';
         download.style.gridColumnEnd = '5';
         experience.style.gridColumnStart = '5';
-        education.style.gridColumnStart = '5';
-        blackBG.style.gridColumnStart = '4';
       }
     } else {
       skillsContainer.style.gridColumnEnd = '1';
+      leftSide.style.gridColumnEnd = '3';
       skillsContainer.style.zIndex = '4';
       chevron.style.display = 'block';
       chevron.style.float = 'none';
+      chevron.style.left = '10%';
       chevron.style.marginRight = '0';
       chevron.style.rotate = '0';
       contact.style.display = 'none';
@@ -172,13 +144,111 @@ function resizeScreen() {
       title.style.gridColumnStart = '1';
       downloadButton.style.display = 'none';
       experience.style.gridColumnStart = '3';
-      education.style.gridColumnStart = '3';
-      blackBG.style.gridColumnStart = '1';
     }
   }
-  
 }
 
 window.onload = function() {
   resizeScreen();
 };
+
+const carouselList = document.querySelector('.wireframe-carousel__list');
+const carouselItems = document.querySelectorAll('.wireframe-carousel__item');
+const elems = Array.from(carouselItems);
+
+carouselList.addEventListener('click', function (event) {
+  var newActive = event.target;
+  var isItem = newActive.closest('.wireframe-carousel__item');
+
+  if (!isItem || newActive.classList.contains('wireframe-carousel__item_active')) {
+    return;
+  };
+  
+  update(newActive);
+});
+
+const update = function(newActive) {
+  const newActivePos = newActive.dataset.pos;
+
+  const current = elems.find((elem) => elem.dataset.pos == 2);
+  const prev = elems.find((elem) => elem.dataset.pos == 1);
+  const next = elems.find((elem) => elem.dataset.pos == 3);
+  const first = elems.find((elem) => elem.dataset.pos == 0);
+  const last = elems.find((elem) => elem.dataset.pos == 4);
+  const behind = elems.find((elem) => elem.dataset.pos == 5);
+  
+  current.classList.remove('wireframe-carousel__item_active');
+
+  let diff = 100;
+  console.log('reset');
+  
+  [current, prev, next, first, last, behind].forEach(item => {
+    var itemPos = item.dataset.pos;
+
+    if (diff === 100) {
+      diff = +itemPos - +newActivePos;
+    }
+
+    item.dataset.pos = getPos(itemPos, diff, 5)
+  });
+};
+
+
+
+const carouselList_final = document.querySelector('.final-proto-carousel__list');
+const carouselItems_final = document.querySelectorAll('.final-proto-carousel__item');
+const elems_final = Array.from(carouselItems_final);
+
+carouselList_final.addEventListener('click', function (event) {
+  var newActive = event.target;
+  var isItem = newActive.closest('.final-proto-carousel__item');
+
+  if (!isItem || newActive.classList.contains('final-proto-carousel__item_active')) {
+    return;
+  };
+  
+  update_final(newActive);
+});
+
+const update_final = function(newActive) {
+  const newActivePos = newActive.dataset.pos;
+
+  const current = elems_final.find((elem) => elem.dataset.pos == 2);
+  const prev = elems_final.find((elem) => elem.dataset.pos == 1);
+  const next = elems_final.find((elem) => elem.dataset.pos == 3);
+  const first = elems_final.find((elem) => elem.dataset.pos == 0);
+  const last = elems_final.find((elem) => elem.dataset.pos == 4);
+  
+  current.classList.remove('final-proto-carousel__item_active');
+
+  let diff = 100;
+  console.log('reset');
+  
+  [current, prev, next, first, last].forEach(item => {
+    var itemPos = item.dataset.pos;
+
+    if (diff === 100) {
+      diff = +itemPos - +newActivePos;
+    }
+
+    item.dataset.pos = getPos(itemPos, diff, 4);
+  });
+};
+
+const getPos = function (current, diff, numOfItems) {
+  console.log(current, diff);
+  // const diff = active - current;
+
+  if (+current + diff > numOfItems) {
+    console.log('answer', +current + diff)
+    return numOfItems - +current;
+  }
+
+  if (+current + diff < 0) {
+    const delta = +current + diff;
+    const val = delta - diff; 
+    return numOfItems - val;
+  }
+
+  return +current + diff;
+}

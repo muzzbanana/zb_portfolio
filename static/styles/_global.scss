@@ -8,63 +8,68 @@ a {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 900;
 
   @include breakpoint(s) {
-    font-size: 36.5px;
+    font-size: 28px;
 
     @include breakpoint(m) {
-      font-size: 47px;
+      font-size: 33px;
     }
   }
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
 
   @include breakpoint(s) {
-    font-size: 24.5px;
+    font-size: 23px;
 
     @include breakpoint(m) {
-      font-size: 29px;
+      font-size: 26px;
     }
   }
 }
 
 h3 {
-  font-size: 12px;
+  font-size: 9px;
   font-weight: 400;
   font-style: italic;
 
   @include breakpoint(s) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
 h4 {
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 900;
   line-height: 0;
 
   @include breakpoint(s) {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
 p, ul {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 18px;
   font-weight: 400;
 
   @include breakpoint(s) {
     font-size: 15px;
-    line-height: 25px;
+    line-height: 20px;
 
     @include breakpoint(xl) {
-      font-size: 20px;
-      line-height: 27px;
+      font-size: 16px;
+      line-height: 22px;
     }
   }
 }
+
+$bg-color: #F1F3F6;
+$dark-blue: #0C0082;
+$black: #000;
+$white: #fff;

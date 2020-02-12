@@ -1,237 +1,115 @@
 html, body {
+    background: #F1F3F6;
     font-family: 'Muli';
     margin: 0;
     position: relative;
 }
 
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
 .home-container {
-    background: linear-gradient(0.25turn, #090067, #000);
-    font-size: 15px;
-    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
-
-    
+    height: calc(100vh - 54px);
 
     .papers {
         grid-column-start: 2;
         grid-column-end: 12;
-        grid-row-start: 1;
-        grid-row-end: 5;
-        margin-top: 50px;
+        margin: auto;
         text-align: center;
 
-        $neonColour1: gray;
-        $neonColour2: #fff;
-
-
-        .hello {
-            border-top: 5px solid;
-            border-bottom: 5px solid;
-            color: $neonColour1;
-            font-family: 'Monoton', cursive;
-            text-transform: uppercase;
-            font-size: 12vw;
-            line-height: 18vw;
-            height: 18vw;
-            text-shadow: 0 0 .1em;
-            animation: blur 6s linear infinite both;
-            
-            
-            span {
-                display: inline-block;
-            }
-            
-            span:nth-child(4n+1) {
-            //	opacity: .95;
-                transform: translateY(.1em);
-            }
-            
-            span:nth-child(4n+2) {
-                animation: flicker 1s linear infinite;
-                transform: translateY(.025em);
-            }
-            
-            span:nth-child(4n+3) {
-                opacity: .75;
-                transform: translateY(-.025em);
-            }
-            
-            span:nth-child(4n+4) {
-                animation: flicker 60ms linear infinite;
-                transform: translateY(-.1em);
-            }
-            
+        .top-border {
+          animation: hue 7s infinite linear;
+          -webkit-animation: hue 7s infinite linear;
+          background-size: 200% 200%;
+          max-width: 2000px;
+          padding: 2px 0;
+          position: relative;
+          background-image: linear-gradient(to left, #03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);
         }
 
-        @keyframes fade {
-            0% { opacity: .8; }
-            100% { opacity: 1; }
-        }
-
-
-        @keyframes blur {
-            0% { filter: blur(1px); }
-            40% { filter: blur(1px); }
-            42% { filter: blur(0); }
-            44% { filter: blur(2px); }
-            46% { filter: blur(1px); }
-            100% { filter: blur(1px); }
-        }
-
-        @keyframes flicker {
-            0% { opacity: 1; }
-            10% { opacity: 1; }
-            10.1% { opacity: 0; }
-            11% { opacity: 0; }
-            11.1% { opacity: 1; }
-            12% { opacity: 1; }
-            12.1% { opacity: 0; }
-            13% { opacity: 0; }
-            13.1% { opacity: 1; }
-            70% { opacity: 1; }
-            71.9% { opacity: 0; }
-            72% { opacity: 0; }
-            72.1% { opacity: 1; }
-            100% { opacity: 1; }
-
-            
+        .bottom-border {
+          animation: hue 7s infinite linear;
+          -webkit-animation: hue 7s infinite linear;
+          background-size: 200% 200%;
+          max-width: 2000px;
+          padding: 2px 0;
+          position: relative;
+          background-image: linear-gradient(to left, #03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);
         }
         
-    }
 
-    .toggle-container {
-        display: inline-grid;
-        margin: auto;
-        position: relative;
-
-        *,*:before,*:after {
-            transition:.25s ease-in-out;
-          }
-          
-          $green:#f3f3f3;
-          
-          .checkbox-label {
-            display: block;
-            background: #6b6969;
-            height: 20px;
-            width: 55px;
-            border-radius: 25px;
-            position: relative;
-            box-shadow: 0 0 0 2px #6b6969;
-
-            .off {
-              display: block;
-              position: absolute;
-              z-index: 0;
-              left: -16;
-              opacity: 1;
-              line-height: 20px;
-              opacity: 0;
-              color: $green;
-            }
-
-            .on {
-              display: block;
-              font-size: 12px;
-              position: absolute;
-              z-index:0;
-              right: 8px;
-              text-align: right;
-              opacity: 1;
-              line-height: 20px;
-              opacity: 1;
-              color: #fff;
-            }
-
-            &:before {
-              content: '';
-              display:block;
-              position:absolute;
-              z-index:1;
-              top: 0;
-              left: 0;
-              border-radius: 25px;
-              height: 20px;
-              width: 20px;
-              background:rgb(54, 54, 54);
-              box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #6b6969;
-            }
-          }
-          
-          .checkbox {
-            position:absolute;
-            left:-5000px;
-
-            &:checked {
-              + .checkbox-label {
-                background:$green;
-                box-shadow:0 0 0 2px $green;
-                .off {
-                  color: #6b6969;
-                  font-size: 12px;
-                  left: 9px;
-                  opacity: 1;
-                }
-                .on {
-                  right: 0px;
-                  opacity: 0;
-                }
-                &:before {
-                  background:rgb(168, 166, 166);
-                  left: 34px;
-                  box-shadow:0 3px 3px rgba(0,0,0,.2), 0 0 0 2px $green;
-                }
-              }
-            }
-          }
+        .hello {
+          animation: hue 7s infinite linear;
+          -webkit-animation: hue 7s infinite linear;
+          background-clip: text;
+          -webkit-background-clip: text;
+          background-size: 200% 200%;
+          background-image: linear-gradient(to left, #03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);
+          color: transparent;
+          font-family: 'Monoton', cursive;
+          text-transform: uppercase;
+          font-size: 12vw;
+          margin: 20px 0;
+        }  
     }
     
     .homepage-text {
-        color: #fff;
+        color: #000;
         grid-column-start: 2;
         grid-column-end: 12;
-        grid-row-start: 3;
-        padding-top: 30px;
         text-align: center;
         z-index: 50;
     }
 
     .view-my-work-button {
-        background-color: #000;
-        border: 2px solid #fff;
+        background-color: #fff;
+        border: none;
         border-radius: 30px;
+        box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
         cursor: pointer;
-        color:#fff;
-        // font-weight: bold;
+        color:#000;
         grid-column-start: 3;
         margin: 50px auto;
         padding: 0 20px;
         text-decoration:none;
         display: flex;
         justify-content: center;
+        transition: all ease-in-out 300ms;
 
         .button-text {
-            font-size: 15px;
-            line-height: 22px;
-            margin-left: 5px;
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 22px;
+          margin-left: 5px;
         }
 
         svg {
-          margin: 13px 13px 13px 0;
+          margin: 10px 5px 9px 0;
           position: relative;
-          transform: scale(1);
-
-          path {
-            fill: #fff;
-          }
+          transform: scale(.8);
         }
 
         &:hover {
-          background-color: white;
-          color: black;
-          border: 2px solid black; 
+          box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
+          transform: translate(0px, -10px);
   
           svg {
   
@@ -243,116 +121,55 @@ html, body {
       }
 
     @include breakpoint(m) {
+      height: calc(100vh - 75px);
+      place-items: center;
+  
         .homepage-text {
-            color: #fff;
-            grid-column-start: 7;
-            grid-column-end: 12;
-            grid-row-start: 1;
-            grid-row-end: 5;
-            padding: 50px 0 0 80px;
+            color: #000;
+            grid-column-start: 8;
+            grid-column-end: 13;
+            padding: 0 50px 0 0;
             text-align: left;
             z-index: 50;
         }
 
         .papers {
-            display: grid;
-            grid-column-start: 2;
-            grid-column-end: 12;
-            grid-row-start: 2;
-            margin-top: 0;
+          grid-column-start: 1;
+          grid-column-end: 7;
+          padding-left: 30px;
 
-            .hello {
-                font-size: 8vw;
-                height: 12vw;
-                line-height: 12vw;
-                margin-top: 125px;
+          .hello {
+              font-size: 8vw;
 
-                &::before,
-                &::after {
-                    left: 1%;
-                    width: 100%;
-                }
+              &::before,
+              &::after {
+                  left: 1%;
+                  width: 100%;
+              }
             }
+          }
 
-            .toggle-container {
-                grid-column-start: 1;
-                left: 0;
-                margin: 0;
+          .view-my-work-button {
+              margin: 50px 0;
+              padding: 0px 27px 0 40px;
 
-                .checkbox-label {
-                    height: 40px;
-                    width: 90px;
-        
-                    .off {
-                      left: -16;
-                      line-height: 40px;
-                    }
-        
-                    .on {
-                      font-size: 18px;
-                      right: 10px;
-                      line-height: 40px;
-                    }
-        
-                    &:before {
-                      content: '';
-                      height: 40px;
-                      width: 40px;
-                    }
-                  }
-                  
-                  .checkbox {
-        
-                    &:checked {
-                      + .checkbox-label {
-                        .off {
-                          font-size: 18px;
-                          left: 11px;
-                        }
-                        &:before {
-                            left: 48px;
-                          }
-                      }
-                    }
-                  }
-            }
-
-            .view-my-work-button {
-                grid-column-start: 8;
-                grid-column-end: 10;
-                margin: 50px 0;
-                padding: -1px 27px 0 40px;
-
-                .button-text {
-                  font-size: 20px;
-                  // line-height: 18px;
-                }
-    
-                svg {
-                  margin: 17px 13px 13px 0;
-                  // padding-top: 10px;
-                  position: relative;
-                  transform: scale(1.2);
-                }
-
-                &:hover {
-                  background-color: white;
-                  color: black;
-                  border: 2px solid black;
-                }
-            }
-
-        }
+              .button-text {
+                font-size: 16px;
+              }
+  
+              svg {
+                margin: 14px 13px 13px 0;
+                position: relative;
+              }
+          }
 
         @include breakpoint(xl) {
           .hello {
-            font-size: 15vw;
-            margin-top: 200px;
+            font-size: 13vw;
           }
   
           .homepage-text {
-              font-size: 30px;
-              padding: 5vw 0 0 5vw;
+            font-size: 20px;
           }
       }
     }
