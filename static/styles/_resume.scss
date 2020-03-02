@@ -296,6 +296,7 @@
 
     h1 {
       text-align: center;
+      color: $black;
     }
 
     ul {
@@ -339,6 +340,7 @@
 
     h1 {
       text-align: center;
+      color: $black;
     }
 
     h2 {
@@ -353,6 +355,7 @@
 
     h1 {
       text-align: center;
+      color: $black;
     }
 
     h2 {
@@ -376,6 +379,7 @@
 
     .section-title {
       padding-left: 40px;
+      color: $black;
     }
 
     p {
@@ -400,13 +404,9 @@
       }
     }
 
-    $headline: #000;
-    $primary-color: #000;
-    $matching-palette: honeydew;
-
     h1 {
       text-align: center;
-      color: $headline;
+      color: $black;
     }
 
     .dates {
@@ -426,7 +426,8 @@
         left: -18px;
         width: 4px;
         height: 97%;
-        background-color: #000;
+        background-color: transparent;
+        background-image: linear-gradient(#03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);;
 
         @include breakpoint(s) {
           left: 7px;
@@ -456,7 +457,9 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background-color: $primary-color;
+      background-color: $white;
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, .4);
+
       &:before {
         content: "";
         position: absolute;
@@ -498,7 +501,7 @@
     /* timeline typography */
 
     .timeline__content .timeline__year {
-      color: $primary-color;
+      color: $black;
       text-align: left;
       top: -5%;
 
@@ -509,7 +512,7 @@
     }
 
     .timeline__midpoint--highlight .timeline__year {
-      color: $white;
+      color: $black;
       line-height: 4;
     }
 
@@ -657,13 +660,9 @@
       }
     }
 
-    $headline: $white;
-    $primary-color: $white;
-    $matching-palette: honeydew;
-
     h1 {
       text-align: center;
-      color: $headline;
+      color: $dark-blue;
     }
 
     .dates {
@@ -713,7 +712,7 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background-color: $primary-color;
+      background-color: $white;
       &:before {
         content: "";
         position: absolute;
@@ -755,7 +754,7 @@
     /* timeline typography */
 
     .timeline__content .timeline__year {
-      color: $primary-color;
+      color: $black;
       position: relative;
       text-align: left;
       top: -5%;
@@ -775,7 +774,7 @@
     }
 
     .timeline__midpoint--highlight .timeline__year {
-      color: $white;
+      color: $black;
       line-height: 4;
     }
 
@@ -863,7 +862,7 @@
         }
       }
       .timeline__text--left {
-        color: $white;
+        color: $black;
         display: block;
         margin-top: 0;
         padding-bottom: 75px;

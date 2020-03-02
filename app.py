@@ -63,6 +63,11 @@ def code_of_ethics():
     name = 'code-of-ethics'
     return render_template('code-of-ethics.html', name=name)
 
+@app.route('/chautauqua', methods=['GET'])
+def chautauqua():
+    name = 'chautauqua'
+    return render_template('chautauqua.html', name=name)
+
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True

@@ -254,21 +254,11 @@ body {
   .top-competitors-image {
     grid-column-start: 2;
     grid-column-end: 12;
+    margin: auto;
 
     @include breakpoint(m) {
       grid-column-start: 8;
       grid-column-end: 12;
-    }
-
-    .bottom-images {
-      display: flex;
-      padding-top: 30px;
-
-      img {
-        max-width: 40%;
-        margin: auto;
-        display: block;
-      }
     }
 
     img {
@@ -332,17 +322,7 @@ body {
       grid-column-start: 1;
       grid-column-end: 9;
       grid-row-start: 2;
-  
-      .bottom-images {
-        display: flex;
-        padding-top: 30px;
-  
-        img {
-          max-width: 40%;
-          margin: auto;
-          display: block;
-        }
-      }
+      margin: auto;
   
       img {
         max-width: 80%;
@@ -370,7 +350,7 @@ body {
   
       @include breakpoint(m) {
         grid-column-start: 5;
-        grid-column-end: 8;
+        grid-column-end: 9;
       }
     }
   }

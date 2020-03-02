@@ -1,0 +1,45 @@
+.gallery-container {
+  .gallery-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 900px;
+    margin: auto;
+
+    @include breakpoint(s) {
+      height: 100vh;
+    }
+  }
+  
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+
+    @include breakpoint(s) {
+      background-position: unset;
+      background-size: contain;
+      background-repeat: none;
+    }
+    
+    &:hover{
+      flex: 10;
+    }
+  }
+  
+  .item-1 { 
+    background-image: url(../images/chautauqua_1.png);
+  }
+  
+  .item-2 { 
+    background-image: url(../images/chautauqua_3.png);
+  }
+  
+  .item-3 { 
+    background-image: url(../images/chautauqua-work.png);
+  }
+}
+
