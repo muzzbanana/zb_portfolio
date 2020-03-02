@@ -152,103 +152,163 @@ window.onload = function() {
   resizeScreen();
 };
 
-const carouselList = document.querySelector('.wireframe-carousel__list');
-const carouselItems = document.querySelectorAll('.wireframe-carousel__item');
-const elems = Array.from(carouselItems);
+if (page === 'work') {
+  const workContainer = document.querySelector('.work-container');
 
-carouselList.addEventListener('click', function (event) {
-  var newActive = event.target;
-  var isItem = newActive.closest('.wireframe-carousel__item');
+  let slide = workContainer.querySelectorAll('.slide');
+  let button = workContainer.querySelectorAll('.btn');
+  let current = 0;
 
-  if (!isItem || newActive.classList.contains('wireframe-carousel__item_active')) {
-    return;
-  };
-  
-  update(newActive);
-});
+  console.log('logging', slide, button);
 
-const update = function(newActive) {
-  const newActivePos = newActive.dataset.pos;
+  slide[current].style.zIndex = 2;
+  button[0].classList.add('inactive');
+  button[button.length - 1].classList.add('inactive');
 
-  const current = elems.find((elem) => elem.dataset.pos == 2);
-  const prev = elems.find((elem) => elem.dataset.pos == 1);
-  const next = elems.find((elem) => elem.dataset.pos == 3);
-  const first = elems.find((elem) => elem.dataset.pos == 0);
-  const last = elems.find((elem) => elem.dataset.pos == 4);
-  const behind = elems.find((elem) => elem.dataset.pos == 5);
-  
-  current.classList.remove('wireframe-carousel__item_active');
+  button = workContainer.querySelectorAll('.btn:not(.inactive');
 
-  let diff = 100;
-  console.log('reset');
-  
-  [current, prev, next, first, last, behind].forEach(item => {
-    var itemPos = item.dataset.pos;
+  for (element = 0; element < button.length; element++) {
+      button[element].addEventListener('click', function() {
 
-    if (diff === 100) {
-      diff = +itemPos - +newActivePos;
-    }
+          for (i=0; i < slide.length; i++) {
+              workContainer.querySelectorAll('.slide-img')[i].classList.add('active');
+              workContainer.querySelectorAll('.button')[i].style.opacity = "0";
+              workContainer.querySelectorAll('.slide-content h2')[i].classList.add("active");
+              workContainer.querySelectorAll('.slide-content p')[i].classList.add("active");
+              workContainer.querySelectorAll('.slide-content a')[i].classList.add("active");
+          }
+          
+          if (this.classList.contains('button-right')) {
+              current++;
+              if (current > slide.length - 1) {
+                  current = slide.length - 1
+              }
+          }
+          if (this.classList.contains('button-left')) {
+              current--;
+              if (current < 0) {
+                  current = 0
+              }
+          }
 
-    item.dataset.pos = getPos(itemPos, diff, 5)
-  });
-};
+          setTimeout(function() {
+              for (e=0; e < slide.length; e++) {
+                  slide[e].style.zIndex = "0";
+              }
+              slide[current].style.zIndex = "2";
 
-
-
-const carouselList_final = document.querySelector('.final-proto-carousel__list');
-const carouselItems_final = document.querySelectorAll('.final-proto-carousel__item');
-const elems_final = Array.from(carouselItems_final);
-
-carouselList_final.addEventListener('click', function (event) {
-  var newActive = event.target;
-  var isItem = newActive.closest('.final-proto-carousel__item');
-
-  if (!isItem || newActive.classList.contains('final-proto-carousel__item_active')) {
-    return;
-  };
-  
-  update_final(newActive);
-});
-
-const update_final = function(newActive) {
-  const newActivePos = newActive.dataset.pos;
-
-  const current = elems_final.find((elem) => elem.dataset.pos == 2);
-  const prev = elems_final.find((elem) => elem.dataset.pos == 1);
-  const next = elems_final.find((elem) => elem.dataset.pos == 3);
-  const first = elems_final.find((elem) => elem.dataset.pos == 0);
-  const last = elems_final.find((elem) => elem.dataset.pos == 4);
-  
-  current.classList.remove('final-proto-carousel__item_active');
-
-  let diff = 100;
-  console.log('reset');
-  
-  [current, prev, next, first, last].forEach(item => {
-    var itemPos = item.dataset.pos;
-
-    if (diff === 100) {
-      diff = +itemPos - +newActivePos;
-    }
-
-    item.dataset.pos = getPos(itemPos, diff, 4);
-  });
-};
-
-const getPos = function (current, diff, numOfItems) {
-  console.log(current, diff);
-  // const diff = active - current;
-
-  if (+current + diff > numOfItems) {
-    console.log('answer', +current + diff)
-    return numOfItems - +current;
+              for (i=0; i <slide.length; i++) {
+                  workContainer.querySelectorAll('.slide-img')[i].classList.remove('active');
+                  workContainer.querySelectorAll('.button')[i].style.opacity = "1";
+                  workContainer.querySelectorAll('.slide-content h2')[i].classList.remove("active");
+                  workContainer.querySelectorAll('.slide-content p')[i].classList.remove("active");
+                  workContainer.querySelectorAll('.slide-content a')[i].classList.remove("active");
+              }
+          }, 1000);
+      });
   }
-
-  if (+current + diff < 0) {
-    const delta = +current + diff;
-    const val = delta - diff; 
-    return numOfItems - val;
-  }
-
-  return +current + diff;
 }
+
+if (page === 'ink-envy') {
+  const carouselList = document.querySelector('.wireframe-carousel__list');
+  const carouselItems = document.querySelectorAll('.wireframe-carousel__item');
+  const elems = Array.from(carouselItems);
+
+  carouselList.addEventListener('click', function (event) {
+    var newActive = event.target;
+    var isItem = newActive.closest('.wireframe-carousel__item');
+
+    if (!isItem || newActive.classList.contains('wireframe-carousel__item_active')) {
+      return;
+    };
+    
+    update(newActive);
+  });
+
+  const update = function(newActive) {
+    const newActivePos = newActive.dataset.pos;
+
+    const current = elems.find((elem) => elem.dataset.pos == 2);
+    const prev = elems.find((elem) => elem.dataset.pos == 1);
+    const next = elems.find((elem) => elem.dataset.pos == 3);
+    const first = elems.find((elem) => elem.dataset.pos == 0);
+    const last = elems.find((elem) => elem.dataset.pos == 4);
+    const behind = elems.find((elem) => elem.dataset.pos == 5);
+    
+    current.classList.remove('wireframe-carousel__item_active');
+
+    let diff = 100;
+    console.log('reset');
+    
+    [current, prev, next, first, last, behind].forEach(item => {
+      var itemPos = item.dataset.pos;
+
+      if (diff === 100) {
+        diff = +itemPos - +newActivePos;
+      }
+
+      item.dataset.pos = getPos(itemPos, diff, 5)
+    });
+  };
+
+
+  const carouselList_final = document.querySelector('.final-proto-carousel__list');
+  const carouselItems_final = document.querySelectorAll('.final-proto-carousel__item');
+  const elems_final = Array.from(carouselItems_final);
+
+  carouselList_final.addEventListener('click', function (event) {
+    var newActive = event.target;
+    var isItem = newActive.closest('.final-proto-carousel__item');
+
+    if (!isItem || newActive.classList.contains('final-proto-carousel__item_active')) {
+      return;
+    };
+    
+    update_final(newActive);
+  });
+
+  const update_final = function(newActive) {
+    const newActivePos = newActive.dataset.pos;
+
+    const current = elems_final.find((elem) => elem.dataset.pos == 2);
+    const prev = elems_final.find((elem) => elem.dataset.pos == 1);
+    const next = elems_final.find((elem) => elem.dataset.pos == 3);
+    const first = elems_final.find((elem) => elem.dataset.pos == 0);
+    const last = elems_final.find((elem) => elem.dataset.pos == 4);
+    
+    current.classList.remove('final-proto-carousel__item_active');
+
+    let diff = 100;
+    console.log('reset');
+    
+    [current, prev, next, first, last].forEach(item => {
+      var itemPos = item.dataset.pos;
+
+      if (diff === 100) {
+        diff = +itemPos - +newActivePos;
+      }
+
+      item.dataset.pos = getPos(itemPos, diff, 4);
+    });
+  };
+
+  const getPos = function (current, diff, numOfItems) {
+    console.log(current, diff);
+    // const diff = active - current;
+
+    if (+current + diff > numOfItems) {
+      console.log('answer', +current + diff)
+      return numOfItems - +current;
+    }
+
+    if (+current + diff < 0) {
+      const delta = +current + diff;
+      const val = delta - diff; 
+      return numOfItems - val;
+    }
+
+    return +current + diff;
+  }
+
+}
+
