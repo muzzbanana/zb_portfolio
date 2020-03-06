@@ -196,6 +196,7 @@
                   transition: all ease-in-out 300ms;
 
                   &:hover {
+                    padding-bottom: 10px;
                     transform: translate(0px, -6px);
                   }
 
