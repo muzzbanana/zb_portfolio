@@ -15,7 +15,7 @@
     flex: 1;
     height: 100%;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: none;
     transition: flex 0.8s ease;
 
@@ -40,6 +40,10 @@
   
   .item-3 { 
     background-image: url(../images/chautauqua-work.png);
+  }
+
+  .item-4 { 
+    background-image: url(../images/chautauqua_5.png);
   }
 }
 
