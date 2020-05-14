@@ -68,10 +68,16 @@ def chautauqua():
     name = 'chautauqua'
     return render_template('chautauqua.html', name=name)
 
+@app.route('/nest-egg', methods=['GET'])
+def nest_egg():
+    name = 'nest-egg'
+    return render_template('nest-egg.html', name=name)
+
+
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug=True, port=7000)
+    app.run(debug=True, port=8000)
 
 
 
