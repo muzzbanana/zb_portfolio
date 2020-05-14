@@ -4,7 +4,6 @@ body {
 }
 
 .ink-envy-container {
-
   h1 {
     color: $dark-blue;
   }
@@ -16,7 +15,6 @@ body {
     width: 100%;
 
     .hero-image-container {
-
       .hero-image {
         display: block;
         margin: auto;
@@ -25,34 +23,34 @@ body {
     }
 
     .proto-button {
-        background-color: $white;
-        border-radius: 30px;
-        border: none;
-        box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
-        cursor: pointer;
-        color:#000;
-        display: flex;
-        font-size: 14px;
-        font-weight: 900;
-        grid-column-start: 3;
-        margin: 0 auto 50px;
-        padding: 15px 0;
-        text-decoration: none;
-        justify-content: center;
-        transition: all ease-in-out 300ms;
-        width: 180px;
+      background-color: $white;
+      border-radius: 30px;
+      border: none;
+      box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      color: #000;
+      display: flex;
+      font-size: 14px;
+      font-weight: 900;
+      grid-column-start: 3;
+      margin: 0 auto 50px;
+      padding: 15px 0;
+      text-decoration: none;
+      justify-content: center;
+      transition: all ease-in-out 300ms;
+      width: 180px;
 
-        &:hover {
-          box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
-          transform: translate(0px, -10px);
-        }
-
-        @include breakpoint(m) {
-          font-size: 20px;
-          padding: 20px 0;
-          width: 269px;
-        }
+      &:hover {
+        box-shadow: 0px 37px 20px -15px rgba(0, 0, 0, 0.2);
+        transform: translate(0px, -10px);
       }
+
+      @include breakpoint(m) {
+        font-size: 20px;
+        padding: 20px 0;
+        width: 269px;
+      }
+    }
   }
 
   .ink-envy-title {
@@ -76,7 +74,6 @@ body {
   .the-challenge {
     grid-column-start: 2;
     grid-column-end: 12;
-
 
     .footnote {
       font-size: 12.36px;
@@ -137,13 +134,13 @@ body {
       grid-column-start: 1;
       grid-column-end: 9;
       grid-row-start: 2;
-  
+
       img {
         display: block;
         margin: auto;
         max-width: 100%;
       }
-  
+
       @include breakpoint(m) {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -155,13 +152,13 @@ body {
       grid-column-start: 1;
       grid-column-end: 8;
       grid-row-start: 1;
-  
+
       img {
         display: block;
         margin: auto;
         max-width: 100%;
       }
-  
+
       @include breakpoint(m) {
         grid-column-start: 5;
         grid-column-end: 8;
@@ -211,23 +208,33 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        
+
         &:before {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
-          
+
           width: 100%;
-          height: .2em;
+          height: 0.2em;
         }
-        
+
         .line {
           display: block;
           position: absolute;
-          
+
           width: 80vw;
-          height: .2em;
-          background-image: linear-gradient(to left, #03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);;
+          height: 0.2em;
+          background-image: linear-gradient(
+            to left,
+            #03e303,
+            #f2ea00,
+            #ff7c00,
+            #ff001e,
+            #ff00ff,
+            #7702da,
+            #0a15c2,
+            #02f0f0
+          );
         }
 
         .triangle {
@@ -235,16 +242,16 @@ body {
           position: relative;
           bottom: calc(100% + 1em);
           box-sizing: content-box;
-    
-          transition: all .5s;
+
+          transition: all 0.5s;
           z-index: 500;
-    
+
           width: 0px;
           border-left: solid 10px $dark-blue;
           border-bottom: solid 10px transparent;
           border-top: solid 10px transparent;
         }
-        
+
         .steps {
           display: flex;
           position: relative;
@@ -253,53 +260,51 @@ body {
           align-items: center;
           width: 80vw;
 
-          
           .step {
             display: block;
             position: relative;
             bottom: calc(100% + 1em);
             box-sizing: content-box;
-      
-            transition: all .5s;
+
+            transition: all 0.5s;
             z-index: 500;
-      
+
             width: 0px;
             border: solid 10px $white;
             border-radius: 20px;
-            box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, .4);
-            
-      
-      
+            box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.4);
+
             &:first-child {
               margin-left: 0;
             }
-      
+
             &:last-child {
               margin-right: 0;
             }
-      
+
             .progress-step {
               color: $black;
               position: absolute;
-              transform: rotate(-90deg) translate(20px, -26px);;
+              transform: rotate(-90deg) translate(20px, -26px);
               transform-origin: top left;
               text-align: start;
-              transition: all .5s;
+              transition: all 0.5s;
               white-space: nowrap;
               text-decoration: underline;
-                
-                &:visited {
-                  color: inherit;
-                }
-          
-                &:hover, &:focus {
-                  color: $dark-blue; 
-                }
+
+              &:visited {
+                color: inherit;
+              }
+
+              &:hover,
+              &:focus {
+                color: $dark-blue;
+              }
 
               @include breakpoint(s) {
                 white-space: normal;
               }
-      
+
               @include breakpoint(m) {
                 left: 50%;
                 top: calc(100% + 1em);
@@ -307,21 +312,21 @@ body {
                 text-align: center;
               }
             }
-          }	
+          }
         }
-      }    
-
+      }
     }
-  
+
     .skip-link {
       text-decoration: underline;
-      
+
       &:visited {
         color: inherit;
       }
 
-      &:hover, &:focus {
-        color: $dark-blue; 
+      &:hover,
+      &:focus {
+        color: $dark-blue;
       }
     }
   }
@@ -343,7 +348,7 @@ body {
     @include breakpoint(m) {
       grid-column-start: 2;
       grid-column-end: 12;
-      margin-top: 100px
+      margin-top: 100px;
     }
   }
 
@@ -396,13 +401,13 @@ body {
       grid-column-start: 1;
       grid-column-end: 9;
       grid-row-start: 2;
-  
+
       img {
         display: block;
         margin: auto;
         max-width: 100%;
       }
-  
+
       @include breakpoint(m) {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -414,13 +419,13 @@ body {
       grid-column-start: 1;
       grid-column-end: 8;
       grid-row-start: 1;
-  
+
       img {
         display: block;
         margin: auto;
         max-width: 100%;
       }
-  
+
       @include breakpoint(m) {
         grid-column-start: 5;
         grid-column-end: 8;
@@ -440,13 +445,13 @@ body {
       grid-column-end: 9;
       grid-row-start: 2;
       margin: auto;
-  
+
       img {
         max-width: 80%;
         margin: auto;
         display: block;
       }
-  
+
       @include breakpoint(m) {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -458,13 +463,13 @@ body {
       grid-column-start: 1;
       grid-column-end: 8;
       grid-row-start: 1;
-  
+
       img {
         display: block;
         margin: auto;
         max-width: 100%;
       }
-  
+
       @include breakpoint(m) {
         grid-column-start: 5;
         grid-column-end: 9;
@@ -609,14 +614,13 @@ body {
     }
 
     .wireframe-container {
-    
       .wireframe-carousel {
         display: flex;
         width: 100%;
         height: 100%;
         align-items: center;
         font-family: Arial;
-      
+
         &__list {
           display: flex;
           list-style: none;
@@ -632,7 +636,7 @@ body {
             height: 500px;
           }
         }
-        
+
         &__item {
           display: flex;
           align-items: center;
@@ -643,76 +647,82 @@ body {
           border-radius: 12px;
           box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
           position: absolute;
-          transition: all .3s ease-in;
+          transition: all 0.3s ease-in;
 
           @include breakpoint(s) {
             width: 227px;
             height: 491px;
           }
-          
+
           &:nth-child(1) {
-            background: center / contain no-repeat url(../images/first_wireframe_appt.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/first_wireframe_appt.png);
           }
           &:nth-child(2) {
-            background: center / contain no-repeat url(../images/first_wireframe_artist.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/first_wireframe_artist.png);
           }
           &:nth-child(3) {
-            background: center / contain no-repeat url(../images/first_wireframe_feed.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/first_wireframe_feed.png);
           }
           &:nth-child(4) {
-            background: center / contain no-repeat url(../images/first_wireframe_notifications.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/first_wireframe_notifications.png);
           }
           &:nth-child(5) {
-            background: center / contain no-repeat url(../images/first_wireframe_review.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/first_wireframe_review.png);
           }
           &:nth-child(6) {
-            background: center / contain no-repeat url(../images/first_wireframe_explore.png)
+            background: center / contain no-repeat
+              url(../images/ink-envy/first_wireframe_explore.png);
           }
-          
+
           &[data-pos="2"] {
             z-index: 5;
           }
-          
+
           &[data-pos="1"],
           &[data-pos="3"] {
             opacity: 0.7;
             filter: blur(1px) grayscale(10%);
           }
-          
+
           &[data-pos="1"] {
-            transform: translateX(-40%) scale(.9);
+            transform: translateX(-40%) scale(0.9);
             z-index: 4;
           }
-          
+
           &[data-pos="3"] {
-            transform: translateX(40%) scale(.9);
+            transform: translateX(40%) scale(0.9);
             z-index: 4;
           }
-          
+
           &[data-pos="0"],
           &[data-pos="4"] {
             opacity: 0.4;
             filter: blur(3px) grayscale(20%);
           }
-          
+
           &[data-pos="0"] {
-            transform: translateX(-70%) scale(.8);
+            transform: translateX(-70%) scale(0.8);
             z-index: 3;
           }
-          
+
           &[data-pos="4"] {
-            transform: translateX(70%) scale(.8);
+            transform: translateX(70%) scale(0.8);
             z-index: 3;
           }
-      
+
           &[data-pos="5"] {
-            transform: scale(.8);
+            transform: scale(0.8);
             z-index: 2;
           }
         }
       }
+    }
   }
-}
 
   .a-b-testing {
     border-top: 1px solid;
@@ -776,13 +786,14 @@ body {
 
     a {
       text-decoration: underline;
-      
+
       &:visited {
         color: inherit;
       }
 
-      &:hover, &:focus {
-        color: $dark-blue; 
+      &:hover,
+      &:focus {
+        color: $dark-blue;
       }
     }
 
@@ -860,7 +871,7 @@ body {
         max-width: 44%;
         margin: 0 1.5%;
       }
-    
+
       @include breakpoint(m) {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -872,7 +883,7 @@ body {
       grid-column-start: 1;
       grid-column-end: 8;
       grid-row-start: 1;
-  
+
       @include breakpoint(m) {
         grid-column-start: 5;
         grid-column-end: 8;
@@ -898,7 +909,7 @@ body {
         max-width: 44%;
         margin: 0 1.5%;
       }
-    
+
       @include breakpoint(m) {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -910,7 +921,7 @@ body {
       grid-column-start: 1;
       grid-column-end: 8;
       grid-row-start: 1;
-  
+
       @include breakpoint(m) {
         grid-column-start: 5;
         grid-column-end: 8;
@@ -936,7 +947,7 @@ body {
         max-width: 44%;
         margin: 0 1.5%;
       }
-    
+
       @include breakpoint(m) {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -948,7 +959,7 @@ body {
       grid-column-start: 1;
       grid-column-end: 8;
       grid-row-start: 1;
-  
+
       @include breakpoint(m) {
         grid-column-start: 5;
         grid-column-end: 8;
@@ -997,14 +1008,13 @@ body {
     }
 
     .final-proto-container {
-    
       .final-proto-carousel {
         display: flex;
         width: 100%;
         height: 100%;
         align-items: center;
         font-family: Arial;
-      
+
         &__list {
           display: flex;
           list-style: none;
@@ -1020,7 +1030,7 @@ body {
             height: 500px;
           }
         }
-        
+
         &__item {
           display: flex;
           align-items: center;
@@ -1029,62 +1039,67 @@ body {
           width: 164px;
           height: 356px;
           position: absolute;
-          transition: all .3s ease-in;
+          transition: all 0.3s ease-in;
 
           @include breakpoint(s) {
             width: 227px;
             height: 491px;
           }
-          
+
           &:nth-child(1) {
-            background: center / contain no-repeat url(../images/final_appt_screen.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/final_appt_screen.png);
           }
           &:nth-child(2) {
-            background: center / contain no-repeat url(../images/final_artist_screen.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/final_artist_screen.png);
           }
           &:nth-child(3) {
-            background: center / contain no-repeat url(../images/final_home_screen.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/final_home_screen.png);
           }
           &:nth-child(4) {
-            background: center / contain no-repeat url(../images/final_profile_screen.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/final_profile_screen.png);
           }
           &:nth-child(5) {
-            background: center / contain no-repeat url(../images/final_explore_screen.png);
+            background: center / contain no-repeat
+              url(../images/ink-envy/final_explore_screen.png);
           }
-          
+
           &[data-pos="2"] {
             z-index: 5;
           }
-          
+
           &[data-pos="1"],
           &[data-pos="3"] {
             opacity: 0.7;
             filter: blur(1px) grayscale(10%);
           }
-          
+
           &[data-pos="1"] {
-            transform: translateX(-40%) scale(.9);
+            transform: translateX(-40%) scale(0.9);
             z-index: 4;
           }
-          
+
           &[data-pos="3"] {
-            transform: translateX(40%) scale(.9);
+            transform: translateX(40%) scale(0.9);
             z-index: 4;
           }
-          
+
           &[data-pos="0"],
           &[data-pos="4"] {
             opacity: 0.4;
             filter: blur(3px) grayscale(20%);
           }
-          
+
           &[data-pos="0"] {
-            transform: translateX(-70%) scale(.8);
+            transform: translateX(-70%) scale(0.8);
             z-index: 3;
           }
-          
+
           &[data-pos="4"] {
-            transform: translateX(70%) scale(.8);
+            transform: translateX(70%) scale(0.8);
             z-index: 3;
           }
         }
@@ -1095,9 +1110,9 @@ body {
       background-color: $white;
       border-radius: 30px;
       border: none;
-      box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+      box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
       cursor: pointer;
-      color:#000;
+      color: #000;
       display: flex;
       font-size: 14px;
       font-weight: 900;
@@ -1109,7 +1124,7 @@ body {
       width: 180px;
 
       &:hover {
-        box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
+        box-shadow: 0px 37px 20px -15px rgba(0, 0, 0, 0.2);
         transform: translate(0px, -10px);
       }
 
