@@ -1,8 +1,9 @@
-html, body {
-    background: $bg-color;
-    font-family: 'Muli';
-    margin: 0;
-    position: relative;
+html,
+body {
+  background: $bg-color;
+  font-family: "Muli";
+  margin: 0;
+  position: relative;
 }
 
 @keyframes hue {
@@ -24,155 +25,181 @@ html, body {
 }
 
 .home-container {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    position: relative;
-    height: calc(100vh - 54px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  height: calc(100vh - 54px);
+
+  .papers {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    margin: auto;
+    text-align: center;
+
+    .top-border {
+      animation: hue 7s infinite linear;
+      -webkit-animation: hue 7s infinite linear;
+      background-size: 200% 200%;
+      max-width: 2000px;
+      padding: 2px 0;
+      position: relative;
+      background-image: linear-gradient(
+        to left,
+        #03e303,
+        #f2ea00,
+        #ff7c00,
+        #ff001e,
+        #ff00ff,
+        #7702da,
+        #0a15c2,
+        #02f0f0
+      );
+    }
+
+    .bottom-border {
+      animation: hue 7s infinite linear;
+      -webkit-animation: hue 7s infinite linear;
+      background-size: 200% 200%;
+      max-width: 2000px;
+      padding: 2px 0;
+      position: relative;
+      background-image: linear-gradient(
+        to left,
+        #03e303,
+        #f2ea00,
+        #ff7c00,
+        #ff001e,
+        #ff00ff,
+        #7702da,
+        #0a15c2,
+        #02f0f0
+      );
+    }
+
+    .hello {
+      animation: hue 7s infinite linear;
+      -webkit-animation: hue 7s infinite linear;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-size: 200% 200%;
+      background-image: linear-gradient(
+        to left,
+        #03e303,
+        #f2ea00,
+        #ff7c00,
+        #ff001e,
+        #ff00ff,
+        #7702da,
+        #0a15c2,
+        #02f0f0
+      );
+      color: transparent;
+      font-family: "Monoton", cursive;
+      text-transform: uppercase;
+      font-size: 12vw;
+      margin: 20px 0;
+    }
+  }
+
+  .homepage-text {
+    color: #000;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    text-align: center;
+    z-index: 50;
+  }
+
+  .view-my-work-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 30px;
+    box-shadow: $button-shadow;
+    cursor: pointer;
+    color: #000;
+    grid-column-start: 3;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    transition: all ease-in-out 300ms;
+
+    .button-text {
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 22px;
+      margin-left: 5px;
+    }
+
+    svg {
+      margin: 10px 5px 9px 0;
+      position: relative;
+      transform: scale(0.8);
+    }
+
+    &:hover {
+      box-shadow: $button-shadow-hover;
+      transform: translate(0px, -10px);
+
+      svg {
+        path {
+          fill: #000;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(m) {
+    height: calc(100vh - 75px);
+    place-items: center;
+
+    .homepage-text {
+      color: #000;
+      grid-column-start: 8;
+      grid-column-end: 13;
+      padding: 0 50px 0 0;
+      text-align: left;
+      z-index: 50;
+    }
 
     .papers {
-        grid-column-start: 2;
-        grid-column-end: 12;
-        margin: auto;
-        text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 7;
+      padding-left: 30px;
 
-        .top-border {
-          animation: hue 7s infinite linear;
-          -webkit-animation: hue 7s infinite linear;
-          background-size: 200% 200%;
-          max-width: 2000px;
-          padding: 2px 0;
-          position: relative;
-          background-image: linear-gradient(to left, #03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);
+      .hello {
+        font-size: 8vw;
+
+        &::before,
+        &::after {
+          left: 1%;
+          width: 100%;
         }
-
-        .bottom-border {
-          animation: hue 7s infinite linear;
-          -webkit-animation: hue 7s infinite linear;
-          background-size: 200% 200%;
-          max-width: 2000px;
-          padding: 2px 0;
-          position: relative;
-          background-image: linear-gradient(to left, #03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);
-        }
-        
-
-        .hello {
-          animation: hue 7s infinite linear;
-          -webkit-animation: hue 7s infinite linear;
-          background-clip: text;
-          -webkit-background-clip: text;
-          background-size: 200% 200%;
-          background-image: linear-gradient(to left, #03E303, #F2EA00, #FF7C00, #FF001E, #FF00FF, #7702DA, #0A15C2, #02F0F0);
-          color: transparent;
-          font-family: 'Monoton', cursive;
-          text-transform: uppercase;
-          font-size: 12vw;
-          margin: 20px 0;
-        }  
-    }
-    
-    .homepage-text {
-        color: #000;
-        grid-column-start: 2;
-        grid-column-end: 12;
-        text-align: center;
-        z-index: 50;
+      }
     }
 
     .view-my-work-button {
-        background-color: #fff;
-        border: none;
-        border-radius: 30px;
-        box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
-        cursor: pointer;
-        color:#000;
-        grid-column-start: 3;
-        margin: 50px auto;
-        padding: 0 20px;
-        text-decoration:none;
-        display: flex;
-        justify-content: center;
-        transition: all ease-in-out 300ms;
+      margin: 50px 0;
+      padding: 0px 27px 0 40px;
 
-        .button-text {
-          font-size: 13px;
-          font-weight: 900;
-          line-height: 22px;
-          margin-left: 5px;
-        }
-
-        svg {
-          margin: 10px 5px 9px 0;
-          position: relative;
-          transform: scale(.8);
-        }
-
-        &:hover {
-          box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
-          transform: translate(0px, -10px);
-  
-          svg {
-  
-            path {
-              fill: #000;
-            }
-          }
-        }
+      .button-text {
+        font-size: 16px;
       }
 
-    @include breakpoint(m) {
-      height: calc(100vh - 75px);
-      place-items: center;
-  
-        .homepage-text {
-            color: #000;
-            grid-column-start: 8;
-            grid-column-end: 13;
-            padding: 0 50px 0 0;
-            text-align: left;
-            z-index: 50;
-        }
-
-        .papers {
-          grid-column-start: 1;
-          grid-column-end: 7;
-          padding-left: 30px;
-
-          .hello {
-              font-size: 8vw;
-
-              &::before,
-              &::after {
-                  left: 1%;
-                  width: 100%;
-              }
-            }
-          }
-
-          .view-my-work-button {
-              margin: 50px 0;
-              padding: 0px 27px 0 40px;
-
-              .button-text {
-                font-size: 16px;
-              }
-  
-              svg {
-                margin: 14px 13px 13px 0;
-                position: relative;
-              }
-          }
-
-        @include breakpoint(xl) {
-          .hello {
-            font-size: 13vw;
-          }
-  
-          .homepage-text {
-            font-size: 20px;
-          }
+      svg {
+        margin: 14px 13px 13px 0;
+        position: relative;
       }
     }
+
+    @include breakpoint(xl) {
+      .hello {
+        font-size: 13vw;
+      }
+
+      .homepage-text {
+        font-size: 20px;
+      }
+    }
+  }
 }
-
-
