@@ -61,528 +61,6 @@ body {
     text-align: left;
   }
 
-  .project-brief {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 6;
-    }
-  }
-
-  .the-challenge {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    .footnote {
-      font-size: 12.36px;
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-    }
-  }
-
-  .my-role {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 7;
-      grid-column-end: 12;
-    }
-  }
-
-  .feats-for-users {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    margin: auto 0;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 6;
-      line-height: 41px;
-    }
-  }
-
-  .feats-for-users-image {
-    grid-column-start: 1;
-    grid-column-end: 13;
-
-    img {
-      display: block;
-      margin: auto;
-      max-width: 100%;
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 6;
-      grid-column-end: 11;
-    }
-  }
-
-  .feats-for-artists {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    margin: auto 0;
-
-    .feats-for-artists-image {
-      grid-column-start: 1;
-      grid-column-end: 9;
-      grid-row-start: 2;
-
-      img {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      @include breakpoint(m) {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-      }
-    }
-
-    .feats-for-artists-text {
-      grid-column-start: 1;
-      grid-column-end: 8;
-      grid-row-start: 1;
-
-      img {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      @include breakpoint(m) {
-        grid-column-start: 5;
-        grid-column-end: 8;
-      }
-    }
-  }
-
-  .the-approach {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-    }
-  }
-
-  .approach-diagram {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    h2 {
-      margin-top: 50px;
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-    }
-
-    .diagram {
-      height: 100px;
-      padding-top: 180px;
-
-      @include breakpoint(s) {
-        padding-top: 150px;
-
-        @include breakpoint(m) {
-          padding-top: 20px;
-          height: 130px;
-        }
-      }
-
-      .horizontal.timeline {
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        &:before {
-          content: "";
-          display: block;
-          position: absolute;
-
-          width: 100%;
-          height: 0.2em;
-        }
-
-        .line {
-          display: block;
-          position: absolute;
-
-          width: 80vw;
-          height: 0.2em;
-          background-image: linear-gradient(
-            to left,
-            #03e303,
-            #f2ea00,
-            #ff7c00,
-            #ff001e,
-            #ff00ff,
-            #7702da,
-            #0a15c2,
-            #02f0f0
-          );
-        }
-
-        .triangle {
-          display: block;
-          position: relative;
-          bottom: calc(100% + 1em);
-          box-sizing: content-box;
-
-          transition: all 0.5s;
-          z-index: 500;
-
-          width: 0px;
-          border-left: solid 10px $dark-blue;
-          border-bottom: solid 10px transparent;
-          border-top: solid 10px transparent;
-        }
-
-        .steps {
-          display: flex;
-          position: relative;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 80vw;
-
-          .step {
-            display: block;
-            position: relative;
-            bottom: calc(100% + 1em);
-            box-sizing: content-box;
-
-            transition: all 0.5s;
-            z-index: 500;
-
-            width: 0px;
-            border: solid 10px $white;
-            border-radius: 20px;
-            box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.4);
-
-            &:first-child {
-              margin-left: 0;
-            }
-
-            &:last-child {
-              margin-right: 0;
-            }
-
-            .progress-step {
-              color: $black;
-              position: absolute;
-              transform: rotate(-90deg) translate(20px, -26px);
-              transform-origin: top left;
-              text-align: start;
-              transition: all 0.5s;
-              white-space: nowrap;
-              text-decoration: underline;
-
-              &:visited {
-                color: inherit;
-              }
-
-              &:hover,
-              &:focus {
-                color: $dark-blue;
-              }
-
-              @include breakpoint(s) {
-                white-space: normal;
-              }
-
-              @include breakpoint(m) {
-                left: 50%;
-                top: calc(100% + 1em);
-                transform: translateX(-50%) rotate(0deg);
-                text-align: center;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .skip-link {
-      text-decoration: underline;
-
-      &:visited {
-        color: inherit;
-      }
-
-      &:hover,
-      &:focus {
-        color: $dark-blue;
-      }
-    }
-  }
-
-  .competitive-research {
-    border-top: 1px solid;
-    grid-column-start: 2;
-    grid-column-end: 12;
-    margin-top: 100px;
-
-    h1 {
-      padding-top: 100px;
-
-      @include breakpoint(m) {
-        padding-top: 150px;
-      }
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-      margin-top: 100px;
-    }
-  }
-
-  .introduction {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-    }
-  }
-
-  .top-competitors {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    margin: auto;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 7;
-    }
-  }
-
-  .top-competitors-image {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    margin: auto;
-
-    @include breakpoint(m) {
-      grid-column-start: 8;
-      grid-column-end: 12;
-    }
-
-    img {
-      max-width: 80%;
-      margin: auto;
-      display: block;
-    }
-  }
-
-  .feats-for-artists {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    margin: auto 0;
-
-    .feats-for-artists-image {
-      grid-column-start: 1;
-      grid-column-end: 9;
-      grid-row-start: 2;
-
-      img {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      @include breakpoint(m) {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-      }
-    }
-
-    .feats-for-artists-text {
-      grid-column-start: 1;
-      grid-column-end: 8;
-      grid-row-start: 1;
-
-      img {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      @include breakpoint(m) {
-        grid-column-start: 5;
-        grid-column-end: 8;
-      }
-    }
-  }
-
-  .tattoodo {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    margin: auto 0;
-
-    .tattoodo-image {
-      grid-column-start: 1;
-      grid-column-end: 9;
-      grid-row-start: 2;
-      margin: auto;
-
-      img {
-        max-width: 80%;
-        margin: auto;
-        display: block;
-      }
-
-      @include breakpoint(m) {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-      }
-    }
-
-    .tattoodo-text {
-      grid-column-start: 1;
-      grid-column-end: 8;
-      grid-row-start: 1;
-
-      img {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      @include breakpoint(m) {
-        grid-column-start: 5;
-        grid-column-end: 9;
-      }
-    }
-  }
-
-  .user-research {
-    border-top: 1px solid;
-    grid-column-start: 2;
-    grid-column-end: 12;
-    margin-top: 100px;
-
-    h1 {
-      padding-top: 100px;
-
-      @include breakpoint(m) {
-        padding-top: 150px;
-      }
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-      margin-top: 150px;
-    }
-  }
-
-  .user-research-summary {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 6;
-    }
-  }
-
-  .user-research-image {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 7;
-      grid-column-end: 12;
-    }
-
-    img {
-      max-width: 100%;
-      margin: auto;
-      display: block;
-    }
-  }
-
-  .wireframes-and-proto {
-    border-top: 1px solid;
-    grid-column-start: 2;
-    grid-column-end: 12;
-    margin-top: 100px;
-
-    h1 {
-      padding-top: 100px;
-
-      @include breakpoint(m) {
-        padding-top: 150px;
-      }
-    }
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-      margin-top: 150px;
-    }
-  }
-
-  .wireframes-and-proto-intro {
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-    }
-  }
-
-  .wireframes-and-proto-images {
-    display: flex;
-    flex-wrap: wrap;
-    place-content: center;
-    grid-column-start: 2;
-    grid-column-end: 12;
-
-    @include breakpoint(m) {
-      grid-column-start: 2;
-      grid-column-end: 12;
-    }
-
-    img {
-      display: inline-flex;
-      max-height: 350px;
-      padding: 10px;
-    }
-
-    .landscape-image {
-      max-width: 50%;
-      object-fit: contain;
-    }
-
-    .portrait-image {
-      max-width: 33%;
-    }
-  }
-
   .first-wireframes {
     grid-column-start: 2;
     grid-column-end: 12;
@@ -642,41 +120,46 @@ body {
           align-items: center;
           justify-content: center;
           font-size: 0px;
-          width: 164px;
-          height: 356px;
+          width: 200px;
+          height: 130px;
           border-radius: 12px;
           box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
           position: absolute;
           transition: all 0.3s ease-in;
 
           @include breakpoint(s) {
-            width: 227px;
-            height: 491px;
+            width: 345px;
+            height: 223px;
+          }
+
+          @include breakpoint(m) {
+            width: 500px;
+            height: 312px;
           }
 
           &:nth-child(1) {
             background: center / contain no-repeat
-              url(../images/ink-envy/first_wireframe_appt.png);
+              url(../images/roastertools/pending.png);
           }
           &:nth-child(2) {
             background: center / contain no-repeat
-              url(../images/ink-envy/first_wireframe_artist.png);
+              url(../images/roastertools/production-row-expanded.png);
           }
           &:nth-child(3) {
             background: center / contain no-repeat
-              url(../images/ink-envy/first_wireframe_feed.png);
+              url(../images/roastertools/ready.png);
           }
           &:nth-child(4) {
             background: center / contain no-repeat
-              url(../images/ink-envy/first_wireframe_notifications.png);
+              url(../images/roastertools/shipped-overdue.png);
           }
           &:nth-child(5) {
             background: center / contain no-repeat
-              url(../images/ink-envy/first_wireframe_review.png);
+              url(../images/roastertools/shipped-row-collapsed.png);
           }
           &:nth-child(6) {
             background: center / contain no-repeat
-              url(../images/ink-envy/first_wireframe_explore.png);
+              url(../images/roastertools/shipped-row-expanded.png);
           }
 
           &[data-pos="2"] {
@@ -1110,7 +593,7 @@ body {
       background-color: $white;
       border-radius: 30px;
       border: none;
-      box-shadow: $button-shadow;
+      box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
       cursor: pointer;
       color: #000;
       display: flex;
@@ -1124,7 +607,7 @@ body {
       width: 180px;
 
       &:hover {
-        box-shadow: $button-shadow-hover;
+        box-shadow: 0px 37px 20px -15px rgba(0, 0, 0, 0.2);
         transform: translate(0px, -10px);
       }
 

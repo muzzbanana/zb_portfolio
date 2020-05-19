@@ -240,7 +240,7 @@ function getPos(current, diff, numOfItems) {
   return +current + diff;
 }
 
-if (page === "ink-envy" || page === "nest-egg") {
+if (page === "ink-envy" || page === "nest-egg" || page === "roastertools") {
   const carouselList = document.querySelector(".wireframe-carousel__list");
   const carouselItems = document.querySelectorAll(".wireframe-carousel__item");
   const elems = Array.from(carouselItems);

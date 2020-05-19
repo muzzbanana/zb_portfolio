@@ -72,6 +72,11 @@ def chautauqua():
 def nest_egg():
     name = 'nest-egg'
     return render_template('nest-egg.html', name=name)
+    
+@app.route('/roastertools', methods=['GET'])
+def roastertools():
+    name = 'roastertools'
+    return render_template('roastertools.html', name=name)
 
 
 if __name__ == '__main__':
