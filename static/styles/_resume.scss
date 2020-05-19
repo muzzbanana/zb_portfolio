@@ -69,7 +69,11 @@
       text-align: justify;
       text-decoration: none;
       justify-content: center;
+<<<<<<< HEAD
       box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+=======
+      box-shadow: $button-shadow;
+>>>>>>> master
 
       .button-text {
         margin-left: 5px;
@@ -81,7 +85,11 @@
       }
 
       &:hover {
+<<<<<<< HEAD
         box-shadow: 0px 37px 20px -15px rgba(0, 0, 0, 0.2);
+=======
+        box-shadow: $button-shadow-hover;
+>>>>>>> master
         transform: translate(0px, -10px);
       }
     }
@@ -183,7 +191,11 @@
     .download-button {
       background-color: $white;
       border: none;
+<<<<<<< HEAD
       box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+=======
+      box-shadow: $button-shadow;
+>>>>>>> master
       border-radius: 30px;
       cursor: pointer;
       color: #000;
@@ -205,7 +217,11 @@
       }
 
       &:hover {
+<<<<<<< HEAD
         box-shadow: 0px 37px 20px -15px rgba(0, 0, 0, 0.2);
+=======
+        box-shadow: $button-shadow-hover;
+>>>>>>> master
         transform: translate(0px, -10px);
       }
 
